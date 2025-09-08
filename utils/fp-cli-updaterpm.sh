@@ -1,16 +1,16 @@
 #!/bin/bash
 #
-# Package WP-CLI to be installed on RPM-based systems.
+# Package FP-CLI to be installed on RPM-based systems.
 #
 # VERSION       :0.1.0
 # DATE          :2017-07-12
 # AUTHOR        :Viktor Szépe <viktor@szepe.net>
 # LICENSE       :The MIT License (MIT)
-# URL           :https://github.com/wp-cli/wp-cli-bundle/tree/main/utils
+# URL           :https://github.com/fp-cli/fp-cli-bundle/tree/main/utils
 # BASH-VERSION  :4.2+
 # DEPENDS       :apt-get install rpm rpmlint php-cli
 
-PHAR_URL="https://github.com/wp-cli/builds/raw/gh-pages/phar/wp-cli.phar"
+PHAR_URL="https://github.com/fp-cli/builds/raw/gh-pages/phar/fp-cli.phar"
 # Source directory
 SOURCE_DIR="rpm-src"
 
@@ -30,9 +30,9 @@ if ! hash php rpm; then
 fi
 
 # Download the binary if needed
-if [ ! -f "wp-cli.phar" ]; then
-	wget -nv -O wp-cli.phar "$PHAR_URL"
-	chmod +x wp-cli.phar
+if [ ! -f "fp-cli.phar" ]; then
+	wget -nv -O fp-cli.phar "$PHAR_URL"
+	chmod +x fp-cli.phar
 fi
 
 if ! [ -d "$SOURCE_DIR" ]; then
@@ -42,33 +42,33 @@ fi
 pushd "$SOURCE_DIR" > /dev/null
 
 # Move files
-mv ../wp-cli.phar wp-cli.phar
-cp ../wp-cli-rpm.spec wp-cli.spec
+mv ../fp-cli.phar fp-cli.phar
+cp ../fp-cli-rpm.spec fp-cli.spec
 
 # Replace version placeholder
-WPCLI_VER="$(php wp-cli.phar cli version | cut -d " " -f 2)"
-if [ -z "$WPCLI_VER" ]; then
-    die 3 "Cannot get WP_CLI version"
+FPCLI_VER="$(php fp-cli.phar cli version | cut -d " " -f 2)"
+if [ -z "$FPCLI_VER" ]; then
+    die 3 "Cannot get FP_CLI version"
 fi
-echo "Current version: ${WPCLI_VER}"
-sed -i -e "s/^Version: .*\$/Version:    ${WPCLI_VER}/" wp-cli.spec || die 4 "Version update failed"
-sed -i -e "s/^\(\* .*\) 0\.0\.0-1\$/\1 ${WPCLI_VER}-1/" wp-cli.spec || die 5 "Changleog update failed"
+echo "Current version: ${FPCLI_VER}"
+sed -i -e "s/^Version: .*\$/Version:    ${FPCLI_VER}/" fp-cli.spec || die 4 "Version update failed"
+sed -i -e "s/^\(\* .*\) 0\.0\.0-1\$/\1 ${FPCLI_VER}-1/" fp-cli.spec || die 5 "Changleog update failed"
 
 # Create man page
 {
-    echo '.TH "WP" "1"'
-    php wp-cli.phar --help
+    echo '.TH "FP" "1"'
+    php fp-cli.phar --help
 } \
     | sed -e 's/^\([A-Z ]\+\)$/.SH "\1"/' \
-    | sed -e 's/^  wp$/wp \\- The command line interface for WordPress/' \
-    > wp.1
+    | sed -e 's/^  fp$/fp \\- The command line interface for FinPress/' \
+    > fp.1
 
 # Build the package
-rpmbuild --define "_sourcedir ${PWD}" --define "_rpmdir ${PWD}" -bb wp-cli.spec | tee wp-cli-updaterpm-rpmbuild.$$.log
+rpmbuild --define "_sourcedir ${PWD}" --define "_rpmdir ${PWD}" -bb fp-cli.spec | tee fp-cli-updaterpm-rpmbuild.$$.log
 
-rpm_path=`grep -o "/.*/noarch/wp-cli-.*noarch.rpm" wp-cli-updaterpm-rpmbuild.$$.log`
+rpm_path=`grep -o "/.*/noarch/fp-cli-.*noarch.rpm" fp-cli-updaterpm-rpmbuild.$$.log`
 
-rm -f wp-cli-updaterpm-rpmbuild.$$.log
+rm -f fp-cli-updaterpm-rpmbuild.$$.log
 
 if [ ${#rpm_path} -lt 20 ] ; then
 	echo "RPM path doesn't exist ($rpm_path)"
@@ -97,7 +97,7 @@ elif ([ $(type -P "rpm2cpio") ] && [ $(type -P "cpio") ]); then
 	fi
 	rpm2cpio $rpm_path | cpio -idmv
 
-	if [ -f "usr/bin/wp" ] ; then
+	if [ -f "usr/bin/fp" ] ; then
 		echo "RPM test succeeded"
 	else
 		echo "RPM test failed"

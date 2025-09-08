@@ -1,254 +1,254 @@
-Feature: WP-CLI Commands
+Feature: FP-CLI Commands
 
-  Scenario: Registered WP-CLI commands
+  Scenario: Registered FP-CLI commands
     Given an empty directory
 
-    When I run `wp cache --help`
+    When I run `fp cache --help`
     Then STDOUT should contain:
       """
-      wp cache <command>
+      fp cache <command>
       """
 
-    When I run `wp cap --help`
+    When I run `fp cap --help`
     Then STDOUT should contain:
       """
-      wp cap <command>
+      fp cap <command>
       """
 
-    When I run `wp comment --help`
+    When I run `fp comment --help`
     Then STDOUT should contain:
       """
-      wp comment <command>
+      fp comment <command>
       """
 
-    When I run `wp config --help`
+    When I run `fp config --help`
     Then STDOUT should contain:
       """
-      wp config <command>
+      fp config <command>
       """
 
-    When I run `wp core --help`
+    When I run `fp core --help`
     Then STDOUT should contain:
       """
-      wp core <command>
+      fp core <command>
       """
 
-    When I run `wp cron --help`
+    When I run `fp cron --help`
     Then STDOUT should contain:
       """
-      wp cron <command>
+      fp cron <command>
       """
 
-    When I run `wp cron`
+    When I run `fp cron`
     Then STDOUT should contain:
       """
-      usage: wp cron event <command>
-         or: wp cron schedule <command>
-         or: wp cron test
+      usage: fp cron event <command>
+         or: fp cron schedule <command>
+         or: fp cron test
       """
 
-    When I run `wp db --help`
+    When I run `fp db --help`
     Then STDOUT should contain:
       """
-      wp db <command>
+      fp db <command>
       """
 
-    When I run `wp db`
+    When I run `fp db`
     Then STDOUT should contain:
       """
-      or: wp db cli
+      or: fp db cli
       """
 
-    When I run `wp eval --help`
+    When I run `fp eval --help`
     Then STDOUT should contain:
       """
-      wp eval <php-code>
+      fp eval <php-code>
       """
 
-    When I run `wp eval-file --help`
+    When I run `fp eval-file --help`
     Then STDOUT should contain:
       """
-      wp eval-file <file> [<arg>...]
+      fp eval-file <file> [<arg>...]
       """
 
-    When I run `wp export --help`
+    When I run `fp export --help`
     Then STDOUT should contain:
       """
-      wp export [--dir=<dirname>]
+      fp export [--dir=<dirname>]
       """
 
-    When I run `wp help --help`
+    When I run `fp help --help`
     Then STDOUT should contain:
       """
-      wp help [<command>...]
+      fp help [<command>...]
       """
 
-    When I run `wp import --help`
+    When I run `fp import --help`
     Then STDOUT should contain:
       """
-      wp import <file>... --authors=<authors>
+      fp import <file>... --authors=<authors>
       """
 
-    When I run `wp language --help`
+    When I run `fp language --help`
     Then STDOUT should contain:
       """
-      wp language <command>
+      fp language <command>
       """
 
-    When I run `wp media --help`
+    When I run `fp media --help`
     Then STDOUT should contain:
       """
-      wp media <command>
+      fp media <command>
       """
 
-    When I run `wp media`
+    When I run `fp media`
     Then STDOUT should contain:
       """
-      or: wp media regenerate
+      or: fp media regenerate
       """
 
-    When I run `wp menu --help`
+    When I run `fp menu --help`
     Then STDOUT should contain:
       """
-      wp menu <command>
+      fp menu <command>
       """
 
-    When I run `wp network --help`
+    When I run `fp network --help`
     Then STDOUT should contain:
       """
-      wp network <command>
+      fp network <command>
       """
 
-    When I run `wp option --help`
+    When I run `fp option --help`
     Then STDOUT should contain:
       """
-      wp option <command>
+      fp option <command>
       """
 
-    When I run `wp package --help`
+    When I run `fp package --help`
     Then STDOUT should contain:
       """
-      wp package <command>
+      fp package <command>
       """
 
-    When I run `wp package`
+    When I run `fp package`
     Then STDOUT should contain:
       """
-      or: wp package install
+      or: fp package install
       """
 
-    When I run `wp plugin --help`
+    When I run `fp plugin --help`
     Then STDOUT should contain:
       """
-      wp plugin <command>
+      fp plugin <command>
       """
 
-    When I run `wp post --help`
+    When I run `fp post --help`
     Then STDOUT should contain:
       """
-      wp post <command>
+      fp post <command>
       """
 
-    When I run `wp post-type --help`
+    When I run `fp post-type --help`
     Then STDOUT should contain:
       """
-      wp post-type <command>
+      fp post-type <command>
       """
 
-    When I run `wp rewrite --help`
+    When I run `fp rewrite --help`
     Then STDOUT should contain:
       """
-      wp rewrite <command>
+      fp rewrite <command>
       """
 
-    When I run `wp role --help`
+    When I run `fp role --help`
     Then STDOUT should contain:
       """
-      wp role <command>
+      fp role <command>
       """
 
-    When I run `wp scaffold --help`
+    When I run `fp scaffold --help`
     Then STDOUT should contain:
       """
-      wp scaffold <command>
+      fp scaffold <command>
       """
 
-    When I run `wp search-replace --help`
+    When I run `fp search-replace --help`
     Then STDOUT should contain:
       """
-      wp search-replace <old> <new>
+      fp search-replace <old> <new>
       """
 
-    When I run `wp server --help`
+    When I run `fp server --help`
     Then STDOUT should contain:
       """
-      wp server [--host=<host>]
+      fp server [--host=<host>]
       """
 
-    When I run `wp shell --help`
+    When I run `fp shell --help`
     Then STDOUT should contain:
       """
-      wp shell [--basic]
+      fp shell [--basic]
       """
 
-    When I run `wp sidebar --help`
+    When I run `fp sidebar --help`
     Then STDOUT should contain:
       """
-      wp sidebar <command>
+      fp sidebar <command>
       """
 
-    When I run `wp site --help`
+    When I run `fp site --help`
     Then STDOUT should contain:
       """
-      wp site <command>
+      fp site <command>
       """
 
-    When I run `wp super-admin --help`
+    When I run `fp super-admin --help`
     Then STDOUT should contain:
       """
-      wp super-admin <command>
+      fp super-admin <command>
       """
 
-    When I run `wp taxonomy --help`
+    When I run `fp taxonomy --help`
     Then STDOUT should contain:
       """
-      wp taxonomy <command>
+      fp taxonomy <command>
       """
 
-    When I run `wp term --help`
+    When I run `fp term --help`
     Then STDOUT should contain:
       """
-      wp term <command>
+      fp term <command>
       """
 
-    When I run `wp theme --help`
+    When I run `fp theme --help`
     Then STDOUT should contain:
       """
-      wp theme <command>
+      fp theme <command>
       """
 
-    When I run `wp transient --help`
+    When I run `fp transient --help`
     Then STDOUT should contain:
       """
-      wp transient <command>
+      fp transient <command>
       """
 
-    When I run `wp user --help`
+    When I run `fp user --help`
     Then STDOUT should contain:
       """
-      wp user <command>
+      fp user <command>
       """
 
-    When I run `wp widget --help`
+    When I run `fp widget --help`
     Then STDOUT should contain:
       """
-      wp widget <command>
+      fp widget <command>
       """
 
-    When I run `wp maintenance-mode --help`
+    When I run `fp maintenance-mode --help`
     Then STDOUT should contain:
       """
-      wp maintenance-mode <command>
+      fp maintenance-mode <command>
       """
 
   Scenario: Invalid class is specified for a command
@@ -257,14 +257,14 @@ Feature: WP-CLI Commands
       """
       <?php
 
-      WP_CLI::add_command( 'command example', 'Non_Existent_Class' );
+      FP_CLI::add_command( 'command example', 'Non_Existent_Class' );
       """
 
-    When I try `wp --require=custom-cmd.php help`
+    When I try `fp --require=custom-cmd.php help`
     Then the return code should be 1
     And STDERR should contain:
       """
-      Callable "Non_Existent_Class" does not exist, and cannot be registered as `wp command example`.
+      Callable "Non_Existent_Class" does not exist, and cannot be registered as `fp command example`.
       """
 
   Scenario: Invalid subcommand of valid command
@@ -273,22 +273,22 @@ Feature: WP-CLI Commands
       """
       <?php
       /**
-       * @when before_wp_load
+       * @when before_fp_load
        */
-      class Custom_Command_Class extends WP_CLI_Command {
+      class Custom_Command_Class extends FP_CLI_Command {
 
           public function valid() {
-             WP_CLI::success( 'Hello world' );
+             FP_CLI::success( 'Hello world' );
           }
 
       }
-      WP_CLI::add_command( 'command', 'Custom_Command_Class' );
+      FP_CLI::add_command( 'command', 'Custom_Command_Class' );
       """
 
-    When I try `wp --require=custom-cmd.php command invalid`
+    When I try `fp --require=custom-cmd.php command invalid`
     Then STDERR should contain:
       """
-      Error: 'invalid' is not a registered subcommand of 'command'. See 'wp help command' for available subcommands.
+      Error: 'invalid' is not a registered subcommand of 'command'. See 'fp help command' for available subcommands.
       """
 
   Scenario: Use a closure as a command
@@ -302,33 +302,33 @@ Feature: WP-CLI Commands
        * <message>
        * : An awesome message to display
        *
-       * @when before_wp_load
+       * @when before_fp_load
        */
       $foo = function( $args ) {
-        WP_CLI::success( $args[0] );
+        FP_CLI::success( $args[0] );
       };
-      WP_CLI::add_command( 'foo', $foo );
+      FP_CLI::add_command( 'foo', $foo );
       """
 
-    When I run `wp --require=custom-cmd.php help`
+    When I run `fp --require=custom-cmd.php help`
     Then STDOUT should contain:
       """
       foo
       """
 
-    When I run `wp --require=custom-cmd.php help foo`
+    When I run `fp --require=custom-cmd.php help foo`
     Then STDOUT should contain:
       """
       My awesome closure command
       """
 
-    When I try `wp --require=custom-cmd.php foo bar --burrito`
+    When I try `fp --require=custom-cmd.php foo bar --burrito`
     Then STDERR should contain:
       """
       unknown --burrito parameter
       """
 
-    When I run `wp --require=custom-cmd.php foo bar`
+    When I run `fp --require=custom-cmd.php foo bar`
     Then STDOUT should contain:
       """
       Success: bar
@@ -345,33 +345,33 @@ Feature: WP-CLI Commands
        * <message>
        * : An awesome message to display
        *
-       * @when before_wp_load
+       * @when before_fp_load
        */
       function foo( $args ) {
-        WP_CLI::success( $args[0] );
+        FP_CLI::success( $args[0] );
       }
-      WP_CLI::add_command( 'foo', 'foo' );
+      FP_CLI::add_command( 'foo', 'foo' );
       """
 
-    When I run `wp --require=custom-cmd.php help`
+    When I run `fp --require=custom-cmd.php help`
     Then STDOUT should contain:
       """
       foo
       """
 
-    When I run `wp --require=custom-cmd.php help foo`
+    When I run `fp --require=custom-cmd.php help foo`
     Then STDOUT should contain:
       """
       My awesome function command
       """
 
-    When I try `wp --require=custom-cmd.php foo bar --burrito`
+    When I try `fp --require=custom-cmd.php foo bar --burrito`
     Then STDERR should contain:
       """
       unknown --burrito parameter
       """
 
-    When I run `wp --require=custom-cmd.php foo bar`
+    When I run `fp --require=custom-cmd.php foo bar`
     Then STDOUT should contain:
       """
       Success: bar
@@ -382,7 +382,7 @@ Feature: WP-CLI Commands
     And a custom-cmd.php file:
       """
       <?php
-      class Foo_Class extends WP_CLI_Command {
+      class Foo_Class extends FP_CLI_Command {
         protected $prefix;
 
         public function __construct( $prefix ) {
@@ -394,35 +394,35 @@ Feature: WP-CLI Commands
          * <message>
          * : An awesome message to display
          *
-         * @when before_wp_load
+         * @when before_fp_load
          */
         function foo( $args ) {
-          WP_CLI::success( $this->prefix . ':' . $args[0] );
+          FP_CLI::success( $this->prefix . ':' . $args[0] );
         }
       }
       $foo = new Foo_Class( 'boo' );
-      WP_CLI::add_command( 'foo', array( $foo, 'foo' ) );
+      FP_CLI::add_command( 'foo', array( $foo, 'foo' ) );
       """
 
-    When I run `wp --require=custom-cmd.php help`
+    When I run `fp --require=custom-cmd.php help`
     Then STDOUT should contain:
       """
       foo
       """
 
-    When I run `wp --require=custom-cmd.php help foo`
+    When I run `fp --require=custom-cmd.php help foo`
     Then STDOUT should contain:
       """
       My awesome class method command
       """
 
-    When I try `wp --require=custom-cmd.php foo bar --burrito`
+    When I try `fp --require=custom-cmd.php foo bar --burrito`
     Then STDERR should contain:
       """
       unknown --burrito parameter
       """
 
-    When I run `wp --require=custom-cmd.php foo bar`
+    When I run `fp --require=custom-cmd.php foo bar`
     Then STDOUT should contain:
       """
       Success: boo:bar
@@ -433,41 +433,41 @@ Feature: WP-CLI Commands
     And a custom-cmd.php file:
       """
       <?php
-      class Foo_Class extends WP_CLI_Command {
+      class Foo_Class extends FP_CLI_Command {
         /**
          * My awesome class method command
          *
          * <message>
          * : An awesome message to display
          *
-         * @when before_wp_load
+         * @when before_fp_load
          */
         function foo( $args ) {
-          WP_CLI::success( $args[0] );
+          FP_CLI::success( $args[0] );
         }
       }
-      WP_CLI::add_command( 'foo', array( 'Foo_Class', 'foo' ) );
+      FP_CLI::add_command( 'foo', array( 'Foo_Class', 'foo' ) );
       """
 
-    When I run `wp --require=custom-cmd.php help`
+    When I run `fp --require=custom-cmd.php help`
     Then STDOUT should contain:
       """
       foo
       """
 
-    When I run `wp --require=custom-cmd.php help foo`
+    When I run `fp --require=custom-cmd.php help foo`
     Then STDOUT should contain:
       """
       My awesome class method command
       """
 
-    When I try `wp --require=custom-cmd.php foo bar --burrito`
+    When I try `fp --require=custom-cmd.php foo bar --burrito`
     Then STDERR should contain:
       """
       unknown --burrito parameter
       """
 
-    When I run `wp --require=custom-cmd.php foo bar`
+    When I run `fp --require=custom-cmd.php foo bar`
     Then STDOUT should contain:
       """
       Success: bar
@@ -488,17 +488,17 @@ Feature: WP-CLI Commands
         /**
          * My awesome class method command
          *
-         * @when before_wp_load
+         * @when before_fp_load
          */
         function __invoke( $args ) {
-          WP_CLI::success( $this->message );
+          FP_CLI::success( $this->message );
         }
       }
       $foo = new Foo_Class( 'bar' );
-      WP_CLI::add_command( 'instantiated-command', $foo );
+      FP_CLI::add_command( 'instantiated-command', $foo );
       """
 
-    When I run `wp --require=custom-cmd.php instantiated-command`
+    When I run `fp --require=custom-cmd.php instantiated-command`
     Then STDOUT should contain:
       """
       bar
@@ -510,27 +510,27 @@ Feature: WP-CLI Commands
     And a custom-cmd.php file:
       """
       <?php
-      class Foo_Class extends WP_CLI_Command {
+      class Foo_Class extends FP_CLI_Command {
         /**
          * My awesome class method command
          *
          * <message>
          * : An awesome message to display
          *
-         * @when before_wp_load
+         * @when before_fp_load
          */
         function foo( $args ) {
-          WP_CLI::success( $args[0] );
+          FP_CLI::success( $args[0] );
         }
       }
       $foo = new Foo_Class;
-      WP_CLI::add_command( 'bar', array( $foo, 'bar' ) );
+      FP_CLI::add_command( 'bar', array( $foo, 'bar' ) );
       """
 
-    When I try `wp --require=custom-cmd.php bar`
+    When I try `fp --require=custom-cmd.php bar`
     Then STDERR should contain:
       """
-      Error: Callable ["Foo_Class","bar"] does not exist, and cannot be registered as `wp bar`.
+      Error: Callable ["Foo_Class","bar"] does not exist, and cannot be registered as `fp bar`.
       """
 
   Scenario: Register a synopsis for a given command
@@ -540,12 +540,12 @@ Feature: WP-CLI Commands
       <?php
       function foo( $args, $assoc_args ) {
         $message = array_shift( $args );
-        WP_CLI::log( 'Message is: ' . $message );
-        WP_CLI::success( $assoc_args['meal'] );
+        FP_CLI::log( 'Message is: ' . $message );
+        FP_CLI::success( $assoc_args['meal'] );
       }
-      WP_CLI::add_command( 'foo', 'foo', array(
+      FP_CLI::add_command( 'foo', 'foo', array(
         'shortdesc'   => 'My awesome function command',
-        'when'        => 'before_wp_load',
+        'when'        => 'before_fp_load',
         'synopsis'    => array(
           array(
             'type'          => 'positional',
@@ -571,21 +571,21 @@ Feature: WP-CLI Commands
         ),
       ) );
       """
-    And a wp-cli.yml file:
+    And a fp-cli.yml file:
       """
       require:
         - custom-cmd.php
       """
 
-    When I try `wp foo`
+    When I try `fp foo`
     Then STDOUT should contain:
       """
-      usage: wp foo <message> --apple=<apple> [--meal=<meal>]
+      usage: fp foo <message> --apple=<apple> [--meal=<meal>]
       """
     And STDERR should be empty
     And the return code should be 1
 
-    When I run `wp help foo`
+    When I run `fp help foo`
     Then STDOUT should contain:
       """
       My awesome function command
@@ -596,7 +596,7 @@ Feature: WP-CLI Commands
       """
     And STDOUT should contain:
       """
-      wp foo <message> --apple=<apple> [--meal=<meal>]
+      fp foo <message> --apple=<apple> [--meal=<meal>]
       """
     And STDOUT should contain:
       """
@@ -625,26 +625,26 @@ Feature: WP-CLI Commands
           ---
       """
 
-    When I try `wp foo nana --apple=fuji`
+    When I try `fp foo nana --apple=fuji`
     Then STDERR should contain:
       """
       Error: Invalid value specified for positional arg.
       """
 
-    When I try `wp foo hello --apple=fuji --meal=snack`
+    When I try `fp foo hello --apple=fuji --meal=snack`
     Then STDERR should contain:
       """
       Invalid value specified for 'meal' (A type of meal.)
       """
 
-    When I run `wp foo hello --apple=fuji`
+    When I run `fp foo hello --apple=fuji`
     Then STDOUT should be:
       """
       Message is: hello
       Success: breakfast
       """
 
-    When I run `wp foo hello --apple=fuji --meal=dinner`
+    When I run `fp foo hello --apple=fuji --meal=dinner`
     Then STDOUT should be:
       """
       Message is: hello
@@ -656,10 +656,10 @@ Feature: WP-CLI Commands
     And a test-cmd.php file:
       """
       <?php
-      WP_CLI::add_command( 'foo', function( $args ){
-        WP_CLI::log( count( $args ) );
+      FP_CLI::add_command( 'foo', function( $args ){
+        FP_CLI::log( count( $args ) );
       }, array(
-        'when' => 'before_wp_load',
+        'when' => 'before_fp_load',
         'synopsis' => array(
           array(
             'type'      => 'positional',
@@ -669,19 +669,19 @@ Feature: WP-CLI Commands
         ),
       ));
       """
-    And a wp-cli.yml file:
+    And a fp-cli.yml file:
       """
       require:
         - test-cmd.php
       """
 
-    When I run `wp foo bar`
+    When I run `fp foo bar`
     Then STDOUT should be:
       """
       1
       """
 
-    When I run `wp foo bar burrito`
+    When I run `fp foo bar burrito`
     Then STDOUT should be:
       """
       2
@@ -692,10 +692,10 @@ Feature: WP-CLI Commands
     And a test-cmd.php file:
       """
       <?php
-      WP_CLI::add_command( 'foo', function( $_, $assoc_args ){
-        WP_CLI::log( \WP_CLI\Utils\get_flag_value( $assoc_args, 'honk' ) ? 'honked' : 'nohonk' );
+      FP_CLI::add_command( 'foo', function( $_, $assoc_args ){
+        FP_CLI::log( \FP_CLI\Utils\get_flag_value( $assoc_args, 'honk' ) ? 'honked' : 'nohonk' );
       }, array(
-        'when' => 'before_wp_load',
+        'when' => 'before_fp_load',
         'synopsis' => array(
           array(
             'type'     => 'flag',
@@ -705,44 +705,44 @@ Feature: WP-CLI Commands
         ),
       ));
       """
-    And a wp-cli.yml file:
+    And a fp-cli.yml file:
       """
       require:
         - test-cmd.php
       """
 
-    When I run `wp foo`
+    When I run `fp foo`
     Then STDOUT should be:
       """
       nohonk
       """
 
-    When I run `wp foo --honk`
+    When I run `fp foo --honk`
     Then STDOUT should be:
       """
       honked
       """
 
-    When I run `wp foo --honk=1`
+    When I run `fp foo --honk=1`
     Then STDOUT should be:
       """
       honked
       """
 
-    When I run `wp foo --no-honk`
+    When I run `fp foo --no-honk`
     Then STDOUT should be:
       """
       nohonk
       """
 
-    When I run `wp foo --honk=0`
+    When I run `fp foo --honk=0`
     Then STDOUT should be:
       """
       nohonk
       """
 
     # Note treats "false" as true.
-    When I run `wp foo --honk=false`
+    When I run `fp foo --honk=false`
     Then STDOUT should be:
       """
       honked
@@ -754,15 +754,15 @@ Feature: WP-CLI Commands
       """
       <?php
       function foo() {
-        WP_CLI::success( 'Command run.' );
+        FP_CLI::success( 'Command run.' );
       }
-      WP_CLI::add_command( 'foo', 'foo', array(
+      FP_CLI::add_command( 'foo', 'foo', array(
         'shortdesc'   => 'My awesome function command',
-        'when'        => 'before_wp_load',
+        'when'        => 'before_fp_load',
         'longdesc'    => '## EXAMPLES ' . PHP_EOL . PHP_EOL . '  # Run the custom foo command',
       ) );
       """
-    And a wp-cli.yml file:
+    And a fp-cli.yml file:
       """
       require:
         - custom-cmd.php
@@ -770,12 +770,12 @@ Feature: WP-CLI Commands
     And I run `echo ' '`
     And save STDOUT as {SPACE}
 
-    When I run `wp help foo`
+    When I run `fp help foo`
     Then STDOUT should contain:
       """
       NAME
 
-        wp foo
+        fp foo
 
       DESCRIPTION
 
@@ -783,7 +783,7 @@ Feature: WP-CLI Commands
 
       SYNOPSIS
 
-        wp foo{SPACE}
+        fp foo{SPACE}
 
       EXAMPLES{SPACE}
 
@@ -800,12 +800,12 @@ Feature: WP-CLI Commands
         $hello_command = function( $args, $assoc_args ) {
             list( $name ) = $args;
             $type = $assoc_args['type'];
-            WP_CLI::$type( "Hello, $name!" );
+            FP_CLI::$type( "Hello, $name!" );
             if ( isset( $assoc_args['honk'] ) ) {
-                WP_CLI::log( 'Honk!' );
+                FP_CLI::log( 'Honk!' );
             }
         };
-        WP_CLI::add_command( 'example hello', $hello_command, array(
+        FP_CLI::add_command( 'example hello', $hello_command, array(
             'shortdesc' => 'Prints a greeting.',
             'synopsis' => array(
                 array(
@@ -828,17 +828,17 @@ Feature: WP-CLI Commands
                     'optional' => true,
                 ),
             ),
-            'when' => 'after_wp_load',
-            'longdesc'    => "\r\n## EXAMPLES\n\n# Say hello to Newman\nwp example hello Newman\nSuccess: Hello, Newman!",
+            'when' => 'after_fp_load',
+            'longdesc'    => "\r\n## EXAMPLES\n\n# Say hello to Newman\nfp example hello Newman\nSuccess: Hello, Newman!",
       ) );
       """
 
-    When I run `wp --require=hello-command.php help example hello`
+    When I run `fp --require=hello-command.php help example hello`
     Then STDOUT should contain:
       """
       NAME
 
-        wp example hello
+        fp example hello
 
       DESCRIPTION
 
@@ -846,7 +846,7 @@ Feature: WP-CLI Commands
 
       SYNOPSIS
 
-        wp example hello <name> [--type=<type>] [--honk]
+        fp example hello <name> [--type=<type>] [--honk]
 
       OPTIONS
 
@@ -866,7 +866,7 @@ Feature: WP-CLI Commands
       EXAMPLES
 
         # Say hello to Newman
-        wp example hello Newman
+        fp example hello Newman
         Success: Hello, Newman!
 
       GLOBAL PARAMETERS
@@ -903,7 +903,7 @@ Feature: WP-CLI Commands
        *   - veggies
        * ---
        *
-       * @when before_wp_load
+       * @when before_fp_load
        */
       $foo = function( $args, $assoc_args ) {
         $out = array(
@@ -911,12 +911,12 @@ Feature: WP-CLI Commands
           'shop'    => isset( $args[1] ) ? $args[1] : '',
           'burrito' => isset( $assoc_args['burrito'] ) ? $assoc_args['burrito'] : '',
         );
-        WP_CLI::print_value( $out, array( 'format' => 'yaml' ) );
+        FP_CLI::print_value( $out, array( 'format' => 'yaml' ) );
       };
-      WP_CLI::add_command( 'foo', $foo );
+      FP_CLI::add_command( 'foo', $foo );
       """
 
-    When I run `wp --require=test-cmd.php foo --help`
+    When I run `fp --require=test-cmd.php foo --help`
     Then STDOUT should contain:
       """
       [<bar>]
@@ -936,7 +936,7 @@ Feature: WP-CLI Commands
           ---
       """
 
-    When I run `wp --require=test-cmd.php foo`
+    When I run `fp --require=test-cmd.php foo`
     Then STDOUT should be YAML containing:
       """
       bar: burrito
@@ -945,7 +945,7 @@ Feature: WP-CLI Commands
       """
     And STDERR should be empty
 
-    When I run `wp --require=test-cmd.php foo ''`
+    When I run `fp --require=test-cmd.php foo ''`
     Then STDOUT should be YAML containing:
       """
       bar:
@@ -954,7 +954,7 @@ Feature: WP-CLI Commands
       """
     And STDERR should be empty
 
-    When I run `wp --require=test-cmd.php foo apple --burrito=veggies`
+    When I run `fp --require=test-cmd.php foo apple --burrito=veggies`
     Then STDOUT should be YAML containing:
       """
       bar: apple
@@ -963,33 +963,33 @@ Feature: WP-CLI Commands
       """
     And STDERR should be empty
 
-    When I try `wp --require=test-cmd.php foo apple --burrito=meat`
+    When I try `fp --require=test-cmd.php foo apple --burrito=meat`
     Then STDERR should contain:
       """
       Error: Parameter errors:
        Invalid value specified for 'burrito' (This is the burrito argument.)
       """
 
-    When I try `wp --require=test-cmd.php foo apple --burrito=''`
+    When I try `fp --require=test-cmd.php foo apple --burrito=''`
     Then STDERR should contain:
       """
       Error: Parameter errors:
        Invalid value specified for 'burrito' (This is the burrito argument.)
       """
 
-    When I try `wp --require=test-cmd.php foo apple taco_del_mar`
+    When I try `fp --require=test-cmd.php foo apple taco_del_mar`
     Then STDERR should contain:
       """
       Error: Invalid value specified for positional arg.
       """
 
-    When I try `wp --require=test-cmd.php foo apple 'cha cha cha' taco_del_mar`
+    When I try `fp --require=test-cmd.php foo apple 'cha cha cha' taco_del_mar`
     Then STDERR should contain:
       """
       Error: Invalid value specified for positional arg.
       """
 
-    When I run `wp --require=test-cmd.php foo apple 'cha cha cha'`
+    When I run `fp --require=test-cmd.php foo apple 'cha cha cha'`
     Then STDOUT should be YAML containing:
       """
       bar: apple
@@ -1014,32 +1014,32 @@ Feature: WP-CLI Commands
        *   - veggies
        * ---
        *
-       * @when before_wp_load
+       * @when before_fp_load
        */
       $foo = function( $args, $assoc_args ) {
         $out = array(
           'burrito' => isset( $args[0] ) ? $args[0] : '',
         );
-        WP_CLI::print_value( $out, array( 'format' => 'yaml' ) );
+        FP_CLI::print_value( $out, array( 'format' => 'yaml' ) );
       };
-      WP_CLI::add_command( 'foo', $foo );
+      FP_CLI::add_command( 'foo', $foo );
       """
 
-    When I run `wp --require=test-cmd.php foo`
+    When I run `fp --require=test-cmd.php foo`
     Then STDOUT should be YAML containing:
       """
       burrito:
       """
     And STDERR should be empty
 
-    When I run `wp --require=test-cmd.php foo beans`
+    When I run `fp --require=test-cmd.php foo beans`
     Then STDOUT should be YAML containing:
       """
       burrito: beans
       """
     And STDERR should be empty
 
-    When I try `wp --require=test-cmd.php foo apple`
+    When I try `fp --require=test-cmd.php foo apple`
     Then STDERR should be:
       """
       Error: Invalid value specified for positional arg.
@@ -1050,19 +1050,19 @@ Feature: WP-CLI Commands
     And a remove-comment.php file:
       """
       <?php
-      WP_CLI::add_hook( 'after_add_command:comment', function () {
-        $command = WP_CLI::get_root_command();
+      FP_CLI::add_hook( 'after_add_command:comment', function () {
+        $command = FP_CLI::get_root_command();
         $command->remove_subcommand( 'comment' );
       } );
       """
 
-    When I run `wp`
+    When I run `fp`
     Then STDOUT should contain:
       """
       Creates, updates, deletes, and moderates comments.
       """
 
-    When I run `wp --require=remove-comment.php`
+    When I run `fp --require=remove-comment.php`
     Then STDOUT should not contain:
       """
       Creates, updates, deletes, and moderates comments.
@@ -1074,21 +1074,21 @@ Feature: WP-CLI Commands
       """
       <?php
       /**
-       * @when before_wp_load
+       * @when before_fp_load
        */
       $before_invoke = function() {
-        WP_CLI::success( 'Invoked' );
+        FP_CLI::success( 'Invoked' );
       };
       $before_invoke_args = array( 'before_invoke' => function() {
-        WP_CLI::success( 'before invoke' );
+        FP_CLI::success( 'before invoke' );
       }, 'after_invoke' => function() {
-        WP_CLI::success( 'after invoke' );
+        FP_CLI::success( 'after invoke' );
       });
-      WP_CLI::add_command( 'before invoke', $before_invoke, $before_invoke_args );
-      WP_CLI::add_command( 'before-invoke', $before_invoke, $before_invoke_args );
+      FP_CLI::add_command( 'before invoke', $before_invoke, $before_invoke_args );
+      FP_CLI::add_command( 'before-invoke', $before_invoke, $before_invoke_args );
       """
 
-    When I run `wp --require=call-invoke.php before invoke`
+    When I run `fp --require=call-invoke.php before invoke`
     Then STDOUT should contain:
       """
       Success: before invoke
@@ -1096,7 +1096,7 @@ Feature: WP-CLI Commands
       Success: after invoke
       """
 
-    When I run `wp --require=call-invoke.php before-invoke`
+    When I run `fp --require=call-invoke.php before-invoke`
     Then STDOUT should contain:
       """
       Success: before invoke
@@ -1104,15 +1104,15 @@ Feature: WP-CLI Commands
       Success: after invoke
       """
 
-  Scenario: Default arguments should respect wp-cli.yml
-    Given a WP installation
-    And a wp-cli.yml file:
+  Scenario: Default arguments should respect fp-cli.yml
+    Given a FP installation
+    And a fp-cli.yml file:
       """
       post list:
         format: count
       """
 
-    When I run `wp post list`
+    When I run `fp post list`
     Then STDOUT should be a number
 
   Scenario: Use class passed as object
@@ -1130,54 +1130,54 @@ Feature: WP-CLI Commands
         /**
          * My awesome class method command
          *
-         * @when before_wp_load
+         * @when before_fp_load
          */
         function message( $args ) {
-          WP_CLI::success( $this->message );
+          FP_CLI::success( $this->message );
         }
       }
       $foo = new Foo_Class( 'bar' );
-      WP_CLI::add_command( 'instantiated-command', $foo );
+      FP_CLI::add_command( 'instantiated-command', $foo );
       """
 
-    When I run `wp --require=custom-cmd.php instantiated-command message`
+    When I run `fp --require=custom-cmd.php instantiated-command message`
     Then STDOUT should contain:
       """
       bar
       """
     And STDERR should be empty
 
-  Scenario: WP-CLI suggests matching commands when user entry contains typos
-    Given a WP installation
+  Scenario: FP-CLI suggests matching commands when user entry contains typos
+    Given a FP installation
 
-    When I try `wp clu`
+    When I try `fp clu`
     Then STDERR should contain:
       """
       Did you mean 'cli'?
       """
 
-    When I try `wp cli nfo`
+    When I try `fp cli nfo`
     Then STDERR should contain:
       """
       Did you mean 'info'?
       """
 
-    When I try `wp cli beyondlevenshteinthreshold`
+    When I try `fp cli beyondlevenshteinthreshold`
     Then STDERR should not contain:
       """
       Did you mean
       """
 
-  Scenario: WP-CLI suggests matching parameters when user entry contains typos
+  Scenario: FP-CLI suggests matching parameters when user entry contains typos
     Given an empty directory
 
-    When I try `wp cli info --quie`
+    When I try `fp cli info --quie`
     Then STDERR should contain:
       """
       Did you mean '--quiet'?
       """
 
-    When I try `wp cli info --forma=json`
+    When I try `fp cli info --forma=json`
     Then STDERR should contain:
       """
       Did you mean '--format'?
@@ -1188,15 +1188,15 @@ Feature: WP-CLI Commands
     And a abort-add-command.php file:
       """
       <?php
-      WP_CLI::add_hook( 'before_add_command:test-command-2', function ( $addition ) {
+      FP_CLI::add_hook( 'before_add_command:test-command-2', function ( $addition ) {
         $addition->abort( 'Testing hooks.' );
       } );
 
-      WP_CLI::add_command( 'test-command-1', function () {} );
-      WP_CLI::add_command( 'test-command-2', function () {} );
+      FP_CLI::add_command( 'test-command-1', function () {} );
+      FP_CLI::add_command( 'test-command-2', function () {} );
       """
 
-    When I try `wp --require=abort-add-command.php`
+    When I try `fp --require=abort-add-command.php`
     Then STDOUT should contain:
       """
       test-command-1
@@ -1219,20 +1219,20 @@ Feature: WP-CLI Commands
       class TestCommand {
       }
 
-      WP_CLI::add_hook( 'after_add_command:test-command', function () {
-        WP_CLI::add_command( 'test-command sub-command', function () {} );
+      FP_CLI::add_hook( 'after_add_command:test-command', function () {
+        FP_CLI::add_command( 'test-command sub-command', function () {} );
       } );
 
-      WP_CLI::add_command( 'test-command', 'TestCommand' );
+      FP_CLI::add_command( 'test-command', 'TestCommand' );
       """
 
-    When I run `wp --require=add-dependent-command.php`
+    When I run `fp --require=add-dependent-command.php`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    When I run `wp --require=add-dependent-command.php help test-command`
+    When I run `fp --require=add-dependent-command.php help test-command`
     Then STDOUT should contain:
       """
       sub-command
@@ -1246,26 +1246,26 @@ Feature: WP-CLI Commands
       class TestCommand {
       }
 
-      WP_CLI::add_command( 'test-command sub-command', function () {} );
+      FP_CLI::add_command( 'test-command sub-command', function () {} );
 
-      WP_CLI::add_command( 'test-command', 'TestCommand' );
+      FP_CLI::add_command( 'test-command', 'TestCommand' );
       """
 
-    When I run `wp --require=add-deferred-command.php`
+    When I run `fp --require=add-deferred-command.php`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    When I run `wp --require=add-deferred-command.php help test-command`
+    When I run `fp --require=add-deferred-command.php help test-command`
     Then STDOUT should contain:
       """
       sub-command
       """
 
   Scenario: Command additions should work as plugins
-    Given a WP installation
-    And a wp-content/plugins/test-cli/command.php file:
+    Given a FP installation
+    And a fp-content/plugins/test-cli/command.php file:
       """
       <?php
       // Plugin Name: Test CLI Help
@@ -1274,39 +1274,39 @@ Feature: WP-CLI Commands
       }
 
       function test_function() {
-        \WP_CLI::success( 'unknown-parent child-command' );
+        \FP_CLI::success( 'unknown-parent child-command' );
       }
 
-      WP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
+      FP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
 
-      WP_CLI::add_command( 'test-command sub-command', function () { \WP_CLI::success( 'test-command sub-command' ); } );
+      FP_CLI::add_command( 'test-command sub-command', function () { \FP_CLI::success( 'test-command sub-command' ); } );
 
-      WP_CLI::add_command( 'test-command', 'TestCommand' );
+      FP_CLI::add_command( 'test-command', 'TestCommand' );
       """
-    And I run `wp plugin activate test-cli`
+    And I run `fp plugin activate test-cli`
 
-    # TODO: Throwing deprecations with PHP 8.1+ and WP < 5.9
-    When I try `wp`
+    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
+    When I try `fp`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and WP < 5.9
-    When I try `wp help test-command`
+    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
+    When I try `fp help test-command`
     Then STDOUT should contain:
       """
       sub-command
       """
 
-    When I run `wp test-command sub-command`
+    When I run `fp test-command sub-command`
     Then STDOUT should contain:
       """
       Success: test-command sub-command
       """
     And STDERR should be empty
 
-    When I run `wp unknown-parent child-command`
+    When I run `fp unknown-parent child-command`
     Then STDOUT should contain:
       """
       Success: unknown-parent child-command
@@ -1314,8 +1314,8 @@ Feature: WP-CLI Commands
     And STDERR should be empty
 
   Scenario: Command additions should work as must-use plugins
-    Given a WP installation
-    And a wp-content/mu-plugins/test-cli.php file:
+    Given a FP installation
+    And a fp-content/mu-plugins/test-cli.php file:
       """
       <?php
       // Plugin Name: Test CLI Help
@@ -1324,47 +1324,47 @@ Feature: WP-CLI Commands
       }
 
       function test_function() {
-        \WP_CLI::success( 'unknown-parent child-command' );
+        \FP_CLI::success( 'unknown-parent child-command' );
       }
 
-      WP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
+      FP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
 
-      WP_CLI::add_command( 'test-command sub-command', function () { \WP_CLI::success( 'test-command sub-command' ); } );
+      FP_CLI::add_command( 'test-command sub-command', function () { \FP_CLI::success( 'test-command sub-command' ); } );
 
-      WP_CLI::add_command( 'test-command', 'TestCommand' );
+      FP_CLI::add_command( 'test-command', 'TestCommand' );
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and WP < 5.9
-    When I try `wp`
+    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
+    When I try `fp`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and WP < 5.9
-    When I try `wp help test-command`
+    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
+    When I try `fp help test-command`
     Then STDOUT should contain:
       """
       sub-command
       """
 
-    When I run `wp test-command sub-command`
+    When I run `fp test-command sub-command`
     Then STDOUT should contain:
       """
       Success: test-command sub-command
       """
     And STDERR should be empty
 
-    When I run `wp unknown-parent child-command`
+    When I run `fp unknown-parent child-command`
     Then STDOUT should contain:
       """
       Success: unknown-parent child-command
       """
     And STDERR should be empty
 
-  Scenario: Command additions should work when registered on after_wp_load
-    Given a WP installation
-    And a wp-content/mu-plugins/test-cli.php file:
+  Scenario: Command additions should work when registered on after_fp_load
+    Given a FP installation
+    And a fp-content/mu-plugins/test-cli.php file:
       """
       <?php
       // Plugin Name: Test CLI Help
@@ -1373,123 +1373,123 @@ Feature: WP-CLI Commands
       }
 
       function test_function() {
-        \WP_CLI::success( 'unknown-parent child-command' );
+        \FP_CLI::success( 'unknown-parent child-command' );
       }
 
-      WP_CLI::add_hook( 'after_wp_load', function(){
-        WP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
+      FP_CLI::add_hook( 'after_fp_load', function(){
+        FP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
 
-        WP_CLI::add_command( 'test-command sub-command', function () { \WP_CLI::success( 'test-command sub-command' ); } );
+        FP_CLI::add_command( 'test-command sub-command', function () { \FP_CLI::success( 'test-command sub-command' ); } );
 
-        WP_CLI::add_command( 'test-command', 'TestCommand' );
+        FP_CLI::add_command( 'test-command', 'TestCommand' );
       });
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and WP < 5.9
-    When I try `wp`
+    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
+    When I try `fp`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and WP < 5.9
-    When I try `wp help test-command`
+    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
+    When I try `fp help test-command`
     Then STDOUT should contain:
       """
       sub-command
       """
 
-    When I run `wp test-command sub-command`
+    When I run `fp test-command sub-command`
     Then STDOUT should contain:
       """
       Success: test-command sub-command
       """
     And STDERR should be empty
 
-    When I run `wp unknown-parent child-command`
+    When I run `fp unknown-parent child-command`
     Then STDOUT should contain:
       """
       Success: unknown-parent child-command
       """
     And STDERR should be empty
 
-  Scenario: The command should fire on `after_wp_load`
-    Given a WP installation
+  Scenario: The command should fire on `after_fp_load`
+    Given a FP installation
     And a custom-cmd.php file:
       """
       <?php
       /**
-       * @when before_wp_load
+       * @when before_fp_load
        */
-      class Custom_Command_Class extends WP_CLI_Command {
+      class Custom_Command_Class extends FP_CLI_Command {
           /**
-           * @when after_wp_load
+           * @when after_fp_load
            */
-          public function after_wp_load() {
+          public function after_fp_load() {
              var_dump( function_exists( 'home_url' ) );
           }
-          public function before_wp_load() {
+          public function before_fp_load() {
              var_dump( function_exists( 'home_url' ) );
           }
       }
-      WP_CLI::add_command( 'command', 'Custom_Command_Class' );
+      FP_CLI::add_command( 'command', 'Custom_Command_Class' );
       """
-    And a wp-cli.yml file:
+    And a fp-cli.yml file:
       """
       require:
         - custom-cmd.php
       """
 
-    When I run `wp command after_wp_load`
+    When I run `fp command after_fp_load`
     Then STDOUT should contain:
       """
       bool(true)
       """
     And the return code should be 0
 
-    When I run `wp command before_wp_load`
+    When I run `fp command before_fp_load`
     Then STDOUT should contain:
       """
       bool(false)
       """
     And the return code should be 0
 
-    When I try `wp command after_wp_load --path=/tmp`
+    When I try `fp command after_fp_load --path=/tmp`
     Then STDERR should contain:
       """
-      Error: This does not seem to be a WordPress installation.
+      Error: This does not seem to be a FinPress installation.
       """
     And the return code should be 1
 
-  Scenario: The command should fire on `before_wp_load`
-    Given a WP installation
+  Scenario: The command should fire on `before_fp_load`
+    Given a FP installation
     And a custom-cmd.php file:
       """
       <?php
       /**
-       * @when after_wp_load
+       * @when after_fp_load
        */
-      class Custom_Command_Class extends WP_CLI_Command {
+      class Custom_Command_Class extends FP_CLI_Command {
           /**
-           * @when before_wp_load
+           * @when before_fp_load
            */
-          public function before_wp_load() {
+          public function before_fp_load() {
              var_dump( function_exists( 'home_url' ) );
           }
 
-          public function after_wp_load() {
+          public function after_fp_load() {
              var_dump( function_exists( 'home_url' ) );
           }
       }
-      WP_CLI::add_command( 'command', 'Custom_Command_Class' );
+      FP_CLI::add_command( 'command', 'Custom_Command_Class' );
       """
-    And a wp-cli.yml file:
+    And a fp-cli.yml file:
       """
       require:
         - custom-cmd.php
       """
 
-    When I run `wp command before_wp_load`
+    When I run `fp command before_fp_load`
     Then STDERR should be empty
     And STDOUT should contain:
       """
@@ -1497,7 +1497,7 @@ Feature: WP-CLI Commands
       """
     And the return code should be 0
 
-    When I run `wp command after_wp_load`
+    When I run `fp command after_fp_load`
     Then STDERR should be empty
     And STDOUT should contain:
       """
@@ -1506,40 +1506,40 @@ Feature: WP-CLI Commands
     And the return code should be 0
 
   Scenario: Command hook should fires as expected on __invoke()
-    Given a WP installation
+    Given a FP installation
     And a custom-cmd.php file:
       """
       <?php
       /**
-       * @when before_wp_load
+       * @when before_fp_load
        */
-      class Custom_Command_Class extends WP_CLI_Command {
+      class Custom_Command_Class extends FP_CLI_Command {
           /**
-           * @when after_wp_load
+           * @when after_fp_load
            */
           public function __invoke() {
              var_dump( function_exists( 'home_url' ) );
           }
       }
-      WP_CLI::add_command( 'command', 'Custom_Command_Class' );
+      FP_CLI::add_command( 'command', 'Custom_Command_Class' );
       """
-    And a wp-cli.yml file:
+    And a fp-cli.yml file:
       """
       require:
         - custom-cmd.php
       """
 
-    When I run `wp command`
+    When I run `fp command`
     Then STDOUT should contain:
       """
       bool(true)
       """
     And the return code should be 0
 
-    When I try `wp command --path=/tmp`
+    When I try `fp command --path=/tmp`
     Then STDERR should contain:
       """
-      Error: This does not seem to be a WordPress installation.
+      Error: This does not seem to be a FinPress installation.
       """
     And the return code should be 1
 
@@ -1551,11 +1551,11 @@ Feature: WP-CLI Commands
       /**
        * My Command Namespace Description.
        */
-      class My_Command_Namespace extends \WP_CLI\Dispatcher\CommandNamespace {}
-      WP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
+      class My_Command_Namespace extends \FP_CLI\Dispatcher\CommandNamespace {}
+      FP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
       """
 
-    When I run `wp help --require=command-namespace.php`
+    When I run `fp help --require=command-namespace.php`
     Then STDOUT should contain:
       """
       my-namespaced-command
@@ -1574,17 +1574,17 @@ Feature: WP-CLI Commands
       /**
        * My Actual Namespaced Command.
        */
-      class My_Namespaced_Command extends WP_CLI_Command {}
-      WP_CLI::add_command( 'my-namespaced-command', 'My_Namespaced_Command' );
+      class My_Namespaced_Command extends FP_CLI_Command {}
+      FP_CLI::add_command( 'my-namespaced-command', 'My_Namespaced_Command' );
 
       /**
        * My Command Namespace Description.
        */
-      class My_Command_Namespace extends \WP_CLI\Dispatcher\CommandNamespace {}
-      WP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
+      class My_Command_Namespace extends \FP_CLI\Dispatcher\CommandNamespace {}
+      FP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
       """
 
-    When I run `wp help --require=command-namespace.php`
+    When I run `fp help --require=command-namespace.php`
     Then STDOUT should contain:
       """
       my-namespaced-command
@@ -1603,17 +1603,17 @@ Feature: WP-CLI Commands
       /**
        * My Command Namespace Description.
        */
-      class My_Command_Namespace extends \WP_CLI\Dispatcher\CommandNamespace {}
-      WP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
+      class My_Command_Namespace extends \FP_CLI\Dispatcher\CommandNamespace {}
+      FP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
 
       /**
        * My Actual Namespaced Command.
        */
-      class My_Namespaced_Command extends WP_CLI_Command {}
-      WP_CLI::add_command( 'my-namespaced-command', 'My_Namespaced_Command' );
+      class My_Namespaced_Command extends FP_CLI_Command {}
+      FP_CLI::add_command( 'my-namespaced-command', 'My_Namespaced_Command' );
       """
 
-    When I run `wp help --require=command-namespace.php`
+    When I run `fp help --require=command-namespace.php`
     Then STDOUT should contain:
       """
       my-namespaced-command
@@ -1632,11 +1632,11 @@ Feature: WP-CLI Commands
       /**
        * My Command Namespace Description.
        */
-      class My_Command_Namespace extends \WP_CLI\Dispatcher\CommandNamespace {}
-      WP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
+      class My_Command_Namespace extends \FP_CLI\Dispatcher\CommandNamespace {}
+      FP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
       """
 
-    When I run `wp --require=command-namespace.php my-namespaced-command`
+    When I run `fp --require=command-namespace.php my-namespaced-command`
     Then STDOUT should contain:
       """
       The namespace my-namespaced-command does not contain any usable commands in the current context.
@@ -1644,29 +1644,29 @@ Feature: WP-CLI Commands
     And STDERR should be empty
 
   Scenario: Late-registered command should appear in command usage
-    Given a WP installation
+    Given a FP installation
     And a test-cmd.php file:
       """
       <?php
-      WP_CLI::add_wp_hook( 'plugins_loaded', function(){
-        WP_CLI::add_command( 'core custom-subcommand', function() {});
+      FP_CLI::add_fp_hook( 'plugins_loaded', function(){
+        FP_CLI::add_command( 'core custom-subcommand', function() {});
       });
       """
-    And a wp-cli.yml file:
+    And a fp-cli.yml file:
       """
       require:
         - test-cmd.php
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and WP < 5.9
-    When I try `wp help core`
+    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
+    When I try `fp help core`
     Then STDOUT should contain:
       """
       custom-subcommand
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and WP < 5.9
-    When I try `wp core`
+    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
+    When I try `fp core`
     Then STDOUT should contain:
       """
       usage:

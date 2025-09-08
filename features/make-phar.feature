@@ -10,7 +10,7 @@ Feature: Check `utils/make-phar.php` output
       """
       <?php
 
-      WP_CLI::add_command( 'command example', 'Dealerdirect\Composer\Plugin\Installers\PHPCodeSniffer\Plugin' );
+      FP_CLI::add_command( 'command example', 'Dealerdirect\Composer\Plugin\Installers\PHPCodeSniffer\Plugin' );
       """
 
     When I try `php -derror_log='' {PHAR_PATH} --require=custom-cmd.php help`
@@ -33,9 +33,9 @@ Feature: Check `utils/make-phar.php` output
   Scenario: Phar renaming affects template path resolution
     Given an empty directory
     And a new Phar with the same version
-    And a WP installation
-    And I run `wp plugin install https://github.com/wp-cli-test/generic-example-plugin/releases/download/v0.1.1/generic-example-plugin.0.1.1.zip --activate`
-    And I run `wp plugin deactivate generic-example-plugin`
+    And a FP installation
+    And I run `fp plugin install https://github.com/fp-cli-test/generic-example-plugin/releases/download/v0.1.1/generic-example-plugin.0.1.1.zip --activate`
+    And I run `fp plugin deactivate generic-example-plugin`
 
     When I run `php {PHAR_PATH} plugin status generic-example-plugin`
     Then STDOUT should contain:
@@ -49,8 +49,8 @@ Feature: Check `utils/make-phar.php` output
       """
     And STDERR should be empty
 
-    When I run `cp {PHAR_PATH} wp`
-    And I try `php wp plugin status generic-example-plugin`
+    When I run `cp {PHAR_PATH} fp`
+    And I try `php fp plugin status generic-example-plugin`
     Then STDERR should not contain:
       """
       Error: Couldn't find plugin-status.mustache

@@ -1,23 +1,23 @@
-Feature: Install WP-CLI packages
+Feature: Install FP-CLI packages
 
   Background:
-    When I run `wp package path`
+    When I run `fp package path`
     Then save STDOUT as {PACKAGE_PATH}
 
-  Scenario: Install a package requiring a WP-CLI version that doesn't match
+  Scenario: Install a package requiring a FP-CLI version that doesn't match
     Given an empty directory
     And a new Phar with version "2.10.0"
     And a path-command/command.php file:
       """
       <?php
-      WP_CLI::add_command( 'community-command', function(){
-        WP_CLI::success( "success!" );
-      }, array( 'when' => 'before_wp_load' ) );
+      FP_CLI::add_command( 'community-command', function(){
+        FP_CLI::success( "success!" );
+      }, array( 'when' => 'before_fp_load' ) );
       """
     And a path-command/composer.json file:
       """
       {
-        "name": "wp-cli/community-command",
+        "name": "fp-cli/community-command",
         "description": "A demo community command.",
         "license": "MIT",
         "minimum-stability": "dev",
@@ -25,7 +25,7 @@ Feature: Install WP-CLI packages
           "files": [ "command.php" ]
         },
         "require": {
-          "wp-cli/wp-cli": ">=2.11.0"
+          "fp-cli/fp-cli": ">=2.11.0"
         },
         "require-dev": {
           "behat/behat": "~2.5"
@@ -40,11 +40,11 @@ Feature: Install WP-CLI packages
       """
     And STDOUT should contain:
       """
-      wp-cli/community-command dev-
+      fp-cli/community-command dev-
       """
     And STDOUT should contain:
       """
-      wp-cli/wp-cli >=2.11.0 -> satisfiable by
+      fp-cli/fp-cli >=2.11.0 -> satisfiable by
       """
     And STDERR should contain:
       """
@@ -58,20 +58,20 @@ Feature: Install WP-CLI packages
       "version": "2.10.0",
       """
 
-  Scenario: Install a package requiring a WP-CLI version that does match
+  Scenario: Install a package requiring a FP-CLI version that does match
     Given an empty directory
     And a new Phar with version "2.11.0"
     And a path-command/command.php file:
       """
       <?php
-      WP_CLI::add_command( 'community-command', function(){
-        WP_CLI::success( "success!" );
-      }, array( 'when' => 'before_wp_load' ) );
+      FP_CLI::add_command( 'community-command', function(){
+        FP_CLI::success( "success!" );
+      }, array( 'when' => 'before_fp_load' ) );
       """
     And a path-command/composer.json file:
       """
       {
-        "name": "wp-cli/community-command",
+        "name": "fp-cli/community-command",
         "description": "A demo community command.",
         "license": "MIT",
         "minimum-stability": "dev",
@@ -79,7 +79,7 @@ Feature: Install WP-CLI packages
           "files": [ "command.php" ]
         },
         "require": {
-          "wp-cli/wp-cli": ">=2.10.0"
+          "fp-cli/fp-cli": ">=2.10.0"
         },
         "require-dev": {
           "behat/behat": "~2.5"
@@ -101,20 +101,20 @@ Feature: Install WP-CLI packages
       "version": "2.11.0",
       """
 
-  Scenario: Install a package requiring a WP-CLI alpha version that does match
+  Scenario: Install a package requiring a FP-CLI alpha version that does match
     Given an empty directory
     And a new Phar with version "2.12.0-alpha-90ecad6"
     And a path-command/command.php file:
       """
       <?php
-      WP_CLI::add_command( 'community-command', function(){
-        WP_CLI::success( "success!" );
-      }, array( 'when' => 'before_wp_load' ) );
+      FP_CLI::add_command( 'community-command', function(){
+        FP_CLI::success( "success!" );
+      }, array( 'when' => 'before_fp_load' ) );
       """
     And a path-command/composer.json file:
       """
       {
-        "name": "wp-cli/community-command",
+        "name": "fp-cli/community-command",
         "description": "A demo community command.",
         "license": "MIT",
         "minimum-stability": "dev",
@@ -122,7 +122,7 @@ Feature: Install WP-CLI packages
           "files": [ "command.php" ]
         },
         "require": {
-          "wp-cli/wp-cli": ">=2.11.0"
+          "fp-cli/fp-cli": ">=2.11.0"
         },
         "require-dev": {
           "behat/behat": "~2.5"

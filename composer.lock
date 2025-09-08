@@ -2580,27 +2580,27 @@
             "time": "2024-11-10T20:33:58+00:00"
         },
         {
-            "name": "wp-cli/cache-command",
+            "name": "fp-cli/cache-command",
             "version": "v2.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/cache-command.git",
+                "url": "https://github.com/fp-cli/cache-command.git",
                 "reference": "14f76b0bc8f9fa0a680e9c70e18fcf627774d055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/cache-command/zipball/14f76b0bc8f9fa0a680e9c70e18fcf627774d055",
+                "url": "https://api.github.com/repos/fp-cli/cache-command/zipball/14f76b0bc8f9fa0a680e9c70e18fcf627774d055",
                 "reference": "14f76b0bc8f9fa0a680e9c70e18fcf627774d055",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -2651,35 +2651,35 @@
                 }
             ],
             "description": "Manages object and transient caches.",
-            "homepage": "https://github.com/wp-cli/cache-command",
+            "homepage": "https://github.com/fp-cli/cache-command",
             "support": {
-                "issues": "https://github.com/wp-cli/cache-command/issues",
-                "source": "https://github.com/wp-cli/cache-command/tree/v2.2.0"
+                "issues": "https://github.com/fp-cli/cache-command/issues",
+                "source": "https://github.com/fp-cli/cache-command/tree/v2.2.0"
             },
             "time": "2025-05-06T01:43:20+00:00"
         },
         {
-            "name": "wp-cli/checksum-command",
+            "name": "fp-cli/checksum-command",
             "version": "v2.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/checksum-command.git",
+                "url": "https://github.com/fp-cli/checksum-command.git",
                 "reference": "39992dbd66835f8d5c2cc5bfeacf9d2c450cbafe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/checksum-command/zipball/39992dbd66835f8d5c2cc5bfeacf9d2c450cbafe",
+                "url": "https://api.github.com/repos/fp-cli/checksum-command/zipball/39992dbd66835f8d5c2cc5bfeacf9d2c450cbafe",
                 "reference": "39992dbd66835f8d5c2cc5bfeacf9d2c450cbafe",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -2710,36 +2710,36 @@
                 }
             ],
             "description": "Verifies file integrity by comparing to published checksums.",
-            "homepage": "https://github.com/wp-cli/checksum-command",
+            "homepage": "https://github.com/fp-cli/checksum-command",
             "support": {
-                "issues": "https://github.com/wp-cli/checksum-command/issues",
-                "source": "https://github.com/wp-cli/checksum-command/tree/v2.3.1"
+                "issues": "https://github.com/fp-cli/checksum-command/issues",
+                "source": "https://github.com/fp-cli/checksum-command/tree/v2.3.1"
             },
             "time": "2025-04-10T11:02:20+00:00"
         },
         {
-            "name": "wp-cli/config-command",
+            "name": "fp-cli/config-command",
             "version": "v2.3.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/config-command.git",
+                "url": "https://github.com/fp-cli/config-command.git",
                 "reference": "994b3dc9e8284fc978366920d5c5ae0dde3a004e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/config-command/zipball/994b3dc9e8284fc978366920d5c5ae0dde3a004e",
+                "url": "https://api.github.com/repos/fp-cli/config-command/zipball/994b3dc9e8284fc978366920d5c5ae0dde3a004e",
                 "reference": "994b3dc9e8284fc978366920d5c5ae0dde3a004e",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12",
-                "wp-cli/wp-config-transformer": "^1.4.0"
+                "fp-cli/fp-cli": "^2.12",
+                "fp-cli/fp-config-transformer": "^1.4.0"
             },
             "require-dev": {
-                "wp-cli/db-command": "^1.3 || ^2",
-                "wp-cli/wp-cli-tests": "^4.2.8"
+                "fp-cli/db-command": "^1.3 || ^2",
+                "fp-cli/fp-cli-tests": "^4.2.8"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -2783,40 +2783,40 @@
                     "homepage": "https://www.alainschlesser.com"
                 }
             ],
-            "description": "Generates and reads the wp-config.php file.",
-            "homepage": "https://github.com/wp-cli/config-command",
+            "description": "Generates and reads the fp-config.php file.",
+            "homepage": "https://github.com/fp-cli/config-command",
             "support": {
-                "issues": "https://github.com/wp-cli/config-command/issues",
-                "source": "https://github.com/wp-cli/config-command/tree/v2.3.8"
+                "issues": "https://github.com/fp-cli/config-command/issues",
+                "source": "https://github.com/fp-cli/config-command/tree/v2.3.8"
             },
             "time": "2025-04-11T09:37:43+00:00"
         },
         {
-            "name": "wp-cli/core-command",
+            "name": "fp-cli/core-command",
             "version": "v2.1.21",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/core-command.git",
+                "url": "https://github.com/fp-cli/core-command.git",
                 "reference": "f157fb37dae1d13fe7318452f932917161e83e53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/core-command/zipball/f157fb37dae1d13fe7318452f932917161e83e53",
+                "url": "https://api.github.com/repos/fp-cli/core-command/zipball/f157fb37dae1d13fe7318452f932917161e83e53",
                 "reference": "f157fb37dae1d13fe7318452f932917161e83e53",
                 "shasum": ""
             },
             "require": {
                 "composer/semver": "^1.4 || ^2 || ^3",
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/checksum-command": "^1 || ^2",
-                "wp-cli/db-command": "^1.3 || ^2",
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^5"
+                "fp-cli/checksum-command": "^1 || ^2",
+                "fp-cli/db-command": "^1.3 || ^2",
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^5"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -2854,38 +2854,38 @@
                     "homepage": "https://runcommand.io"
                 }
             ],
-            "description": "Downloads, installs, updates, and manages a WordPress installation.",
-            "homepage": "https://github.com/wp-cli/core-command",
+            "description": "Downloads, installs, updates, and manages a FinPress installation.",
+            "homepage": "https://github.com/fp-cli/core-command",
             "support": {
-                "issues": "https://github.com/wp-cli/core-command/issues",
-                "source": "https://github.com/wp-cli/core-command/tree/v2.1.21"
+                "issues": "https://github.com/fp-cli/core-command/issues",
+                "source": "https://github.com/fp-cli/core-command/tree/v2.1.21"
             },
             "time": "2025-07-08T17:31:39+00:00"
         },
         {
-            "name": "wp-cli/cron-command",
+            "name": "fp-cli/cron-command",
             "version": "v2.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/cron-command.git",
+                "url": "https://github.com/fp-cli/cron-command.git",
                 "reference": "6f450028a75ebd275f12cad62959a0709bf3e7c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/cron-command/zipball/6f450028a75ebd275f12cad62959a0709bf3e7c1",
+                "url": "https://api.github.com/repos/fp-cli/cron-command/zipball/6f450028a75ebd275f12cad62959a0709bf3e7c1",
                 "reference": "6f450028a75ebd275f12cad62959a0709bf3e7c1",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/eval-command": "^2.0",
-                "wp-cli/server-command": "^2.0",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/eval-command": "^2.0",
+                "fp-cli/server-command": "^2.0",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -2923,36 +2923,36 @@
                     "homepage": "https://runcommand.io"
                 }
             ],
-            "description": "Tests, runs, and deletes WP-Cron events; manages WP-Cron schedules.",
-            "homepage": "https://github.com/wp-cli/cron-command",
+            "description": "Tests, runs, and deletes FP-Cron events; manages FP-Cron schedules.",
+            "homepage": "https://github.com/fp-cli/cron-command",
             "support": {
-                "issues": "https://github.com/wp-cli/cron-command/issues",
-                "source": "https://github.com/wp-cli/cron-command/tree/v2.3.2"
+                "issues": "https://github.com/fp-cli/cron-command/issues",
+                "source": "https://github.com/fp-cli/cron-command/tree/v2.3.2"
             },
             "time": "2025-04-02T11:55:20+00:00"
         },
         {
-            "name": "wp-cli/db-command",
+            "name": "fp-cli/db-command",
             "version": "v2.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/db-command.git",
+                "url": "https://github.com/fp-cli/db-command.git",
                 "reference": "f857c91454d7092fa672bc388512a51752d9264a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/db-command/zipball/f857c91454d7092fa672bc388512a51752d9264a",
+                "url": "https://api.github.com/repos/fp-cli/db-command/zipball/f857c91454d7092fa672bc388512a51752d9264a",
                 "reference": "f857c91454d7092fa672bc388512a51752d9264a",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -2997,36 +2997,36 @@
                     "homepage": "https://runcommand.io"
                 }
             ],
-            "description": "Performs basic database operations using credentials stored in wp-config.php.",
-            "homepage": "https://github.com/wp-cli/db-command",
+            "description": "Performs basic database operations using credentials stored in fp-config.php.",
+            "homepage": "https://github.com/fp-cli/db-command",
             "support": {
-                "issues": "https://github.com/wp-cli/db-command/issues",
-                "source": "https://github.com/wp-cli/db-command/tree/v2.1.3"
+                "issues": "https://github.com/fp-cli/db-command/issues",
+                "source": "https://github.com/fp-cli/db-command/tree/v2.1.3"
             },
             "time": "2025-04-10T11:02:04+00:00"
         },
         {
-            "name": "wp-cli/embed-command",
+            "name": "fp-cli/embed-command",
             "version": "v2.0.18",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/embed-command.git",
+                "url": "https://github.com/fp-cli/embed-command.git",
                 "reference": "52f59a1dacf1d4a1c68fd685f27909e1f493816b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/embed-command/zipball/52f59a1dacf1d4a1c68fd685f27909e1f493816b",
+                "url": "https://api.github.com/repos/fp-cli/embed-command/zipball/52f59a1dacf1d4a1c68fd685f27909e1f493816b",
                 "reference": "52f59a1dacf1d4a1c68fd685f27909e1f493816b",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3051,7 +3051,7 @@
                     "embed-command.php"
                 ],
                 "psr-4": {
-                    "WP_CLI\\Embeds\\": "src/"
+                    "FP_CLI\\Embeds\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3065,39 +3065,39 @@
                 }
             ],
             "description": "Inspects oEmbed providers, clears embed cache, and more.",
-            "homepage": "https://github.com/wp-cli/embed-command",
+            "homepage": "https://github.com/fp-cli/embed-command",
             "support": {
-                "issues": "https://github.com/wp-cli/embed-command/issues",
-                "source": "https://github.com/wp-cli/embed-command/tree/v2.0.18"
+                "issues": "https://github.com/fp-cli/embed-command/issues",
+                "source": "https://github.com/fp-cli/embed-command/tree/v2.0.18"
             },
             "time": "2025-04-10T11:01:32+00:00"
         },
         {
-            "name": "wp-cli/entity-command",
+            "name": "fp-cli/entity-command",
             "version": "v2.8.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/entity-command.git",
+                "url": "https://github.com/fp-cli/entity-command.git",
                 "reference": "213611f8ab619ca137d983e9b987f7fbf1ac21d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/entity-command/zipball/213611f8ab619ca137d983e9b987f7fbf1ac21d4",
+                "url": "https://api.github.com/repos/fp-cli/entity-command/zipball/213611f8ab619ca137d983e9b987f7fbf1ac21d4",
                 "reference": "213611f8ab619ca137d983e9b987f7fbf1ac21d4",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/cache-command": "^1 || ^2",
-                "wp-cli/db-command": "^1.3 || ^2",
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/media-command": "^1.1 || ^2",
-                "wp-cli/super-admin-command": "^1 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/cache-command": "^1 || ^2",
+                "fp-cli/db-command": "^1.3 || ^2",
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/media-command": "^1.1 || ^2",
+                "fp-cli/super-admin-command": "^1 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3301,35 +3301,35 @@
                     "homepage": "https://runcommand.io"
                 }
             ],
-            "description": "Manage WordPress comments, menus, options, posts, sites, terms, and users.",
-            "homepage": "https://github.com/wp-cli/entity-command",
+            "description": "Manage FinPress comments, menus, options, posts, sites, terms, and users.",
+            "homepage": "https://github.com/fp-cli/entity-command",
             "support": {
-                "issues": "https://github.com/wp-cli/entity-command/issues",
-                "source": "https://github.com/wp-cli/entity-command/tree/v2.8.4"
+                "issues": "https://github.com/fp-cli/entity-command/issues",
+                "source": "https://github.com/fp-cli/entity-command/tree/v2.8.4"
             },
             "time": "2025-05-06T16:12:49+00:00"
         },
         {
-            "name": "wp-cli/eval-command",
+            "name": "fp-cli/eval-command",
             "version": "v2.2.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/eval-command.git",
+                "url": "https://github.com/fp-cli/eval-command.git",
                 "reference": "20ec428a7b9bc604fab0bd33ee8fa20662650455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/eval-command/zipball/20ec428a7b9bc604fab0bd33ee8fa20662650455",
+                "url": "https://api.github.com/repos/fp-cli/eval-command/zipball/20ec428a7b9bc604fab0bd33ee8fa20662650455",
                 "reference": "20ec428a7b9bc604fab0bd33ee8fa20662650455",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3360,40 +3360,40 @@
                 }
             ],
             "description": "Executes arbitrary PHP code or files.",
-            "homepage": "https://github.com/wp-cli/eval-command",
+            "homepage": "https://github.com/fp-cli/eval-command",
             "support": {
-                "issues": "https://github.com/wp-cli/eval-command/issues",
-                "source": "https://github.com/wp-cli/eval-command/tree/v2.2.6"
+                "issues": "https://github.com/fp-cli/eval-command/issues",
+                "source": "https://github.com/fp-cli/eval-command/tree/v2.2.6"
             },
             "time": "2024-11-24T17:28:06+00:00"
         },
         {
-            "name": "wp-cli/export-command",
+            "name": "fp-cli/export-command",
             "version": "v2.1.14",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/export-command.git",
+                "url": "https://github.com/fp-cli/export-command.git",
                 "reference": "2af32bf12c1bccd6561a215dbbafc2f272647ee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/export-command/zipball/2af32bf12c1bccd6561a215dbbafc2f272647ee8",
+                "url": "https://api.github.com/repos/fp-cli/export-command/zipball/2af32bf12c1bccd6561a215dbbafc2f272647ee8",
                 "reference": "2af32bf12c1bccd6561a215dbbafc2f272647ee8",
                 "shasum": ""
             },
             "require": {
                 "nb/oxymel": "~0.1.0",
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/db-command": "^1.3 || ^2",
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/import-command": "^1 || ^2",
-                "wp-cli/media-command": "^1 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/db-command": "^1.3 || ^2",
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/import-command": "^1 || ^2",
+                "fp-cli/media-command": "^1 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3422,40 +3422,40 @@
                     "homepage": "https://runcommand.io"
                 }
             ],
-            "description": "Exports WordPress content to a WXR file.",
-            "homepage": "https://github.com/wp-cli/export-command",
+            "description": "Exports FinPress content to a WXR file.",
+            "homepage": "https://github.com/fp-cli/export-command",
             "support": {
-                "issues": "https://github.com/wp-cli/export-command/issues",
-                "source": "https://github.com/wp-cli/export-command/tree/v2.1.14"
+                "issues": "https://github.com/fp-cli/export-command/issues",
+                "source": "https://github.com/fp-cli/export-command/tree/v2.1.14"
             },
             "time": "2025-04-02T15:29:08+00:00"
         },
         {
-            "name": "wp-cli/extension-command",
+            "name": "fp-cli/extension-command",
             "version": "v2.1.24",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/extension-command.git",
+                "url": "https://github.com/fp-cli/extension-command.git",
                 "reference": "d21a2f504ac43a86b6b08697669b5b0844748133"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/extension-command/zipball/d21a2f504ac43a86b6b08697669b5b0844748133",
+                "url": "https://api.github.com/repos/fp-cli/extension-command/zipball/d21a2f504ac43a86b6b08697669b5b0844748133",
                 "reference": "d21a2f504ac43a86b6b08697669b5b0844748133",
                 "shasum": ""
             },
             "require": {
                 "composer/semver": "^1.4 || ^2 || ^3",
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/cache-command": "^2.0",
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/language-command": "^2.0",
-                "wp-cli/scaffold-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^4.3.7"
+                "fp-cli/cache-command": "^2.0",
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/language-command": "^2.0",
+                "fp-cli/scaffold-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^4.3.7"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3521,24 +3521,24 @@
                 }
             ],
             "description": "Manages plugins and themes, including installs, activations, and updates.",
-            "homepage": "https://github.com/wp-cli/extension-command",
+            "homepage": "https://github.com/fp-cli/extension-command",
             "support": {
-                "issues": "https://github.com/wp-cli/extension-command/issues",
-                "source": "https://github.com/wp-cli/extension-command/tree/v2.1.24"
+                "issues": "https://github.com/fp-cli/extension-command/issues",
+                "source": "https://github.com/fp-cli/extension-command/tree/v2.1.24"
             },
             "time": "2025-05-06T19:17:53+00:00"
         },
         {
-            "name": "wp-cli/i18n-command",
+            "name": "fp-cli/i18n-command",
             "version": "v2.6.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/i18n-command.git",
+                "url": "https://github.com/fp-cli/i18n-command.git",
                 "reference": "5e73d417398993625331a9f69f6c2ef60f234070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/i18n-command/zipball/5e73d417398993625331a9f69f6c2ef60f234070",
+                "url": "https://api.github.com/repos/fp-cli/i18n-command/zipball/5e73d417398993625331a9f69f6c2ef60f234070",
                 "reference": "5e73d417398993625331a9f69f6c2ef60f234070",
                 "shasum": ""
             },
@@ -3546,17 +3546,17 @@
                 "eftec/bladeone": "3.52",
                 "gettext/gettext": "^4.8",
                 "mck89/peast": "^1.13.11",
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/scaffold-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^4.3.9"
+                "fp-cli/scaffold-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^4.3.9"
             },
             "suggest": {
                 "ext-json": "Used for reading and generating JSON translation files",
                 "ext-mbstring": "Used for calculating include/exclude matches in code extraction"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3576,7 +3576,7 @@
                     "i18n-command.php"
                 ],
                 "psr-4": {
-                    "WP_CLI\\I18n\\": "src/"
+                    "FP_CLI\\I18n\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3589,38 +3589,38 @@
                     "homepage": "https://pascalbirchler.com/"
                 }
             ],
-            "description": "Provides internationalization tools for WordPress projects.",
-            "homepage": "https://github.com/wp-cli/i18n-command",
+            "description": "Provides internationalization tools for FinPress projects.",
+            "homepage": "https://github.com/fp-cli/i18n-command",
             "support": {
-                "issues": "https://github.com/wp-cli/i18n-command/issues",
-                "source": "https://github.com/wp-cli/i18n-command/tree/v2.6.5"
+                "issues": "https://github.com/fp-cli/i18n-command/issues",
+                "source": "https://github.com/fp-cli/i18n-command/tree/v2.6.5"
             },
             "time": "2025-04-25T21:49:29+00:00"
         },
         {
-            "name": "wp-cli/import-command",
+            "name": "fp-cli/import-command",
             "version": "v2.0.14",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/import-command.git",
+                "url": "https://github.com/fp-cli/import-command.git",
                 "reference": "b2c48f3e51683e825738df62bf8ccc7004c5f0f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/import-command/zipball/b2c48f3e51683e825738df62bf8ccc7004c5f0f9",
+                "url": "https://api.github.com/repos/fp-cli/import-command/zipball/b2c48f3e51683e825738df62bf8ccc7004c5f0f9",
                 "reference": "b2c48f3e51683e825738df62bf8ccc7004c5f0f9",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/export-command": "^1 || ^2",
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/export-command": "^1 || ^2",
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3650,37 +3650,37 @@
                 }
             ],
             "description": "Imports content from a given WXR file.",
-            "homepage": "https://github.com/wp-cli/import-command",
+            "homepage": "https://github.com/fp-cli/import-command",
             "support": {
-                "issues": "https://github.com/wp-cli/import-command/issues",
-                "source": "https://github.com/wp-cli/import-command/tree/v2.0.14"
+                "issues": "https://github.com/fp-cli/import-command/issues",
+                "source": "https://github.com/fp-cli/import-command/tree/v2.0.14"
             },
             "time": "2025-04-02T16:47:25+00:00"
         },
         {
-            "name": "wp-cli/language-command",
+            "name": "fp-cli/language-command",
             "version": "v2.0.24",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/language-command.git",
+                "url": "https://github.com/fp-cli/language-command.git",
                 "reference": "1f1ca0ce3ee6cc46edfe06ee093cf3a57a131a18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/language-command/zipball/1f1ca0ce3ee6cc46edfe06ee093cf3a57a131a18",
+                "url": "https://api.github.com/repos/fp-cli/language-command/zipball/1f1ca0ce3ee6cc46edfe06ee093cf3a57a131a18",
                 "reference": "1f1ca0ce3ee6cc46edfe06ee093cf3a57a131a18",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/db-command": "^1.3 || ^2",
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^5"
+                "fp-cli/db-command": "^1.3 || ^2",
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^5"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3730,34 +3730,34 @@
                 }
             ],
             "description": "Installs, activates, and manages language packs.",
-            "homepage": "https://github.com/wp-cli/language-command",
+            "homepage": "https://github.com/fp-cli/language-command",
             "support": {
-                "issues": "https://github.com/wp-cli/language-command/issues",
-                "source": "https://github.com/wp-cli/language-command/tree/v2.0.24"
+                "issues": "https://github.com/fp-cli/language-command/issues",
+                "source": "https://github.com/fp-cli/language-command/tree/v2.0.24"
             },
             "time": "2025-07-08T17:50:14+00:00"
         },
         {
-            "name": "wp-cli/maintenance-mode-command",
+            "name": "fp-cli/maintenance-mode-command",
             "version": "v2.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/maintenance-mode-command.git",
+                "url": "https://github.com/fp-cli/maintenance-mode-command.git",
                 "reference": "b947e094e00b7b68c6376ec9bd03303515864062"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/maintenance-mode-command/zipball/b947e094e00b7b68c6376ec9bd03303515864062",
+                "url": "https://api.github.com/repos/fp-cli/maintenance-mode-command/zipball/b947e094e00b7b68c6376ec9bd03303515864062",
                 "reference": "b947e094e00b7b68c6376ec9bd03303515864062",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3776,7 +3776,7 @@
                     "maintenance-mode-command.php"
                 ],
                 "psr-4": {
-                    "WP_CLI\\MaintenanceMode\\": "src/"
+                    "FP_CLI\\MaintenanceMode\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3791,36 +3791,36 @@
                 }
             ],
             "description": "Activates, deactivates or checks the status of the maintenance mode of a site.",
-            "homepage": "https://github.com/wp-cli/maintenance-mode-command",
+            "homepage": "https://github.com/fp-cli/maintenance-mode-command",
             "support": {
-                "issues": "https://github.com/wp-cli/maintenance-mode-command/issues",
-                "source": "https://github.com/wp-cli/maintenance-mode-command/tree/v2.1.3"
+                "issues": "https://github.com/fp-cli/maintenance-mode-command/issues",
+                "source": "https://github.com/fp-cli/maintenance-mode-command/tree/v2.1.3"
             },
             "time": "2024-11-24T17:26:30+00:00"
         },
         {
-            "name": "wp-cli/media-command",
+            "name": "fp-cli/media-command",
             "version": "v2.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/media-command.git",
+                "url": "https://github.com/fp-cli/media-command.git",
                 "reference": "a810ea0e68473fce6a234e67c6c5f19bb820a753"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/media-command/zipball/a810ea0e68473fce6a234e67c6c5f19bb820a753",
+                "url": "https://api.github.com/repos/fp-cli/media-command/zipball/a810ea0e68473fce6a234e67c6c5f19bb820a753",
                 "reference": "a810ea0e68473fce6a234e67c6c5f19bb820a753",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/extension-command": "^2.0",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/extension-command": "^2.0",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3853,24 +3853,24 @@
                 }
             ],
             "description": "Imports files as attachments, regenerates thumbnails, or lists registered image sizes.",
-            "homepage": "https://github.com/wp-cli/media-command",
+            "homepage": "https://github.com/fp-cli/media-command",
             "support": {
-                "issues": "https://github.com/wp-cli/media-command/issues",
-                "source": "https://github.com/wp-cli/media-command/tree/v2.2.2"
+                "issues": "https://github.com/fp-cli/media-command/issues",
+                "source": "https://github.com/fp-cli/media-command/tree/v2.2.2"
             },
             "time": "2025-04-11T09:28:29+00:00"
         },
         {
-            "name": "wp-cli/mustangostang-spyc",
+            "name": "fp-cli/mustangostang-spyc",
             "version": "0.6.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/spyc.git",
+                "url": "https://github.com/fp-cli/spyc.git",
                 "reference": "6aa0b4da69ce9e9a2c8402dab8d43cf32c581cc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/spyc/zipball/6aa0b4da69ce9e9a2c8402dab8d43cf32c581cc7",
+                "url": "https://api.github.com/repos/fp-cli/spyc/zipball/6aa0b4da69ce9e9a2c8402dab8d43cf32c581cc7",
                 "reference": "6aa0b4da69ce9e9a2c8402dab8d43cf32c581cc7",
                 "shasum": ""
             },
@@ -3904,37 +3904,37 @@
                     "email": "vlad.andersen@gmail.com"
                 }
             ],
-            "description": "A simple YAML loader/dumper class for PHP (WP-CLI fork)",
+            "description": "A simple YAML loader/dumper class for PHP (FP-CLI fork)",
             "homepage": "https://github.com/mustangostang/spyc/",
             "support": {
-                "source": "https://github.com/wp-cli/spyc/tree/autoload"
+                "source": "https://github.com/fp-cli/spyc/tree/autoload"
             },
             "time": "2017-04-25T11:26:20+00:00"
         },
         {
-            "name": "wp-cli/package-command",
+            "name": "fp-cli/package-command",
             "version": "v2.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/package-command.git",
+                "url": "https://github.com/fp-cli/package-command.git",
                 "reference": "682d8c6bb30c782c3b09c015478c7cbe1cc727a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/package-command/zipball/682d8c6bb30c782c3b09c015478c7cbe1cc727a9",
+                "url": "https://api.github.com/repos/fp-cli/package-command/zipball/682d8c6bb30c782c3b09c015478c7cbe1cc727a9",
                 "reference": "682d8c6bb30c782c3b09c015478c7cbe1cc727a9",
                 "shasum": ""
             },
             "require": {
                 "composer/composer": "^2.2.25",
                 "ext-json": "*",
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/scaffold-command": "^1 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/scaffold-command": "^1 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -3968,25 +3968,25 @@
                     "homepage": "https://runcommand.io"
                 }
             ],
-            "description": "Lists, installs, and removes WP-CLI packages.",
-            "homepage": "https://github.com/wp-cli/package-command",
+            "description": "Lists, installs, and removes FP-CLI packages.",
+            "homepage": "https://github.com/fp-cli/package-command",
             "support": {
-                "issues": "https://github.com/wp-cli/package-command/issues",
-                "source": "https://github.com/wp-cli/package-command/tree/v2.6.0"
+                "issues": "https://github.com/fp-cli/package-command/issues",
+                "source": "https://github.com/fp-cli/package-command/tree/v2.6.0"
             },
             "time": "2025-04-11T09:28:45+00:00"
         },
         {
-            "name": "wp-cli/php-cli-tools",
+            "name": "fp-cli/php-cli-tools",
             "version": "v0.12.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/php-cli-tools.git",
+                "url": "https://github.com/fp-cli/php-cli-tools.git",
                 "reference": "34b83b4f700df8a4ec3fd17bf7e7e7d8ca5f28da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/34b83b4f700df8a4ec3fd17bf7e7e7d8ca5f28da",
+                "url": "https://api.github.com/repos/fp-cli/php-cli-tools/zipball/34b83b4f700df8a4ec3fd17bf7e7e7d8ca5f28da",
                 "reference": "34b83b4f700df8a4ec3fd17bf7e7e7d8ca5f28da",
                 "shasum": ""
             },
@@ -3995,7 +3995,7 @@
             },
             "require-dev": {
                 "roave/security-advisories": "dev-latest",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/fp-cli-tests": "^4"
             },
             "type": "library",
             "extra": {
@@ -4028,39 +4028,39 @@
                 }
             ],
             "description": "Console utilities for PHP",
-            "homepage": "http://github.com/wp-cli/php-cli-tools",
+            "homepage": "http://github.com/fp-cli/php-cli-tools",
             "keywords": [
                 "cli",
                 "console"
             ],
             "support": {
-                "issues": "https://github.com/wp-cli/php-cli-tools/issues",
-                "source": "https://github.com/wp-cli/php-cli-tools/tree/v0.12.5"
+                "issues": "https://github.com/fp-cli/php-cli-tools/issues",
+                "source": "https://github.com/fp-cli/php-cli-tools/tree/v0.12.5"
             },
             "time": "2025-03-26T16:13:46+00:00"
         },
         {
-            "name": "wp-cli/rewrite-command",
+            "name": "fp-cli/rewrite-command",
             "version": "v2.0.15",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/rewrite-command.git",
+                "url": "https://github.com/fp-cli/rewrite-command.git",
                 "reference": "277ec689b7c268680ff429f52558508622c9b34c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/rewrite-command/zipball/277ec689b7c268680ff429f52558508622c9b34c",
+                "url": "https://api.github.com/repos/fp-cli/rewrite-command/zipball/277ec689b7c268680ff429f52558508622c9b34c",
                 "reference": "277ec689b7c268680ff429f52558508622c9b34c",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -4093,34 +4093,34 @@
                 }
             ],
             "description": "Lists or flushes the site's rewrite rules, updates the permalink structure.",
-            "homepage": "https://github.com/wp-cli/rewrite-command",
+            "homepage": "https://github.com/fp-cli/rewrite-command",
             "support": {
-                "issues": "https://github.com/wp-cli/rewrite-command/issues",
-                "source": "https://github.com/wp-cli/rewrite-command/tree/v2.0.15"
+                "issues": "https://github.com/fp-cli/rewrite-command/issues",
+                "source": "https://github.com/fp-cli/rewrite-command/tree/v2.0.15"
             },
             "time": "2025-04-02T12:09:09+00:00"
         },
         {
-            "name": "wp-cli/role-command",
+            "name": "fp-cli/role-command",
             "version": "v2.0.16",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/role-command.git",
+                "url": "https://github.com/fp-cli/role-command.git",
                 "reference": "ed57fb5436b4d47954b07e56c734d19deb4fc491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/role-command/zipball/ed57fb5436b4d47954b07e56c734d19deb4fc491",
+                "url": "https://api.github.com/repos/fp-cli/role-command/zipball/ed57fb5436b4d47954b07e56c734d19deb4fc491",
                 "reference": "ed57fb5436b4d47954b07e56c734d19deb4fc491",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -4159,35 +4159,35 @@
                 }
             ],
             "description": "Adds, removes, lists, and resets roles and capabilities.",
-            "homepage": "https://github.com/wp-cli/role-command",
+            "homepage": "https://github.com/fp-cli/role-command",
             "support": {
-                "issues": "https://github.com/wp-cli/role-command/issues",
-                "source": "https://github.com/wp-cli/role-command/tree/v2.0.16"
+                "issues": "https://github.com/fp-cli/role-command/issues",
+                "source": "https://github.com/fp-cli/role-command/tree/v2.0.16"
             },
             "time": "2025-04-02T12:24:15+00:00"
         },
         {
-            "name": "wp-cli/scaffold-command",
+            "name": "fp-cli/scaffold-command",
             "version": "v2.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/scaffold-command.git",
+                "url": "https://github.com/fp-cli/scaffold-command.git",
                 "reference": "b4238ea12e768b3f15d10339a53a8642f82e1d2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/scaffold-command/zipball/b4238ea12e768b3f15d10339a53a8642f82e1d2b",
+                "url": "https://api.github.com/repos/fp-cli/scaffold-command/zipball/b4238ea12e768b3f15d10339a53a8642f82e1d2b",
                 "reference": "b4238ea12e768b3f15d10339a53a8642f82e1d2b",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -4225,37 +4225,37 @@
                 }
             ],
             "description": "Generates code for post types, taxonomies, blocks, plugins, child themes, etc.",
-            "homepage": "https://github.com/wp-cli/scaffold-command",
+            "homepage": "https://github.com/fp-cli/scaffold-command",
             "support": {
-                "issues": "https://github.com/wp-cli/scaffold-command/issues",
-                "source": "https://github.com/wp-cli/scaffold-command/tree/v2.5.0"
+                "issues": "https://github.com/fp-cli/scaffold-command/issues",
+                "source": "https://github.com/fp-cli/scaffold-command/tree/v2.5.0"
             },
             "time": "2025-04-11T09:29:34+00:00"
         },
         {
-            "name": "wp-cli/search-replace-command",
+            "name": "fp-cli/search-replace-command",
             "version": "v2.1.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/search-replace-command.git",
+                "url": "https://github.com/fp-cli/search-replace-command.git",
                 "reference": "65397a7bfdd5ba2cff26f3ab03ef0bcb916c0057"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/search-replace-command/zipball/65397a7bfdd5ba2cff26f3ab03ef0bcb916c0057",
+                "url": "https://api.github.com/repos/fp-cli/search-replace-command/zipball/65397a7bfdd5ba2cff26f3ab03ef0bcb916c0057",
                 "reference": "65397a7bfdd5ba2cff26f3ab03ef0bcb916c0057",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/db-command": "^1.3 || ^2",
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/db-command": "^1.3 || ^2",
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -4285,35 +4285,35 @@
                 }
             ],
             "description": "Searches/replaces strings in the database.",
-            "homepage": "https://github.com/wp-cli/search-replace-command",
+            "homepage": "https://github.com/fp-cli/search-replace-command",
             "support": {
-                "issues": "https://github.com/wp-cli/search-replace-command/issues",
-                "source": "https://github.com/wp-cli/search-replace-command/tree/v2.1.8"
+                "issues": "https://github.com/fp-cli/search-replace-command/issues",
+                "source": "https://github.com/fp-cli/search-replace-command/tree/v2.1.8"
             },
             "time": "2025-04-02T13:07:50+00:00"
         },
         {
-            "name": "wp-cli/server-command",
+            "name": "fp-cli/server-command",
             "version": "v2.0.15",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/server-command.git",
+                "url": "https://github.com/fp-cli/server-command.git",
                 "reference": "80a9243f94e0ac073f9bfdb516d2ac7e1fa01a71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/server-command/zipball/80a9243f94e0ac073f9bfdb516d2ac7e1fa01a71",
+                "url": "https://api.github.com/repos/fp-cli/server-command/zipball/80a9243f94e0ac073f9bfdb516d2ac7e1fa01a71",
                 "reference": "80a9243f94e0ac073f9bfdb516d2ac7e1fa01a71",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -4342,35 +4342,35 @@
                     "homepage": "https://runcommand.io"
                 }
             ],
-            "description": "Launches PHP's built-in web server for a specific WordPress installation.",
-            "homepage": "https://github.com/wp-cli/server-command",
+            "description": "Launches PHP's built-in web server for a specific FinPress installation.",
+            "homepage": "https://github.com/fp-cli/server-command",
             "support": {
-                "issues": "https://github.com/wp-cli/server-command/issues",
-                "source": "https://github.com/wp-cli/server-command/tree/v2.0.15"
+                "issues": "https://github.com/fp-cli/server-command/issues",
+                "source": "https://github.com/fp-cli/server-command/tree/v2.0.15"
             },
             "time": "2025-04-10T11:03:13+00:00"
         },
         {
-            "name": "wp-cli/shell-command",
+            "name": "fp-cli/shell-command",
             "version": "v2.0.16",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/shell-command.git",
+                "url": "https://github.com/fp-cli/shell-command.git",
                 "reference": "3af53a9f4b240e03e77e815b2ee10f229f1aa591"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/shell-command/zipball/3af53a9f4b240e03e77e815b2ee10f229f1aa591",
+                "url": "https://api.github.com/repos/fp-cli/shell-command/zipball/3af53a9f4b240e03e77e815b2ee10f229f1aa591",
                 "reference": "3af53a9f4b240e03e77e815b2ee10f229f1aa591",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -4400,35 +4400,35 @@
                 }
             ],
             "description": "Opens an interactive PHP console for running and testing PHP code.",
-            "homepage": "https://github.com/wp-cli/shell-command",
+            "homepage": "https://github.com/fp-cli/shell-command",
             "support": {
-                "issues": "https://github.com/wp-cli/shell-command/issues",
-                "source": "https://github.com/wp-cli/shell-command/tree/v2.0.16"
+                "issues": "https://github.com/fp-cli/shell-command/issues",
+                "source": "https://github.com/fp-cli/shell-command/tree/v2.0.16"
             },
             "time": "2025-04-11T09:39:33+00:00"
         },
         {
-            "name": "wp-cli/super-admin-command",
+            "name": "fp-cli/super-admin-command",
             "version": "v2.0.16",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/super-admin-command.git",
+                "url": "https://github.com/fp-cli/super-admin-command.git",
                 "reference": "54ac063c384743ee414806d42cb8c61c6aa1fa8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/super-admin-command/zipball/54ac063c384743ee414806d42cb8c61c6aa1fa8e",
+                "url": "https://api.github.com/repos/fp-cli/super-admin-command/zipball/54ac063c384743ee414806d42cb8c61c6aa1fa8e",
                 "reference": "54ac063c384743ee414806d42cb8c61c6aa1fa8e",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/entity-command": "^1.3 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/entity-command": "^1.3 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -4461,35 +4461,35 @@
                 }
             ],
             "description": "Lists, adds, or removes super admin users on a multisite installation.",
-            "homepage": "https://github.com/wp-cli/super-admin-command",
+            "homepage": "https://github.com/fp-cli/super-admin-command",
             "support": {
-                "issues": "https://github.com/wp-cli/super-admin-command/issues",
-                "source": "https://github.com/wp-cli/super-admin-command/tree/v2.0.16"
+                "issues": "https://github.com/fp-cli/super-admin-command/issues",
+                "source": "https://github.com/fp-cli/super-admin-command/tree/v2.0.16"
             },
             "time": "2025-04-02T13:07:32+00:00"
         },
         {
-            "name": "wp-cli/widget-command",
+            "name": "fp-cli/widget-command",
             "version": "v2.1.12",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/widget-command.git",
+                "url": "https://github.com/fp-cli/widget-command.git",
                 "reference": "73084053f7b32d92583e44d870b81f287beea6a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/widget-command/zipball/73084053f7b32d92583e44d870b81f287beea6a9",
+                "url": "https://api.github.com/repos/fp-cli/widget-command/zipball/73084053f7b32d92583e44d870b81f287beea6a9",
                 "reference": "73084053f7b32d92583e44d870b81f287beea6a9",
                 "shasum": ""
             },
             "require": {
-                "wp-cli/wp-cli": "^2.12"
+                "fp-cli/fp-cli": "^2.12"
             },
             "require-dev": {
-                "wp-cli/extension-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/extension-command": "^1.2 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
-            "type": "wp-cli-package",
+            "type": "fp-cli-package",
             "extra": {
                 "bundled": true,
                 "commands": [
@@ -4528,24 +4528,24 @@
                 }
             ],
             "description": "Adds, moves, and removes widgets; lists sidebars.",
-            "homepage": "https://github.com/wp-cli/widget-command",
+            "homepage": "https://github.com/fp-cli/widget-command",
             "support": {
-                "issues": "https://github.com/wp-cli/widget-command/issues",
-                "source": "https://github.com/wp-cli/widget-command/tree/v2.1.12"
+                "issues": "https://github.com/fp-cli/widget-command/issues",
+                "source": "https://github.com/fp-cli/widget-command/tree/v2.1.12"
             },
             "time": "2025-04-11T09:29:37+00:00"
         },
         {
-            "name": "wp-cli/wp-cli",
+            "name": "fp-cli/fp-cli",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/wp-cli.git",
+                "url": "https://github.com/fp-cli/fp-cli.git",
                 "reference": "ae3545998aa8d2197be3c040bcbee82c4e0e7e66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/ae3545998aa8d2197be3c040bcbee82c4e0e7e66",
+                "url": "https://api.github.com/repos/fp-cli/fp-cli/zipball/ae3545998aa8d2197be3c040bcbee82c4e0e7e66",
                 "reference": "ae3545998aa8d2197be3c040bcbee82c4e0e7e66",
                 "shasum": ""
             },
@@ -4554,17 +4554,17 @@
                 "mustache/mustache": "^3.0.0",
                 "php": ">=7.2.24 || ^8.0",
                 "symfony/finder": ">2.7",
-                "wp-cli/mustangostang-spyc": "^0.6.3",
-                "wp-cli/php-cli-tools": "~0.12.4"
+                "fp-cli/mustangostang-spyc": "^0.6.3",
+                "fp-cli/php-cli-tools": "~0.12.4"
             },
             "require-dev": {
                 "justinrainbow/json-schema": "^6.3",
                 "roave/security-advisories": "dev-latest",
-                "wp-cli/db-command": "^1.3 || ^2",
-                "wp-cli/entity-command": "^1.2 || ^2",
-                "wp-cli/extension-command": "^1.1 || ^2",
-                "wp-cli/package-command": "^1 || ^2",
-                "wp-cli/wp-cli-tests": "^4"
+                "fp-cli/db-command": "^1.3 || ^2",
+                "fp-cli/entity-command": "^1.2 || ^2",
+                "fp-cli/extension-command": "^1.1 || ^2",
+                "fp-cli/package-command": "^1 || ^2",
+                "fp-cli/fp-cli-tests": "^4"
             },
             "suggest": {
                 "ext-readline": "Include for a better --prompt implementation",
@@ -4572,8 +4572,8 @@
             },
             "default-branch": true,
             "bin": [
-                "bin/wp",
-                "bin/wp.bat"
+                "bin/fp",
+                "bin/fp.bat"
             ],
             "type": "library",
             "extra": {
@@ -4583,41 +4583,41 @@
             },
             "autoload": {
                 "psr-0": {
-                    "WP_CLI\\": "php/"
+                    "FP_CLI\\": "php/"
                 },
                 "classmap": [
-                    "php/class-wp-cli.php",
-                    "php/class-wp-cli-command.php"
+                    "php/class-fp-cli.php",
+                    "php/class-fp-cli-command.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "WP-CLI framework",
-            "homepage": "https://wp-cli.org",
+            "description": "FP-CLI framework",
+            "homepage": "https://fp-cli.org",
             "keywords": [
                 "cli",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "docs": "https://make.wordpress.org/cli/handbook/",
-                "issues": "https://github.com/wp-cli/wp-cli/issues",
-                "source": "https://github.com/wp-cli/wp-cli"
+                "docs": "https://make.finpress.org/cli/handbook/",
+                "issues": "https://github.com/fp-cli/fp-cli/issues",
+                "source": "https://github.com/fp-cli/fp-cli"
             },
             "time": "2025-08-25T09:19:00+00:00"
         },
         {
-            "name": "wp-cli/wp-config-transformer",
+            "name": "fp-cli/fp-config-transformer",
             "version": "v1.4.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/wp-config-transformer.git",
+                "url": "https://github.com/fp-cli/fp-config-transformer.git",
                 "reference": "b78cab1159b43eb5ee097e2cfafe5eab573d2a8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-config-transformer/zipball/b78cab1159b43eb5ee097e2cfafe5eab573d2a8a",
+                "url": "https://api.github.com/repos/fp-cli/fp-config-transformer/zipball/b78cab1159b43eb5ee097e2cfafe5eab573d2a8a",
                 "reference": "b78cab1159b43eb5ee097e2cfafe5eab573d2a8a",
                 "shasum": ""
             },
@@ -4625,7 +4625,7 @@
                 "php": "^5.6 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "wp-cli/wp-cli-tests": "^4.0"
+                "fp-cli/fp-cli-tests": "^4.0"
             },
             "type": "library",
             "extra": {
@@ -4635,7 +4635,7 @@
             },
             "autoload": {
                 "files": [
-                    "src/WPConfigTransformer.php"
+                    "src/FPConfigTransformer.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4648,11 +4648,11 @@
                     "email": "fjarrett@gmail.com"
                 }
             ],
-            "description": "Programmatically edit a wp-config.php file.",
-            "homepage": "https://github.com/wp-cli/wp-config-transformer",
+            "description": "Programmatically edit a fp-config.php file.",
+            "homepage": "https://github.com/fp-cli/fp-config-transformer",
             "support": {
-                "issues": "https://github.com/wp-cli/wp-config-transformer/issues",
-                "source": "https://github.com/wp-cli/wp-config-transformer/tree/v1.4.2"
+                "issues": "https://github.com/fp-cli/fp-config-transformer/issues",
+                "source": "https://github.com/fp-cli/fp-config-transformer/tree/v1.4.2"
             },
             "time": "2025-03-31T08:37:05+00:00"
         }
@@ -5364,16 +5364,16 @@
             "time": "2024-03-27T12:14:49+00:00"
         },
         {
-            "name": "php-stubs/wordpress-stubs",
+            "name": "php-stubs/finpress-stubs",
             "version": "v6.8.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-stubs/wordpress-stubs.git",
+                "url": "https://github.com/php-stubs/finpress-stubs.git",
                 "reference": "9c8e22e437463197c1ec0d5eaa9ddd4a0eb6d7f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/9c8e22e437463197c1ec0d5eaa9ddd4a0eb6d7f8",
+                "url": "https://api.github.com/repos/php-stubs/finpress-stubs/zipball/9c8e22e437463197c1ec0d5eaa9ddd4a0eb6d7f8",
                 "reference": "9c8e22e437463197c1ec0d5eaa9ddd4a0eb6d7f8",
                 "shasum": ""
             },
@@ -5389,28 +5389,28 @@
                 "phpstan/phpstan": "^2.1",
                 "phpunit/phpunit": "^9.5",
                 "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.1.1",
-                "wp-coding-standards/wpcs": "3.1.0 as 2.3.0"
+                "fp-coding-standards/fpcs": "3.1.0 as 2.3.0"
             },
             "suggest": {
                 "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
                 "symfony/polyfill-php80": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
-                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+                "szepeviktor/phpstan-finpress": "FinPress extensions for PHPStan"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "WordPress function and class declaration stubs for static analysis.",
-            "homepage": "https://github.com/php-stubs/wordpress-stubs",
+            "description": "FinPress function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/finpress-stubs",
             "keywords": [
                 "PHPStan",
                 "static analysis",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
-                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.8.2"
+                "issues": "https://github.com/php-stubs/finpress-stubs/issues",
+                "source": "https://github.com/php-stubs/finpress-stubs/tree/v6.8.2"
             },
             "time": "2025-07-16T06:41:00+00:00"
         },
@@ -6446,7 +6446,7 @@
                 "auth0/auth0-php": ">=8.0.0.0-beta1,<8.14",
                 "auth0/login": "<7.17",
                 "auth0/symfony": "<5.4",
-                "auth0/wordpress": "<5.3",
+                "auth0/finpress": "<5.3",
                 "automad/automad": "<2.0.0.0-alpha5",
                 "automattic/jetpack": "<9.8",
                 "awesome-support/awesome-support": "<=6.0.7",
@@ -6473,7 +6473,7 @@
                 "billz/raspap-webgui": "<=3.1.4",
                 "bk2k/bootstrap-package": ">=7.1,<7.1.2|>=8,<8.0.8|>=9,<9.0.4|>=9.1,<9.1.3|>=10,<10.0.10|>=11,<11.0.3",
                 "blueimp/jquery-file-upload": "==6.4.4",
-                "bmarshall511/wordpress_zero_spam": "<5.2.13",
+                "bmarshall511/finpress_zero_spam": "<5.2.13",
                 "bolt/bolt": "<3.7.2",
                 "bolt/core": "<=4.2",
                 "born05/craft-twofactorauthentication": "<3.3.4",
@@ -6544,7 +6544,7 @@
                 "desperado/xml-bundle": "<=0.1.7",
                 "dev-lancer/minecraft-motd-parser": "<=1.0.5",
                 "devgroup/dotplant": "<2020.09.14-dev",
-                "digimix/wp-svg-upload": "<=1",
+                "digimix/fp-svg-upload": "<=1",
                 "directmailteam/direct-mail": "<6.0.3|>=7,<7.0.3|>=8,<9.5.2",
                 "dl/yag": "<3.0.1",
                 "dmk/webkitpdf": "<1.1.4",
@@ -6733,7 +6733,7 @@
                 "jbartels/wec-map": "<3.0.3",
                 "jcbrand/converse.js": "<3.3.3",
                 "joelbutcher/socialstream": "<5.6|>=6,<6.2",
-                "johnbillion/wp-crontrol": "<1.16.2",
+                "johnbillion/fp-crontrol": "<1.16.2",
                 "joomla/application": "<1.0.13",
                 "joomla/archive": "<1.1.12|>=2,<2.0.1",
                 "joomla/database": ">=1,<2.2|>=3,<3.4",
@@ -6805,7 +6805,7 @@
                 "magento/project-community-edition": "<=2.0.2",
                 "magneto/core": "<1.9.4.4-dev",
                 "maikuolan/phpmussel": ">=1,<1.6",
-                "mainwp/mainwp": "<=4.4.3.3",
+                "mainfp/mainfp": "<=4.4.3.3",
                 "mantisbt/mantisbt": "<=2.26.3",
                 "marcwillmann/turn": "<0.3.3",
                 "matomo/matomo": "<1.11",
@@ -6850,7 +6850,7 @@
                 "munkireport/reportdata": "<3.5",
                 "munkireport/softwareupdate": "<1.6",
                 "mustache/mustache": ">=2,<2.14.1",
-                "mwdelaney/wp-enable-svg": "<=0.2",
+                "mwdelaney/fp-enable-svg": "<=0.2",
                 "namshi/jose": "<2.2",
                 "nasirkhan/laravel-starter": "<11.11",
                 "nategood/httpful": "<1",
@@ -7221,12 +7221,12 @@
                 "wintercms/winter": "<=1.2.3",
                 "wireui/wireui": "<1.19.3|>=2,<2.1.3",
                 "woocommerce/woocommerce": "<6.6|>=8.8,<8.8.5|>=8.9,<8.9.3",
-                "wp-cli/wp-cli": ">=0.12,<2.5",
-                "wp-graphql/wp-graphql": "<=1.14.5",
-                "wp-premium/gravityforms": "<2.4.21",
-                "wpanel/wpanel4-cms": "<=4.3.1",
-                "wpcloud/wp-stateless": "<3.2",
-                "wpglobus/wpglobus": "<=1.9.6",
+                "fp-cli/fp-cli": ">=0.12,<2.5",
+                "fp-graphql/fp-graphql": "<=1.14.5",
+                "fp-premium/gravityforms": "<2.4.21",
+                "fpanel/fpanel4-cms": "<=4.3.1",
+                "fpcloud/fp-stateless": "<3.2",
+                "fpglobus/fpglobus": "<=1.9.6",
                 "wwbn/avideo": "<14.3",
                 "xataface/xataface": "<3",
                 "xpressengine/xpressengine": "<3.0.15",
@@ -8770,22 +8770,22 @@
             "time": "2024-09-25T14:11:13+00:00"
         },
         {
-            "name": "szepeviktor/phpstan-wordpress",
+            "name": "szepeviktor/phpstan-finpress",
             "version": "v1.3.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/szepeviktor/phpstan-wordpress.git",
+                "url": "https://github.com/szepeviktor/phpstan-finpress.git",
                 "reference": "7f8cfe992faa96b6a33bbd75c7bace98864161e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/szepeviktor/phpstan-wordpress/zipball/7f8cfe992faa96b6a33bbd75c7bace98864161e7",
+                "url": "https://api.github.com/repos/szepeviktor/phpstan-finpress/zipball/7f8cfe992faa96b6a33bbd75c7bace98864161e7",
                 "reference": "7f8cfe992faa96b6a33bbd75c7bace98864161e7",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
-                "php-stubs/wordpress-stubs": "^4.7 || ^5.0 || ^6.0",
+                "php-stubs/finpress-stubs": "^4.7 || ^5.0 || ^6.0",
                 "phpstan/phpstan": "^1.10.31",
                 "symfony/polyfill-php73": "^1.12.0"
             },
@@ -8796,7 +8796,7 @@
                 "phpstan/phpstan-strict-rules": "^1.2",
                 "phpunit/phpunit": "^8.0 || ^9.0",
                 "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.0",
-                "wp-coding-standards/wpcs": "3.1.0 as 2.3.0"
+                "fp-coding-standards/fpcs": "3.1.0 as 2.3.0"
             },
             "suggest": {
                 "swissspidy/phpstan-no-private": "Detect usage of internal core functions, classes and methods"
@@ -8811,24 +8811,24 @@
             },
             "autoload": {
                 "psr-4": {
-                    "SzepeViktor\\PHPStan\\WordPress\\": "src/"
+                    "SzepeViktor\\PHPStan\\FinPress\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "WordPress extensions for PHPStan",
+            "description": "FinPress extensions for PHPStan",
             "keywords": [
                 "PHPStan",
                 "code analyse",
                 "code analysis",
                 "static analysis",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "issues": "https://github.com/szepeviktor/phpstan-wordpress/issues",
-                "source": "https://github.com/szepeviktor/phpstan-wordpress/tree/v1.3.5"
+                "issues": "https://github.com/szepeviktor/phpstan-finpress/issues",
+                "source": "https://github.com/szepeviktor/phpstan-finpress/tree/v1.3.5"
             },
             "time": "2024-06-28T22:27:19+00:00"
         },
@@ -8883,16 +8883,16 @@
             "time": "2024-03-03T12:36:25+00:00"
         },
         {
-            "name": "wp-cli/wp-cli-tests",
+            "name": "fp-cli/fp-cli-tests",
             "version": "v5.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/wp-cli-tests.git",
+                "url": "https://github.com/fp-cli/fp-cli-tests.git",
                 "reference": "ce7412d73b0f7573a2148db28cb3c4853a49e1b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli-tests/zipball/ce7412d73b0f7573a2148db28cb3c4853a49e1b8",
+                "url": "https://api.github.com/repos/fp-cli/fp-cli-tests/zipball/ce7412d73b0f7573a2148db28cb3c4853a49e1b8",
                 "reference": "ce7412d73b0f7573a2148db28cb3c4853a49e1b8",
                 "shasum": ""
             },
@@ -8909,12 +8909,12 @@
                 "phpstan/phpstan-phpunit": "^1.4",
                 "phpstan/phpstan-strict-rules": "^1.6",
                 "swissspidy/phpstan-no-private": "^0.2.1",
-                "szepeviktor/phpstan-wordpress": "^v1.3.5",
-                "wp-cli/config-command": "^1 || ^2",
-                "wp-cli/core-command": "^1 || ^2",
-                "wp-cli/eval-command": "^1 || ^2",
-                "wp-cli/wp-cli": "^2.12",
-                "wp-coding-standards/wpcs": "^3",
+                "szepeviktor/phpstan-finpress": "^v1.3.5",
+                "fp-cli/config-command": "^1 || ^2",
+                "fp-cli/core-command": "^1 || ^2",
+                "fp-cli/eval-command": "^1 || ^2",
+                "fp-cli/fp-cli": "^2.12",
+                "fp-coding-standards/fpcs": "^3",
                 "yoast/phpunit-polyfills": "^4.0.0"
             },
             "require-dev": {
@@ -8954,37 +8954,37 @@
             },
             "autoload": {
                 "psr-4": {
-                    "WP_CLI\\Tests\\": "src"
+                    "FP_CLI\\Tests\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "WP-CLI testing framework",
-            "homepage": "https://wp-cli.org",
+            "description": "FP-CLI testing framework",
+            "homepage": "https://fp-cli.org",
             "keywords": [
                 "cli",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "docs": "https://make.wordpress.org/cli/handbook/",
-                "issues": "https://github.com/wp-cli/wp-cli-tests/issues",
-                "source": "https://github.com/wp-cli/wp-cli-tests"
+                "docs": "https://make.finpress.org/cli/handbook/",
+                "issues": "https://github.com/fp-cli/fp-cli-tests/issues",
+                "source": "https://github.com/fp-cli/fp-cli-tests"
             },
             "time": "2025-07-28T07:57:44+00:00"
         },
         {
-            "name": "wp-coding-standards/wpcs",
+            "name": "fp-coding-standards/fpcs",
             "version": "3.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
+                "url": "https://github.com/FinPress/FinPress-Coding-Standards.git",
                 "reference": "d2421de7cec3274ae622c22c744de9a62c7925af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/d2421de7cec3274ae622c22c744de9a62c7925af",
+                "url": "https://api.github.com/repos/FinPress/FinPress-Coding-Standards/zipball/d2421de7cec3274ae622c22c744de9a62c7925af",
                 "reference": "d2421de7cec3274ae622c22c744de9a62c7925af",
                 "shasum": ""
             },
@@ -9017,20 +9017,20 @@
             "authors": [
                 {
                     "name": "Contributors",
-                    "homepage": "https://github.com/WordPress/WordPress-Coding-Standards/graphs/contributors"
+                    "homepage": "https://github.com/FinPress/FinPress-Coding-Standards/graphs/contributors"
                 }
             ],
-            "description": "PHP_CodeSniffer rules (sniffs) to enforce WordPress coding conventions",
+            "description": "PHP_CodeSniffer rules (sniffs) to enforce FinPress coding conventions",
             "keywords": [
                 "phpcs",
                 "standards",
                 "static analysis",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "issues": "https://github.com/WordPress/WordPress-Coding-Standards/issues",
-                "source": "https://github.com/WordPress/WordPress-Coding-Standards",
-                "wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki"
+                "issues": "https://github.com/FinPress/FinPress-Coding-Standards/issues",
+                "source": "https://github.com/FinPress/FinPress-Coding-Standards",
+                "wiki": "https://github.com/FinPress/FinPress-Coding-Standards/wiki"
             },
             "funding": [
                 {
@@ -9108,7 +9108,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "roave/security-advisories": 20,
-        "wp-cli/wp-cli": 20
+        "fp-cli/fp-cli": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

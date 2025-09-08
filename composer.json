@@ -1,52 +1,52 @@
 {
-  "name": "wp-cli/wp-cli-bundle",
-  "description": "WP-CLI bundle package with default commands.",
+  "name": "fp-cli/fp-cli-bundle",
+  "description": "FP-CLI bundle package with default commands.",
   "keywords": [
     "cli",
-    "wordpress"
+    "finpress"
   ],
-  "homepage": "https://wp-cli.org",
+  "homepage": "https://fp-cli.org",
   "license": "MIT",
   "require": {
     "php": ">=7.2.24",
-    "wp-cli/cache-command": "^2",
-    "wp-cli/checksum-command": "^2.1",
-    "wp-cli/config-command": "^2.1",
-    "wp-cli/core-command": "^2.1",
-    "wp-cli/cron-command": "^2",
-    "wp-cli/db-command": "^2",
-    "wp-cli/embed-command": "^2",
-    "wp-cli/entity-command": "^2",
-    "wp-cli/eval-command": "^2",
-    "wp-cli/export-command": "^2",
-    "wp-cli/extension-command": "^2.1",
-    "wp-cli/i18n-command": "^2",
-    "wp-cli/import-command": "^2",
-    "wp-cli/language-command": "^2",
-    "wp-cli/maintenance-mode-command": "^2",
-    "wp-cli/media-command": "^2",
-    "wp-cli/package-command": "^2.1",
-    "wp-cli/rewrite-command": "^2",
-    "wp-cli/role-command": "^2",
-    "wp-cli/scaffold-command": "^2",
-    "wp-cli/search-replace-command": "^2",
-    "wp-cli/server-command": "^2",
-    "wp-cli/shell-command": "^2",
-    "wp-cli/super-admin-command": "^2",
-    "wp-cli/widget-command": "^2",
-    "wp-cli/wp-cli": "dev-main"
+    "fp-cli/cache-command": "^2",
+    "fp-cli/checksum-command": "^2.1",
+    "fp-cli/config-command": "^2.1",
+    "fp-cli/core-command": "^2.1",
+    "fp-cli/cron-command": "^2",
+    "fp-cli/db-command": "^2",
+    "fp-cli/embed-command": "^2",
+    "fp-cli/entity-command": "^2",
+    "fp-cli/eval-command": "^2",
+    "fp-cli/export-command": "^2",
+    "fp-cli/extension-command": "^2.1",
+    "fp-cli/i18n-command": "^2",
+    "fp-cli/import-command": "^2",
+    "fp-cli/language-command": "^2",
+    "fp-cli/maintenance-mode-command": "^2",
+    "fp-cli/media-command": "^2",
+    "fp-cli/package-command": "^2.1",
+    "fp-cli/rewrite-command": "^2",
+    "fp-cli/role-command": "^2",
+    "fp-cli/scaffold-command": "^2",
+    "fp-cli/search-replace-command": "^2",
+    "fp-cli/server-command": "^2",
+    "fp-cli/shell-command": "^2",
+    "fp-cli/super-admin-command": "^2",
+    "fp-cli/widget-command": "^2",
+    "fp-cli/fp-cli": "dev-main"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
-    "wp-cli/wp-cli-tests": "^5"
+    "fp-cli/fp-cli-tests": "^5"
   },
   "suggest": {
-    "psy/psysh": "Enhanced `wp shell` functionality"
+    "psy/psysh": "Enhanced `fp shell` functionality"
   },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
-      "johnpbloch/wordpress-core-installer": true,
+      "johnpbloch/finpress-core-installer": true,
       "phpstan/extension-installer": true
     },
     "autoloader-suffix": "WpCliBundle",
@@ -63,7 +63,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "WP_CLI\\Maintenance\\": "utils/maintenance"
+      "FP_CLI\\Maintenance\\": "utils/maintenance"
     }
   },
   "minimum-stability": "dev",
@@ -87,8 +87,8 @@
     ]
   },
   "support": {
-    "issues": "https://github.com/wp-cli/wp-cli-bundle/issues",
-    "source": "https://github.com/wp-cli/wp-cli-bundle",
-    "docs": "https://make.wordpress.org/cli/handbook/"
+    "issues": "https://github.com/fp-cli/fp-cli-bundle/issues",
+    "source": "https://github.com/fp-cli/fp-cli-bundle",
+    "docs": "https://make.finpress.org/cli/handbook/"
   }
 }
