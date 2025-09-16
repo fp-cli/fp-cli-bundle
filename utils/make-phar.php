@@ -1,28 +1,28 @@
 <?php
 
-define( 'FP_CLI_BUNDLE_ROOT', rtrim( dirname( __DIR__ ), '/' ) );
+define( 'FIN_CLI_BUNDLE_ROOT', rtrim( dirname( __DIR__ ), '/' ) );
 
-if ( file_exists( FP_CLI_BUNDLE_ROOT . '/vendor/autoload.php' ) ) {
-	define( 'FP_CLI_BASE_PATH', FP_CLI_BUNDLE_ROOT );
-	define( 'FP_CLI_VENDOR_DIR', FP_CLI_BUNDLE_ROOT . '/vendor' );
-} elseif ( file_exists( dirname( dirname( FP_CLI_BUNDLE_ROOT ) ) . '/autoload.php' ) ) {
-	define( 'FP_CLI_BASE_PATH', dirname( dirname( dirname( FP_CLI_BUNDLE_ROOT ) ) ) );
-	define( 'FP_CLI_VENDOR_DIR', dirname( dirname( FP_CLI_BUNDLE_ROOT ) ) );
+if ( file_exists( FIN_CLI_BUNDLE_ROOT . '/vendor/autoload.php' ) ) {
+	define( 'FIN_CLI_BASE_PATH', FIN_CLI_BUNDLE_ROOT );
+	define( 'FIN_CLI_VENDOR_DIR', FIN_CLI_BUNDLE_ROOT . '/vendor' );
+} elseif ( file_exists( dirname( dirname( FIN_CLI_BUNDLE_ROOT ) ) . '/autoload.php' ) ) {
+	define( 'FIN_CLI_BASE_PATH', dirname( dirname( dirname( FIN_CLI_BUNDLE_ROOT ) ) ) );
+	define( 'FIN_CLI_VENDOR_DIR', dirname( dirname( FIN_CLI_BUNDLE_ROOT ) ) );
 } else {
 	fwrite( STDERR, 'Missing vendor/autoload.php' . PHP_EOL );
 	exit( 1 );
 }
 
-define( 'FP_CLI_ROOT', rtrim( FP_CLI_VENDOR_DIR, '/' ) . '/fp-cli/fp-cli' );
+define( 'FIN_CLI_ROOT', rtrim( FIN_CLI_VENDOR_DIR, '/' ) . '/fin-cli/fin-cli' );
 
-require FP_CLI_VENDOR_DIR . '/autoload.php';
-require FP_CLI_ROOT . '/php/utils.php';
+require FIN_CLI_VENDOR_DIR . '/autoload.php';
+require FIN_CLI_ROOT . '/php/utils.php';
 
 use Symfony\Component\Finder\Finder;
-use FP_CLI\Utils;
-use FP_CLI\Configurator;
+use FIN_CLI\Utils;
+use FIN_CLI\Configurator;
 
-$configurator = new Configurator( FP_CLI_BUNDLE_ROOT . '/utils/make-phar-spec.php' );
+$configurator = new Configurator( FIN_CLI_BUNDLE_ROOT . '/utils/make-phar-spec.php' );
 
 list( $args, $assoc_args, $runtime_config ) = $configurator->parse_args( array_slice( $GLOBALS['argv'], 1 ) );
 
@@ -37,21 +37,21 @@ define( 'BE_QUIET', isset( $runtime_config['quiet'] ) && $runtime_config['quiet'
 
 define( 'BUILD', isset( $runtime_config['build'] ) ? $runtime_config['build'] : '' );
 
-$current_version = trim( (string) file_get_contents( FP_CLI_ROOT . '/VERSION' ) );
+$current_version = trim( (string) file_get_contents( FIN_CLI_ROOT . '/VERSION' ) );
 
 if ( isset( $runtime_config['version'] ) ) {
 	$new_version = $runtime_config['version'];
 	$new_version = Utils\increment_version( $current_version, $new_version );
 
 	if ( isset( $runtime_config['store-version'] ) && $runtime_config['store-version'] ) {
-		file_put_contents( FP_CLI_ROOT . '/VERSION', $new_version );
+		file_put_contents( FIN_CLI_ROOT . '/VERSION', $new_version );
 	}
 
 	$current_version = $new_version;
 }
 
 function add_file( $phar, $path ) {
-	$key = str_replace( FP_CLI_BASE_PATH, '', $path );
+	$key = str_replace( FIN_CLI_BASE_PATH, '', $path );
 
 	if ( ! BE_QUIET ) {
 		echo "$key - $path" . PHP_EOL;
@@ -73,7 +73,7 @@ function add_file( $phar, $path ) {
 					'\/php-parallel-lint\/',
 					'\/nb\/oxymel\/',
 					'-command\/src\/',
-					'\/fp-cli\/[^\n]+?-command\/',
+					'\/fin-cli\/[^\n]+?-command\/',
 					'\/symfony\/(?:config|console|debug|dependency-injection|event-dispatcher|filesystem|translation|yaml)',
 					'\/(?:dealerdirect|myclabs|squizlabs|wimg)\/',
 					'\/yoast\/',
@@ -108,7 +108,7 @@ function add_file( $phar, $path ) {
 }
 
 function set_file_contents( $phar, $path, $content ) {
-	$key = str_replace( FP_CLI_BASE_PATH, '', $path );
+	$key = str_replace( FIN_CLI_BASE_PATH, '', $path );
 
 	if ( ! BE_QUIET ) {
 		echo "$key - $path" . PHP_EOL;
@@ -118,7 +118,7 @@ function set_file_contents( $phar, $path, $content ) {
 }
 
 function get_composer_versions( $current_version ) {
-	$composer_lock_path = FP_CLI_BUNDLE_ROOT . '/composer.lock';
+	$composer_lock_path = FIN_CLI_BUNDLE_ROOT . '/composer.lock';
 	$composer_lock_file = file_get_contents( $composer_lock_path );
 	if ( ! $composer_lock_file ) {
 		fwrite( STDERR, sprintf( "Warning: Failed to read '%s'." . PHP_EOL, $composer_lock_path ) );
@@ -139,7 +139,7 @@ function get_composer_versions( $current_version ) {
 		return '';
 	}
 
-	$vendor_versions    = [ implode( ' ', [ 'fp-cli/fp-cli', $current_version, gmdate( 'c' ) ] ) ];
+	$vendor_versions    = [ implode( ' ', [ 'fin-cli/fin-cli', $current_version, gmdate( 'c' ) ] ) ];
 	$missing_names      = 0;
 	$missing_versions   = 0;
 	$missing_references = 0;
@@ -181,7 +181,7 @@ function get_composer_versions( $current_version ) {
 if ( file_exists( DEST_PATH ) ) {
 	unlink( DEST_PATH );
 }
-$phar = new Phar( DEST_PATH, 0, 'fp-cli.phar' );
+$phar = new Phar( DEST_PATH, 0, 'fin-cli.phar' );
 
 $phar->startBuffering();
 
@@ -191,13 +191,13 @@ $finder
 	->files()
 	->ignoreVCS( true )
 	->name( '/\.*.php8?/' )
-	->in( FP_CLI_ROOT . '/php' )
-	->in( FP_CLI_BUNDLE_ROOT . '/php' )
-	->in( FP_CLI_VENDOR_DIR . '/mustache/mustache' )
-	->in( FP_CLI_VENDOR_DIR . '/eftec/bladeone' )
-	->in( FP_CLI_ROOT . '/bundle/rmccue/requests' )
-	->in( FP_CLI_VENDOR_DIR . '/composer' )
-	->in( FP_CLI_VENDOR_DIR . '/symfony' )
+	->in( FIN_CLI_ROOT . '/php' )
+	->in( FIN_CLI_BUNDLE_ROOT . '/php' )
+	->in( FIN_CLI_VENDOR_DIR . '/mustache/mustache' )
+	->in( FIN_CLI_VENDOR_DIR . '/eftec/bladeone' )
+	->in( FIN_CLI_ROOT . '/bundle/rmccue/requests' )
+	->in( FIN_CLI_VENDOR_DIR . '/composer' )
+	->in( FIN_CLI_VENDOR_DIR . '/symfony' )
 	->notName( 'behat-tags.php' )
 	->notPath( '#(?:[^/]+-command|php-cli-tools)/vendor/#' ) // For running locally, in case have composer installed or symlinked them.
 	->exclude( 'config' )
@@ -212,15 +212,15 @@ $finder
 	->exclude( 'tests' )
 	->exclude( 'Test' )
 	->exclude( 'Tests' );
-if ( is_dir( FP_CLI_VENDOR_DIR . '/react' ) ) {
+if ( is_dir( FIN_CLI_VENDOR_DIR . '/react' ) ) {
 	$finder
-		->in( FP_CLI_VENDOR_DIR . '/react' );
+		->in( FIN_CLI_VENDOR_DIR . '/react' );
 }
 if ( 'cli' === BUILD ) {
 	$finder
-		->in( FP_CLI_VENDOR_DIR . '/fp-cli/mustangostang-spyc' )
-		->in( FP_CLI_VENDOR_DIR . '/fp-cli/php-cli-tools' )
-		->in( FP_CLI_VENDOR_DIR . '/seld/cli-prompt' )
+		->in( FIN_CLI_VENDOR_DIR . '/fin-cli/mustangostang-spyc' )
+		->in( FIN_CLI_VENDOR_DIR . '/fin-cli/php-cli-tools' )
+		->in( FIN_CLI_VENDOR_DIR . '/seld/cli-prompt' )
 		->exclude( 'console' )
 		->exclude( 'filesystem' )
 		->exclude( 'composer/ca-bundle' )
@@ -229,20 +229,20 @@ if ( 'cli' === BUILD ) {
 		->exclude( 'composer/spdx-licenses' );
 } else {
 	$finder
-		->in( FP_CLI_VENDOR_DIR . '/fp-cli' )
-		->in( FP_CLI_VENDOR_DIR . '/nb/oxymel' )
-		->in( FP_CLI_VENDOR_DIR . '/psr' )
-		->in( FP_CLI_VENDOR_DIR . '/seld' )
-		->in( FP_CLI_VENDOR_DIR . '/justinrainbow/json-schema' )
-		->in( FP_CLI_VENDOR_DIR . '/gettext' )
-		->in( FP_CLI_VENDOR_DIR . '/mck89' )
+		->in( FIN_CLI_VENDOR_DIR . '/fin-cli' )
+		->in( FIN_CLI_VENDOR_DIR . '/nb/oxymel' )
+		->in( FIN_CLI_VENDOR_DIR . '/psr' )
+		->in( FIN_CLI_VENDOR_DIR . '/seld' )
+		->in( FIN_CLI_VENDOR_DIR . '/justinrainbow/json-schema' )
+		->in( FIN_CLI_VENDOR_DIR . '/gettext' )
+		->in( FIN_CLI_VENDOR_DIR . '/mck89' )
 		->exclude( 'demo' )
 		->exclude( 'nb/oxymel/OxymelTest.php' )
 		->exclude( 'composer/spdx-licenses' )
 		->exclude( 'composer/composer/src/Composer/Command' )
 		->exclude( 'composer/composer/src/Composer/Compiler.php' )
 		->exclude( 'composer/composer/src/Composer/Console' )
-		->exclude( 'composer/composer/src/Composer/Downloader/PearPackageExtractor.php' ) // Assuming Pear installation isn't supported by fp-cli.
+		->exclude( 'composer/composer/src/Composer/Downloader/PearPackageExtractor.php' ) // Assuming Pear installation isn't supported by fin-cli.
 		->exclude( 'composer/composer/src/Composer/Installer/PearBinaryInstaller.php' )
 		->exclude( 'composer/composer/src/Composer/Installer/PearInstaller.php' )
 		->exclude( 'composer/composer/src/Composer/Question' )
@@ -250,8 +250,8 @@ if ( 'cli' === BUILD ) {
 		->exclude( 'composer/composer/src/Composer/SelfUpdate' );
 
 	// required by justinrainbow/json-schema v6+.
-	if ( is_dir( FP_CLI_VENDOR_DIR . '/marc-mabe/php-enum' ) ) {
-		$finder->in( FP_CLI_VENDOR_DIR . '/marc-mabe/php-enum' );
+	if ( is_dir( FIN_CLI_VENDOR_DIR . '/marc-mabe/php-enum' ) ) {
+		$finder->in( FIN_CLI_VENDOR_DIR . '/marc-mabe/php-enum' );
 	}
 }
 
@@ -265,8 +265,8 @@ $finder
 	->files()
 	->ignoreVCS( true )
 	->ignoreDotFiles( false )
-	->in( FP_CLI_ROOT . '/templates' )
-	->in( FP_CLI_VENDOR_DIR . '/fp-cli/*-command/templates' );
+	->in( FIN_CLI_ROOT . '/templates' )
+	->in( FIN_CLI_VENDOR_DIR . '/fin-cli/*-command/templates' );
 
 foreach ( $finder as $file ) {
 	add_file( $phar, $file );
@@ -274,13 +274,13 @@ foreach ( $finder as $file ) {
 
 if ( 'cli' !== BUILD ) {
 	// Include base project files, because the autoloader will load them
-	if ( FP_CLI_BASE_PATH !== FP_CLI_BUNDLE_ROOT && is_dir( FP_CLI_BASE_PATH . '/src' ) ) {
+	if ( FIN_CLI_BASE_PATH !== FIN_CLI_BUNDLE_ROOT && is_dir( FIN_CLI_BASE_PATH . '/src' ) ) {
 		$finder = new Finder();
 		$finder
 			->files()
 			->ignoreVCS( true )
 			->name( '*.php' )
-			->in( FP_CLI_BASE_PATH . '/src' )
+			->in( FIN_CLI_BASE_PATH . '/src' )
 			->exclude( 'test' )
 			->exclude( 'tests' )
 			->exclude( 'Test' )
@@ -289,7 +289,7 @@ if ( 'cli' !== BUILD ) {
 			add_file( $phar, $file );
 		}
 		// Any PHP files in the project root
-		$files = glob( FP_CLI_BASE_PATH . '/*.php' );
+		$files = glob( FIN_CLI_BASE_PATH . '/*.php' );
 		if ( $files ) {
 			foreach ( $files as $file ) {
 				add_file( $phar, $file );
@@ -298,24 +298,24 @@ if ( 'cli' !== BUILD ) {
 	}
 }
 
-add_file( $phar, FP_CLI_VENDOR_DIR . '/autoload.php' );
+add_file( $phar, FIN_CLI_VENDOR_DIR . '/autoload.php' );
 if ( 'cli' !== BUILD ) {
-	add_file( $phar, FP_CLI_VENDOR_DIR . '/composer/composer/LICENSE' );
-	add_file( $phar, FP_CLI_VENDOR_DIR . '/composer/composer/res/composer-schema.json' );
+	add_file( $phar, FIN_CLI_VENDOR_DIR . '/composer/composer/LICENSE' );
+	add_file( $phar, FIN_CLI_VENDOR_DIR . '/composer/composer/res/composer-schema.json' );
 }
-add_file( $phar, FP_CLI_ROOT . '/bundle/rmccue/requests/certificates/cacert.pem' );
+add_file( $phar, FIN_CLI_ROOT . '/bundle/rmccue/requests/certificates/cacert.pem' );
 
-set_file_contents( $phar, FP_CLI_ROOT . '/COMPOSER_VERSIONS', get_composer_versions( $current_version ) );
-set_file_contents( $phar, FP_CLI_ROOT . '/VERSION', $current_version );
+set_file_contents( $phar, FIN_CLI_ROOT . '/COMPOSER_VERSIONS', get_composer_versions( $current_version ) );
+set_file_contents( $phar, FIN_CLI_ROOT . '/VERSION', $current_version );
 
-$phar_boot = str_replace( FP_CLI_BASE_PATH, '', FP_CLI_BUNDLE_ROOT . '/php/boot-phar.php' );
+$phar_boot = str_replace( FIN_CLI_BASE_PATH, '', FIN_CLI_BUNDLE_ROOT . '/php/boot-phar.php' );
 $phar_boot = '/' . ltrim( $phar_boot, '/' );
 $phar->setStub(
 	<<<EOB
 #!/usr/bin/env php
 <?php
 Phar::mapPhar();
-include 'phar://fp-cli.phar{$phar_boot}';
+include 'phar://fin-cli.phar{$phar_boot}';
 __HALT_COMPILER();
 ?>
 EOB

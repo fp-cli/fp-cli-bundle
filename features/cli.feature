@@ -1,4 +1,4 @@
-Feature: `fp cli` tasks
+Feature: `fin cli` tasks
 
   Scenario: Ability to set a custom version when building
     Given an empty directory
@@ -8,7 +8,7 @@ Feature: `fp cli` tasks
     When I run `{PHAR_PATH} cli version`
     Then STDOUT should be:
       """
-      FP-CLI 1.2.3
+      FIN-CLI 1.2.3
       """
     And the {FRAMEWORK_ROOT}/VERSION file should be:
       """
@@ -28,14 +28,14 @@ Feature: `fp cli` tasks
     And STDERR should be empty
 
   @github-api
-  Scenario: Do FP-CLI Update
+  Scenario: Do FIN-CLI Update
     Given an empty directory
     And a new Phar with version "0.0.0"
 
     When I run `{PHAR_PATH} --info`
     Then STDOUT should contain:
       """
-      FP-CLI version
+      FIN-CLI version
       """
     And STDOUT should contain:
       """
@@ -57,7 +57,7 @@ Feature: `fp cli` tasks
     When I run `{PHAR_PATH} --info`
     Then STDOUT should contain:
       """
-      FP-CLI version
+      FIN-CLI version
       """
     And STDOUT should not contain:
       """
@@ -67,7 +67,7 @@ Feature: `fp cli` tasks
     When I run `{PHAR_PATH} cli update`
     Then STDOUT should be:
       """
-      Success: FP-CLI is at the latest version.
+      Success: FIN-CLI is at the latest version.
       """
 
   @github-api
@@ -78,7 +78,7 @@ Feature: `fp cli` tasks
     When I run `{PHAR_PATH} --version`
     Then STDOUT should be:
       """
-      FP-CLI 2.8.0
+      FIN-CLI 2.8.0
       """
 
     When I run `{PHAR_PATH} cli update --patch --yes`
@@ -88,7 +88,7 @@ Feature: `fp cli` tasks
       """
     And STDOUT should contain:
       """
-      Success: Updated FP-CLI to 2.8.1
+      Success: Updated FIN-CLI to 2.8.1
       """
     And STDERR should be empty
     And the return code should be 0
@@ -96,7 +96,7 @@ Feature: `fp cli` tasks
     When I run `{PHAR_PATH} --version`
     Then STDOUT should be:
       """
-      FP-CLI 2.8.1
+      FIN-CLI 2.8.1
       """
 
   @github-api
@@ -116,7 +116,7 @@ Feature: `fp cli` tasks
     And STDERR should be empty
     And the return code should be 0
 
-  Scenario: Install FP-CLI nightly
+  Scenario: Install FIN-CLI nightly
     Given an empty directory
     And a new Phar with version "2.8.0"
 
@@ -127,14 +127,14 @@ Feature: `fp cli` tasks
       """
     And STDOUT should contain:
       """
-      Success: Updated FP-CLI to the latest nightly release.
+      Success: Updated FIN-CLI to the latest nightly release.
       """
 
     And STDERR should be empty
     And the return code should be 0
 
   @github-api
-  Scenario: Install FP-CLI stable
+  Scenario: Install FIN-CLI stable
     Given an empty directory
     And a new Phar with version "2.8.0"
     And a session file:
@@ -149,7 +149,7 @@ Feature: `fp cli` tasks
     When I run `{PHAR_PATH} cli update --stable < session`
     Then STDOUT should contain:
       """
-      You are currently using FP-CLI version 2.8.0. Would you like to update to the latest stable release? [y/n]
+      You are currently using FIN-CLI version 2.8.0. Would you like to update to the latest stable release? [y/n]
       """
     And STDOUT should contain:
       """
@@ -157,7 +157,7 @@ Feature: `fp cli` tasks
       """
     And STDOUT should contain:
       """
-      Success: Updated FP-CLI to the latest stable release.
+      Success: Updated FIN-CLI to the latest stable release.
       """
     And STDERR should be empty
     And the return code should be 0
@@ -165,11 +165,11 @@ Feature: `fp cli` tasks
     When I run `{PHAR_PATH} cli check-update`
     Then STDOUT should be:
       """
-      Success: FP-CLI is at the latest version.
+      Success: FIN-CLI is at the latest version.
       """
 
     When I run `{PHAR_PATH} cli version`
     Then STDOUT should be:
       """
-      FP-CLI {UPDATE_VERSION}
+      FIN-CLI {UPDATE_VERSION}
       """

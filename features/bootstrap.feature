@@ -1,4 +1,4 @@
-Feature: Bootstrap FP-CLI
+Feature: Bootstrap FIN-CLI
 
   Scenario: Override command bundled with freshly built PHAR
 
@@ -7,28 +7,28 @@ Feature: Bootstrap FP-CLI
     And a cli-override-command/cli.php file:
       """
       <?php
-      if ( ! class_exists( 'FP_CLI' ) ) {
+      if ( ! class_exists( 'FIN_CLI' ) ) {
         return;
       }
       $autoload = dirname( __FILE__ ) . '/vendor/autoload.php';
       if ( file_exists( $autoload ) ) {
         require_once $autoload;
       }
-      FP_CLI::add_command( 'cli', 'CLI_Command', array( 'when' => 'before_fp_load' ) );
+      FIN_CLI::add_command( 'cli', 'CLI_Command', array( 'when' => 'before_fin_load' ) );
       """
     And a cli-override-command/src/CLI_Command.php file:
       """
       <?php
-      class CLI_Command extends FP_CLI_Command {
+      class CLI_Command extends FIN_CLI_Command {
         public function version() {
-          FP_CLI::success( "FP-Override-CLI" );
+          FIN_CLI::success( "FIN-Override-CLI" );
         }
       }
       """
     And a cli-override-command/composer.json file:
       """
       {
-        "name": "fp-cli/cli-override",
+        "name": "fin-cli/cli-override",
         "description": "A command that overrides the bundled 'cli' command.",
         "autoload": {
           "psr-4": { "": "src/" },
@@ -46,22 +46,22 @@ Feature: Bootstrap FP-CLI
     When I run `{PHAR_PATH} cli version`
     Then STDOUT should contain:
       """
-      FP-CLI
+      FIN-CLI
       """
 
     When I run `{PHAR_PATH} --require=cli-override-command/cli.php cli version`
     Then STDOUT should contain:
       """
-      FP-Override-CLI
+      FIN-Override-CLI
       """
 
   Scenario: Template paths should be resolved correctly when PHAR is renamed
 
     Given an empty directory
     And a new Phar with the same version
-    And a FP installation
-    And I run `fp plugin install https://github.com/fp-cli-test/generic-example-plugin/releases/download/v0.1.1/generic-example-plugin.0.1.1.zip --activate`
-    And I run `fp plugin deactivate generic-example-plugin`
+    And a FIN installation
+    And I run `fin plugin install https://github.com/fin-cli-test/generic-example-plugin/releases/download/v0.1.1/generic-example-plugin.0.1.1.zip --activate`
+    And I run `fin plugin deactivate generic-example-plugin`
 
     When I run `php {PHAR_PATH} plugin status generic-example-plugin`
     Then STDOUT should contain:
@@ -72,8 +72,8 @@ Feature: Bootstrap FP-CLI
       """
     And STDERR should be empty
 
-    When I run `cp {PHAR_PATH} fp-renamed.phar`
-    And I try `php fp-renamed.phar plugin status generic-example-plugin`
+    When I run `cp {PHAR_PATH} fin-renamed.phar`
+    And I try `php fin-renamed.phar plugin status generic-example-plugin`
     Then STDOUT should contain:
       """
       Plugin generic-example-plugin details:

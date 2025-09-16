@@ -1,23 +1,23 @@
-Feature: Install FP-CLI packages
+Feature: Install FIN-CLI packages
 
   Background:
-    When I run `fp package path`
+    When I run `fin package path`
     Then save STDOUT as {PACKAGE_PATH}
 
-  Scenario: Install a package requiring a FP-CLI version that doesn't match
+  Scenario: Install a package requiring a FIN-CLI version that doesn't match
     Given an empty directory
     And a new Phar with version "2.10.0"
     And a path-command/command.php file:
       """
       <?php
-      FP_CLI::add_command( 'community-command', function(){
-        FP_CLI::success( "success!" );
-      }, array( 'when' => 'before_fp_load' ) );
+      FIN_CLI::add_command( 'community-command', function(){
+        FIN_CLI::success( "success!" );
+      }, array( 'when' => 'before_fin_load' ) );
       """
     And a path-command/composer.json file:
       """
       {
-        "name": "fp-cli/community-command",
+        "name": "fin-cli/community-command",
         "description": "A demo community command.",
         "license": "MIT",
         "minimum-stability": "dev",
@@ -25,7 +25,7 @@ Feature: Install FP-CLI packages
           "files": [ "command.php" ]
         },
         "require": {
-          "fp-cli/fp-cli": ">=2.11.0"
+          "fin-cli/fin-cli": ">=2.11.0"
         },
         "require-dev": {
           "behat/behat": "~2.5"
@@ -40,11 +40,11 @@ Feature: Install FP-CLI packages
       """
     And STDOUT should contain:
       """
-      fp-cli/community-command dev-
+      fin-cli/community-command dev-
       """
     And STDOUT should contain:
       """
-      fp-cli/fp-cli >=2.11.0 -> satisfiable by
+      fin-cli/fin-cli >=2.11.0 -> satisfiable by
       """
     And STDERR should contain:
       """
@@ -58,20 +58,20 @@ Feature: Install FP-CLI packages
       "version": "2.10.0",
       """
 
-  Scenario: Install a package requiring a FP-CLI version that does match
+  Scenario: Install a package requiring a FIN-CLI version that does match
     Given an empty directory
     And a new Phar with version "2.11.0"
     And a path-command/command.php file:
       """
       <?php
-      FP_CLI::add_command( 'community-command', function(){
-        FP_CLI::success( "success!" );
-      }, array( 'when' => 'before_fp_load' ) );
+      FIN_CLI::add_command( 'community-command', function(){
+        FIN_CLI::success( "success!" );
+      }, array( 'when' => 'before_fin_load' ) );
       """
     And a path-command/composer.json file:
       """
       {
-        "name": "fp-cli/community-command",
+        "name": "fin-cli/community-command",
         "description": "A demo community command.",
         "license": "MIT",
         "minimum-stability": "dev",
@@ -79,7 +79,7 @@ Feature: Install FP-CLI packages
           "files": [ "command.php" ]
         },
         "require": {
-          "fp-cli/fp-cli": ">=2.10.0"
+          "fin-cli/fin-cli": ">=2.10.0"
         },
         "require-dev": {
           "behat/behat": "~2.5"
@@ -101,20 +101,20 @@ Feature: Install FP-CLI packages
       "version": "2.11.0",
       """
 
-  Scenario: Install a package requiring a FP-CLI alpha version that does match
+  Scenario: Install a package requiring a FIN-CLI alpha version that does match
     Given an empty directory
     And a new Phar with version "2.12.0-alpha-90ecad6"
     And a path-command/command.php file:
       """
       <?php
-      FP_CLI::add_command( 'community-command', function(){
-        FP_CLI::success( "success!" );
-      }, array( 'when' => 'before_fp_load' ) );
+      FIN_CLI::add_command( 'community-command', function(){
+        FIN_CLI::success( "success!" );
+      }, array( 'when' => 'before_fin_load' ) );
       """
     And a path-command/composer.json file:
       """
       {
-        "name": "fp-cli/community-command",
+        "name": "fin-cli/community-command",
         "description": "A demo community command.",
         "license": "MIT",
         "minimum-stability": "dev",
@@ -122,7 +122,7 @@ Feature: Install FP-CLI packages
           "files": [ "command.php" ]
         },
         "require": {
-          "fp-cli/fp-cli": ">=2.11.0"
+          "fin-cli/fin-cli": ">=2.11.0"
         },
         "require-dev": {
           "behat/behat": "~2.5"

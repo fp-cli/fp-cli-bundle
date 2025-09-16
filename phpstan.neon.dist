@@ -4,15 +4,15 @@ parameters:
     - php
     - utils
   scanDirectories:
-  	- vendor/fp-cli/fp-cli
+  	- vendor/fin-cli/fin-cli
   scanFiles:
     - vendor/php-stubs/finpress-stubs/finpress-stubs.php
     - php/boot-phar.php
   treatPhpDocTypesAsCertain: false
   dynamicConstantNames:
-  	- FP_DEBUG
-  	- FP_DEBUG_LOG
-  	- FP_DEBUG_DISPLAY
+  	- FIN_DEBUG
+  	- FIN_DEBUG_LOG
+  	- FIN_DEBUG_DISPLAY
   ignoreErrors:
     - identifier: missingType.parameter
     - identifier: missingType.return

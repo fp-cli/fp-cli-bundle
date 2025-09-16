@@ -1,4 +1,4 @@
-name: Update fp-cli framework
+name: Update fin-cli framework
 
 on:
   workflow_dispatch:
@@ -19,9 +19,9 @@ concurrency:
 jobs:
 
   update-framework: #----------------------------------------------------------
-    name: Update fp-cli framework
+    name: Update fin-cli framework
     runs-on: ubuntu-latest
-    if: ${{ github.repository_owner == 'fp-cli' }}
+    if: ${{ github.repository_owner == 'fin-cli' }}
     steps:
       - name: Check out source code
         uses: actions/checkout@v5
@@ -50,8 +50,8 @@ jobs:
 
       - name: Configure git user
         run: |
-          git config --global user.email "info@fp-cli.org"
-          git config --global user.name "fp-make-coffee"
+          git config --global user.email "info@fin-cli.org"
+          git config --global user.name "fin-make-coffee"
 
       - name: Check if remote branch exists
         run: echo "REMOTE_BRANCH_EXISTS=$([[ -z $(git ls-remote --heads origin update-framework) ]] && echo "0" || echo "1")" >> $GITHUB_ENV
@@ -68,9 +68,9 @@ jobs:
           git checkout update-framework
           git pull --no-rebase
 
-      - name: Update fp-cli framework
+      - name: Update fin-cli framework
         run: |
-          composer update fp-cli/fp-cli --with-all-dependencies
+          composer update fin-cli/fin-cli --with-all-dependencies
 
       - name: Check if there are changes
         run: echo "CHANGES_DETECTED=$([[ -z $(git status --porcelain) ]] && echo "0" || echo "1")" >> $GITHUB_ENV
@@ -79,7 +79,7 @@ jobs:
         if: env.CHANGES_DETECTED == 1
         run: |
           git add composer.lock
-          git commit -m "Update fp-cli framework - $(date +'%Y-%m-%d')"
+          git commit -m "Update fin-cli framework - $(date +'%Y-%m-%d')"
           git push origin update-framework
 
       - name: Create pull request
@@ -91,6 +91,6 @@ jobs:
           source_branch: update-framework
           destination_branch: ${{ github.event.repository.default_branch }}
           github_token: ${{ secrets.ACTIONS_BOT }}
-          pr_title: Update fp-cli framework
-          pr_body: "**This is an automated pull-request**\n\nUpdates the `fp-cli/fp-cli` framework to the latest changeset."
+          pr_title: Update fin-cli framework
+          pr_body: "**This is an automated pull-request**\n\nUpdates the `fin-cli/fin-cli` framework to the latest changeset."
           pr_label: scope:framework

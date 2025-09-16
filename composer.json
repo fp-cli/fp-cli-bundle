@@ -1,47 +1,47 @@
 {
-  "name": "fp-cli/fp-cli-bundle",
-  "description": "FP-CLI bundle package with default commands.",
+  "name": "fin-cli/fin-cli-bundle",
+  "description": "FIN-CLI bundle package with default commands.",
   "keywords": [
     "cli",
     "finpress"
   ],
-  "homepage": "https://fp-cli.org",
+  "homepage": "https://fin-cli.org",
   "license": "MIT",
   "require": {
     "php": ">=7.2.24",
-    "fp-cli/cache-command": "^2",
-    "fp-cli/checksum-command": "^2.1",
-    "fp-cli/config-command": "^2.1",
-    "fp-cli/core-command": "^2.1",
-    "fp-cli/cron-command": "^2",
-    "fp-cli/db-command": "^2",
-    "fp-cli/embed-command": "^2",
-    "fp-cli/entity-command": "^2",
-    "fp-cli/eval-command": "^2",
-    "fp-cli/export-command": "^2",
-    "fp-cli/extension-command": "^2.1",
-    "fp-cli/i18n-command": "^2",
-    "fp-cli/import-command": "^2",
-    "fp-cli/language-command": "^2",
-    "fp-cli/maintenance-mode-command": "^2",
-    "fp-cli/media-command": "^2",
-    "fp-cli/package-command": "^2.1",
-    "fp-cli/rewrite-command": "^2",
-    "fp-cli/role-command": "^2",
-    "fp-cli/scaffold-command": "^2",
-    "fp-cli/search-replace-command": "^2",
-    "fp-cli/server-command": "^2",
-    "fp-cli/shell-command": "^2",
-    "fp-cli/super-admin-command": "^2",
-    "fp-cli/widget-command": "^2",
-    "fp-cli/fp-cli": "dev-main"
+    "fin-cli/cache-command": "^2",
+    "fin-cli/checksum-command": "^2.1",
+    "fin-cli/config-command": "^2.1",
+    "fin-cli/core-command": "^2.1",
+    "fin-cli/cron-command": "^2",
+    "fin-cli/db-command": "^2",
+    "fin-cli/embed-command": "^2",
+    "fin-cli/entity-command": "^2",
+    "fin-cli/eval-command": "^2",
+    "fin-cli/export-command": "^2",
+    "fin-cli/extension-command": "^2.1",
+    "fin-cli/i18n-command": "^2",
+    "fin-cli/import-command": "^2",
+    "fin-cli/language-command": "^2",
+    "fin-cli/maintenance-mode-command": "^2",
+    "fin-cli/media-command": "^2",
+    "fin-cli/package-command": "^2.1",
+    "fin-cli/rewrite-command": "^2",
+    "fin-cli/role-command": "^2",
+    "fin-cli/scaffold-command": "^2",
+    "fin-cli/search-replace-command": "^2",
+    "fin-cli/server-command": "^2",
+    "fin-cli/shell-command": "^2",
+    "fin-cli/super-admin-command": "^2",
+    "fin-cli/widget-command": "^2",
+    "fin-cli/fin-cli": "dev-main"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
-    "fp-cli/fp-cli-tests": "^5"
+    "fin-cli/fin-cli-tests": "^5"
   },
   "suggest": {
-    "psy/psysh": "Enhanced `fp shell` functionality"
+    "psy/psysh": "Enhanced `fin shell` functionality"
   },
   "config": {
     "allow-plugins": {
@@ -49,7 +49,7 @@
       "dieselfox1/finpress-core-installer": true,
       "phpstan/extension-installer": true
     },
-    "autoloader-suffix": "FpCliBundle",
+    "autoloader-suffix": "FinCliBundle",
     "platform": {
       "php": "7.2.24"
     },
@@ -63,7 +63,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "FP_CLI\\Maintenance\\": "utils/maintenance"
+      "FIN_CLI\\Maintenance\\": "utils/maintenance"
     }
   },
   "minimum-stability": "dev",
@@ -87,8 +87,8 @@
     ]
   },
   "support": {
-    "issues": "https://github.com/fp-cli/fp-cli-bundle/issues",
-    "source": "https://github.com/fp-cli/fp-cli-bundle",
+    "issues": "https://github.com/fin-cli/fin-cli-bundle/issues",
+    "source": "https://github.com/fin-cli/fin-cli-bundle",
     "docs": "https://make.finpress.org/cli/handbook/"
   }
 }

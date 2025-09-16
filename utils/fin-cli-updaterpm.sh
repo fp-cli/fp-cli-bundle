@@ -1,16 +1,16 @@
 #!/bin/bash
 #
-# Package FP-CLI to be installed on RPM-based systems.
+# Package FIN-CLI to be installed on RPM-based systems.
 #
 # VERSION       :0.1.0
 # DATE          :2017-07-12
 # AUTHOR        :Viktor Szépe <viktor@szepe.net>
 # LICENSE       :The MIT License (MIT)
-# URL           :https://github.com/fp-cli/fp-cli-bundle/tree/main/utils
+# URL           :https://github.com/fin-cli/fin-cli-bundle/tree/main/utils
 # BASH-VERSION  :4.2+
 # DEPENDS       :apt-get install rpm rpmlint php-cli
 
-PHAR_URL="https://github.com/fp-cli/builds/raw/gh-pages/phar/fp-cli.phar"
+PHAR_URL="https://github.com/fin-cli/builds/raw/gh-pages/phar/fin-cli.phar"
 # Source directory
 SOURCE_DIR="rpm-src"
 
@@ -30,9 +30,9 @@ if ! hash php rpm; then
 fi
 
 # Download the binary if needed
-if [ ! -f "fp-cli.phar" ]; then
-	wget -nv -O fp-cli.phar "$PHAR_URL"
-	chmod +x fp-cli.phar
+if [ ! -f "fin-cli.phar" ]; then
+	wget -nv -O fin-cli.phar "$PHAR_URL"
+	chmod +x fin-cli.phar
 fi
 
 if ! [ -d "$SOURCE_DIR" ]; then
@@ -42,33 +42,33 @@ fi
 pushd "$SOURCE_DIR" > /dev/null
 
 # Move files
-mv ../fp-cli.phar fp-cli.phar
-cp ../fp-cli-rpm.spec fp-cli.spec
+mv ../fin-cli.phar fin-cli.phar
+cp ../fin-cli-rpm.spec fin-cli.spec
 
 # Replace version placeholder
-FPCLI_VER="$(php fp-cli.phar cli version | cut -d " " -f 2)"
-if [ -z "$FPCLI_VER" ]; then
-    die 3 "Cannot get FP_CLI version"
+FINCLI_VER="$(php fin-cli.phar cli version | cut -d " " -f 2)"
+if [ -z "$FINCLI_VER" ]; then
+    die 3 "Cannot get FIN_CLI version"
 fi
-echo "Current version: ${FPCLI_VER}"
-sed -i -e "s/^Version: .*\$/Version:    ${FPCLI_VER}/" fp-cli.spec || die 4 "Version update failed"
-sed -i -e "s/^\(\* .*\) 0\.0\.0-1\$/\1 ${FPCLI_VER}-1/" fp-cli.spec || die 5 "Changleog update failed"
+echo "Current version: ${FINCLI_VER}"
+sed -i -e "s/^Version: .*\$/Version:    ${FINCLI_VER}/" fin-cli.spec || die 4 "Version update failed"
+sed -i -e "s/^\(\* .*\) 0\.0\.0-1\$/\1 ${FINCLI_VER}-1/" fin-cli.spec || die 5 "Changleog update failed"
 
 # Create man page
 {
-    echo '.TH "FP" "1"'
-    php fp-cli.phar --help
+    echo '.TH "FIN" "1"'
+    php fin-cli.phar --help
 } \
     | sed -e 's/^\([A-Z ]\+\)$/.SH "\1"/' \
-    | sed -e 's/^  fp$/fp \\- The command line interface for FinPress/' \
-    > fp.1
+    | sed -e 's/^  fin$/fin \\- The command line interface for FinPress/' \
+    > fin.1
 
 # Build the package
-rpmbuild --define "_sourcedir ${PWD}" --define "_rpmdir ${PWD}" -bb fp-cli.spec | tee fp-cli-updaterpm-rpmbuild.$$.log
+rpmbuild --define "_sourcedir ${PWD}" --define "_rpmdir ${PWD}" -bb fin-cli.spec | tee fin-cli-updaterpm-rpmbuild.$$.log
 
-rpm_path=`grep -o "/.*/noarch/fp-cli-.*noarch.rpm" fp-cli-updaterpm-rpmbuild.$$.log`
+rpm_path=`grep -o "/.*/noarch/fin-cli-.*noarch.rpm" fin-cli-updaterpm-rpmbuild.$$.log`
 
-rm -f fp-cli-updaterpm-rpmbuild.$$.log
+rm -f fin-cli-updaterpm-rpmbuild.$$.log
 
 if [ ${#rpm_path} -lt 20 ] ; then
 	echo "RPM path doesn't exist ($rpm_path)"
@@ -97,7 +97,7 @@ elif ([ $(type -P "rpm2cpio") ] && [ $(type -P "cpio") ]); then
 	fi
 	rpm2cpio $rpm_path | cpio -idmv
 
-	if [ -f "usr/bin/fp" ] ; then
+	if [ -f "usr/bin/fin" ] ; then
 		echo "RPM test succeeded"
 	else
 		echo "RPM test failed"

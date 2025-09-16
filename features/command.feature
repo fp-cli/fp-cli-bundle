@@ -1,254 +1,254 @@
-Feature: FP-CLI Commands
+Feature: FIN-CLI Commands
 
-  Scenario: Registered FP-CLI commands
+  Scenario: Registered FIN-CLI commands
     Given an empty directory
 
-    When I run `fp cache --help`
+    When I run `fin cache --help`
     Then STDOUT should contain:
       """
-      fp cache <command>
+      fin cache <command>
       """
 
-    When I run `fp cap --help`
+    When I run `fin cap --help`
     Then STDOUT should contain:
       """
-      fp cap <command>
+      fin cap <command>
       """
 
-    When I run `fp comment --help`
+    When I run `fin comment --help`
     Then STDOUT should contain:
       """
-      fp comment <command>
+      fin comment <command>
       """
 
-    When I run `fp config --help`
+    When I run `fin config --help`
     Then STDOUT should contain:
       """
-      fp config <command>
+      fin config <command>
       """
 
-    When I run `fp core --help`
+    When I run `fin core --help`
     Then STDOUT should contain:
       """
-      fp core <command>
+      fin core <command>
       """
 
-    When I run `fp cron --help`
+    When I run `fin cron --help`
     Then STDOUT should contain:
       """
-      fp cron <command>
+      fin cron <command>
       """
 
-    When I run `fp cron`
+    When I run `fin cron`
     Then STDOUT should contain:
       """
-      usage: fp cron event <command>
-         or: fp cron schedule <command>
-         or: fp cron test
+      usage: fin cron event <command>
+         or: fin cron schedule <command>
+         or: fin cron test
       """
 
-    When I run `fp db --help`
+    When I run `fin db --help`
     Then STDOUT should contain:
       """
-      fp db <command>
+      fin db <command>
       """
 
-    When I run `fp db`
+    When I run `fin db`
     Then STDOUT should contain:
       """
-      or: fp db cli
+      or: fin db cli
       """
 
-    When I run `fp eval --help`
+    When I run `fin eval --help`
     Then STDOUT should contain:
       """
-      fp eval <php-code>
+      fin eval <php-code>
       """
 
-    When I run `fp eval-file --help`
+    When I run `fin eval-file --help`
     Then STDOUT should contain:
       """
-      fp eval-file <file> [<arg>...]
+      fin eval-file <file> [<arg>...]
       """
 
-    When I run `fp export --help`
+    When I run `fin export --help`
     Then STDOUT should contain:
       """
-      fp export [--dir=<dirname>]
+      fin export [--dir=<dirname>]
       """
 
-    When I run `fp help --help`
+    When I run `fin help --help`
     Then STDOUT should contain:
       """
-      fp help [<command>...]
+      fin help [<command>...]
       """
 
-    When I run `fp import --help`
+    When I run `fin import --help`
     Then STDOUT should contain:
       """
-      fp import <file>... --authors=<authors>
+      fin import <file>... --authors=<authors>
       """
 
-    When I run `fp language --help`
+    When I run `fin language --help`
     Then STDOUT should contain:
       """
-      fp language <command>
+      fin language <command>
       """
 
-    When I run `fp media --help`
+    When I run `fin media --help`
     Then STDOUT should contain:
       """
-      fp media <command>
+      fin media <command>
       """
 
-    When I run `fp media`
+    When I run `fin media`
     Then STDOUT should contain:
       """
-      or: fp media regenerate
+      or: fin media regenerate
       """
 
-    When I run `fp menu --help`
+    When I run `fin menu --help`
     Then STDOUT should contain:
       """
-      fp menu <command>
+      fin menu <command>
       """
 
-    When I run `fp network --help`
+    When I run `fin network --help`
     Then STDOUT should contain:
       """
-      fp network <command>
+      fin network <command>
       """
 
-    When I run `fp option --help`
+    When I run `fin option --help`
     Then STDOUT should contain:
       """
-      fp option <command>
+      fin option <command>
       """
 
-    When I run `fp package --help`
+    When I run `fin package --help`
     Then STDOUT should contain:
       """
-      fp package <command>
+      fin package <command>
       """
 
-    When I run `fp package`
+    When I run `fin package`
     Then STDOUT should contain:
       """
-      or: fp package install
+      or: fin package install
       """
 
-    When I run `fp plugin --help`
+    When I run `fin plugin --help`
     Then STDOUT should contain:
       """
-      fp plugin <command>
+      fin plugin <command>
       """
 
-    When I run `fp post --help`
+    When I run `fin post --help`
     Then STDOUT should contain:
       """
-      fp post <command>
+      fin post <command>
       """
 
-    When I run `fp post-type --help`
+    When I run `fin post-type --help`
     Then STDOUT should contain:
       """
-      fp post-type <command>
+      fin post-type <command>
       """
 
-    When I run `fp rewrite --help`
+    When I run `fin rewrite --help`
     Then STDOUT should contain:
       """
-      fp rewrite <command>
+      fin rewrite <command>
       """
 
-    When I run `fp role --help`
+    When I run `fin role --help`
     Then STDOUT should contain:
       """
-      fp role <command>
+      fin role <command>
       """
 
-    When I run `fp scaffold --help`
+    When I run `fin scaffold --help`
     Then STDOUT should contain:
       """
-      fp scaffold <command>
+      fin scaffold <command>
       """
 
-    When I run `fp search-replace --help`
+    When I run `fin search-replace --help`
     Then STDOUT should contain:
       """
-      fp search-replace <old> <new>
+      fin search-replace <old> <new>
       """
 
-    When I run `fp server --help`
+    When I run `fin server --help`
     Then STDOUT should contain:
       """
-      fp server [--host=<host>]
+      fin server [--host=<host>]
       """
 
-    When I run `fp shell --help`
+    When I run `fin shell --help`
     Then STDOUT should contain:
       """
-      fp shell [--basic]
+      fin shell [--basic]
       """
 
-    When I run `fp sidebar --help`
+    When I run `fin sidebar --help`
     Then STDOUT should contain:
       """
-      fp sidebar <command>
+      fin sidebar <command>
       """
 
-    When I run `fp site --help`
+    When I run `fin site --help`
     Then STDOUT should contain:
       """
-      fp site <command>
+      fin site <command>
       """
 
-    When I run `fp super-admin --help`
+    When I run `fin super-admin --help`
     Then STDOUT should contain:
       """
-      fp super-admin <command>
+      fin super-admin <command>
       """
 
-    When I run `fp taxonomy --help`
+    When I run `fin taxonomy --help`
     Then STDOUT should contain:
       """
-      fp taxonomy <command>
+      fin taxonomy <command>
       """
 
-    When I run `fp term --help`
+    When I run `fin term --help`
     Then STDOUT should contain:
       """
-      fp term <command>
+      fin term <command>
       """
 
-    When I run `fp theme --help`
+    When I run `fin theme --help`
     Then STDOUT should contain:
       """
-      fp theme <command>
+      fin theme <command>
       """
 
-    When I run `fp transient --help`
+    When I run `fin transient --help`
     Then STDOUT should contain:
       """
-      fp transient <command>
+      fin transient <command>
       """
 
-    When I run `fp user --help`
+    When I run `fin user --help`
     Then STDOUT should contain:
       """
-      fp user <command>
+      fin user <command>
       """
 
-    When I run `fp widget --help`
+    When I run `fin widget --help`
     Then STDOUT should contain:
       """
-      fp widget <command>
+      fin widget <command>
       """
 
-    When I run `fp maintenance-mode --help`
+    When I run `fin maintenance-mode --help`
     Then STDOUT should contain:
       """
-      fp maintenance-mode <command>
+      fin maintenance-mode <command>
       """
 
   Scenario: Invalid class is specified for a command
@@ -257,14 +257,14 @@ Feature: FP-CLI Commands
       """
       <?php
 
-      FP_CLI::add_command( 'command example', 'Non_Existent_Class' );
+      FIN_CLI::add_command( 'command example', 'Non_Existent_Class' );
       """
 
-    When I try `fp --require=custom-cmd.php help`
+    When I try `fin --require=custom-cmd.php help`
     Then the return code should be 1
     And STDERR should contain:
       """
-      Callable "Non_Existent_Class" does not exist, and cannot be registered as `fp command example`.
+      Callable "Non_Existent_Class" does not exist, and cannot be registered as `fin command example`.
       """
 
   Scenario: Invalid subcommand of valid command
@@ -273,22 +273,22 @@ Feature: FP-CLI Commands
       """
       <?php
       /**
-       * @when before_fp_load
+       * @when before_fin_load
        */
-      class Custom_Command_Class extends FP_CLI_Command {
+      class Custom_Command_Class extends FIN_CLI_Command {
 
           public function valid() {
-             FP_CLI::success( 'Hello world' );
+             FIN_CLI::success( 'Hello world' );
           }
 
       }
-      FP_CLI::add_command( 'command', 'Custom_Command_Class' );
+      FIN_CLI::add_command( 'command', 'Custom_Command_Class' );
       """
 
-    When I try `fp --require=custom-cmd.php command invalid`
+    When I try `fin --require=custom-cmd.php command invalid`
     Then STDERR should contain:
       """
-      Error: 'invalid' is not a registered subcommand of 'command'. See 'fp help command' for available subcommands.
+      Error: 'invalid' is not a registered subcommand of 'command'. See 'fin help command' for available subcommands.
       """
 
   Scenario: Use a closure as a command
@@ -302,33 +302,33 @@ Feature: FP-CLI Commands
        * <message>
        * : An awesome message to display
        *
-       * @when before_fp_load
+       * @when before_fin_load
        */
       $foo = function( $args ) {
-        FP_CLI::success( $args[0] );
+        FIN_CLI::success( $args[0] );
       };
-      FP_CLI::add_command( 'foo', $foo );
+      FIN_CLI::add_command( 'foo', $foo );
       """
 
-    When I run `fp --require=custom-cmd.php help`
+    When I run `fin --require=custom-cmd.php help`
     Then STDOUT should contain:
       """
       foo
       """
 
-    When I run `fp --require=custom-cmd.php help foo`
+    When I run `fin --require=custom-cmd.php help foo`
     Then STDOUT should contain:
       """
       My awesome closure command
       """
 
-    When I try `fp --require=custom-cmd.php foo bar --burrito`
+    When I try `fin --require=custom-cmd.php foo bar --burrito`
     Then STDERR should contain:
       """
       unknown --burrito parameter
       """
 
-    When I run `fp --require=custom-cmd.php foo bar`
+    When I run `fin --require=custom-cmd.php foo bar`
     Then STDOUT should contain:
       """
       Success: bar
@@ -345,33 +345,33 @@ Feature: FP-CLI Commands
        * <message>
        * : An awesome message to display
        *
-       * @when before_fp_load
+       * @when before_fin_load
        */
       function foo( $args ) {
-        FP_CLI::success( $args[0] );
+        FIN_CLI::success( $args[0] );
       }
-      FP_CLI::add_command( 'foo', 'foo' );
+      FIN_CLI::add_command( 'foo', 'foo' );
       """
 
-    When I run `fp --require=custom-cmd.php help`
+    When I run `fin --require=custom-cmd.php help`
     Then STDOUT should contain:
       """
       foo
       """
 
-    When I run `fp --require=custom-cmd.php help foo`
+    When I run `fin --require=custom-cmd.php help foo`
     Then STDOUT should contain:
       """
       My awesome function command
       """
 
-    When I try `fp --require=custom-cmd.php foo bar --burrito`
+    When I try `fin --require=custom-cmd.php foo bar --burrito`
     Then STDERR should contain:
       """
       unknown --burrito parameter
       """
 
-    When I run `fp --require=custom-cmd.php foo bar`
+    When I run `fin --require=custom-cmd.php foo bar`
     Then STDOUT should contain:
       """
       Success: bar
@@ -382,7 +382,7 @@ Feature: FP-CLI Commands
     And a custom-cmd.php file:
       """
       <?php
-      class Foo_Class extends FP_CLI_Command {
+      class Foo_Class extends FIN_CLI_Command {
         protected $prefix;
 
         public function __construct( $prefix ) {
@@ -394,35 +394,35 @@ Feature: FP-CLI Commands
          * <message>
          * : An awesome message to display
          *
-         * @when before_fp_load
+         * @when before_fin_load
          */
         function foo( $args ) {
-          FP_CLI::success( $this->prefix . ':' . $args[0] );
+          FIN_CLI::success( $this->prefix . ':' . $args[0] );
         }
       }
       $foo = new Foo_Class( 'boo' );
-      FP_CLI::add_command( 'foo', array( $foo, 'foo' ) );
+      FIN_CLI::add_command( 'foo', array( $foo, 'foo' ) );
       """
 
-    When I run `fp --require=custom-cmd.php help`
+    When I run `fin --require=custom-cmd.php help`
     Then STDOUT should contain:
       """
       foo
       """
 
-    When I run `fp --require=custom-cmd.php help foo`
+    When I run `fin --require=custom-cmd.php help foo`
     Then STDOUT should contain:
       """
       My awesome class method command
       """
 
-    When I try `fp --require=custom-cmd.php foo bar --burrito`
+    When I try `fin --require=custom-cmd.php foo bar --burrito`
     Then STDERR should contain:
       """
       unknown --burrito parameter
       """
 
-    When I run `fp --require=custom-cmd.php foo bar`
+    When I run `fin --require=custom-cmd.php foo bar`
     Then STDOUT should contain:
       """
       Success: boo:bar
@@ -433,41 +433,41 @@ Feature: FP-CLI Commands
     And a custom-cmd.php file:
       """
       <?php
-      class Foo_Class extends FP_CLI_Command {
+      class Foo_Class extends FIN_CLI_Command {
         /**
          * My awesome class method command
          *
          * <message>
          * : An awesome message to display
          *
-         * @when before_fp_load
+         * @when before_fin_load
          */
         function foo( $args ) {
-          FP_CLI::success( $args[0] );
+          FIN_CLI::success( $args[0] );
         }
       }
-      FP_CLI::add_command( 'foo', array( 'Foo_Class', 'foo' ) );
+      FIN_CLI::add_command( 'foo', array( 'Foo_Class', 'foo' ) );
       """
 
-    When I run `fp --require=custom-cmd.php help`
+    When I run `fin --require=custom-cmd.php help`
     Then STDOUT should contain:
       """
       foo
       """
 
-    When I run `fp --require=custom-cmd.php help foo`
+    When I run `fin --require=custom-cmd.php help foo`
     Then STDOUT should contain:
       """
       My awesome class method command
       """
 
-    When I try `fp --require=custom-cmd.php foo bar --burrito`
+    When I try `fin --require=custom-cmd.php foo bar --burrito`
     Then STDERR should contain:
       """
       unknown --burrito parameter
       """
 
-    When I run `fp --require=custom-cmd.php foo bar`
+    When I run `fin --require=custom-cmd.php foo bar`
     Then STDOUT should contain:
       """
       Success: bar
@@ -488,17 +488,17 @@ Feature: FP-CLI Commands
         /**
          * My awesome class method command
          *
-         * @when before_fp_load
+         * @when before_fin_load
          */
         function __invoke( $args ) {
-          FP_CLI::success( $this->message );
+          FIN_CLI::success( $this->message );
         }
       }
       $foo = new Foo_Class( 'bar' );
-      FP_CLI::add_command( 'instantiated-command', $foo );
+      FIN_CLI::add_command( 'instantiated-command', $foo );
       """
 
-    When I run `fp --require=custom-cmd.php instantiated-command`
+    When I run `fin --require=custom-cmd.php instantiated-command`
     Then STDOUT should contain:
       """
       bar
@@ -510,27 +510,27 @@ Feature: FP-CLI Commands
     And a custom-cmd.php file:
       """
       <?php
-      class Foo_Class extends FP_CLI_Command {
+      class Foo_Class extends FIN_CLI_Command {
         /**
          * My awesome class method command
          *
          * <message>
          * : An awesome message to display
          *
-         * @when before_fp_load
+         * @when before_fin_load
          */
         function foo( $args ) {
-          FP_CLI::success( $args[0] );
+          FIN_CLI::success( $args[0] );
         }
       }
       $foo = new Foo_Class;
-      FP_CLI::add_command( 'bar', array( $foo, 'bar' ) );
+      FIN_CLI::add_command( 'bar', array( $foo, 'bar' ) );
       """
 
-    When I try `fp --require=custom-cmd.php bar`
+    When I try `fin --require=custom-cmd.php bar`
     Then STDERR should contain:
       """
-      Error: Callable ["Foo_Class","bar"] does not exist, and cannot be registered as `fp bar`.
+      Error: Callable ["Foo_Class","bar"] does not exist, and cannot be registered as `fin bar`.
       """
 
   Scenario: Register a synopsis for a given command
@@ -540,12 +540,12 @@ Feature: FP-CLI Commands
       <?php
       function foo( $args, $assoc_args ) {
         $message = array_shift( $args );
-        FP_CLI::log( 'Message is: ' . $message );
-        FP_CLI::success( $assoc_args['meal'] );
+        FIN_CLI::log( 'Message is: ' . $message );
+        FIN_CLI::success( $assoc_args['meal'] );
       }
-      FP_CLI::add_command( 'foo', 'foo', array(
+      FIN_CLI::add_command( 'foo', 'foo', array(
         'shortdesc'   => 'My awesome function command',
-        'when'        => 'before_fp_load',
+        'when'        => 'before_fin_load',
         'synopsis'    => array(
           array(
             'type'          => 'positional',
@@ -571,21 +571,21 @@ Feature: FP-CLI Commands
         ),
       ) );
       """
-    And a fp-cli.yml file:
+    And a fin-cli.yml file:
       """
       require:
         - custom-cmd.php
       """
 
-    When I try `fp foo`
+    When I try `fin foo`
     Then STDOUT should contain:
       """
-      usage: fp foo <message> --apple=<apple> [--meal=<meal>]
+      usage: fin foo <message> --apple=<apple> [--meal=<meal>]
       """
     And STDERR should be empty
     And the return code should be 1
 
-    When I run `fp help foo`
+    When I run `fin help foo`
     Then STDOUT should contain:
       """
       My awesome function command
@@ -596,7 +596,7 @@ Feature: FP-CLI Commands
       """
     And STDOUT should contain:
       """
-      fp foo <message> --apple=<apple> [--meal=<meal>]
+      fin foo <message> --apple=<apple> [--meal=<meal>]
       """
     And STDOUT should contain:
       """
@@ -625,26 +625,26 @@ Feature: FP-CLI Commands
           ---
       """
 
-    When I try `fp foo nana --apple=fuji`
+    When I try `fin foo nana --apple=fuji`
     Then STDERR should contain:
       """
       Error: Invalid value specified for positional arg.
       """
 
-    When I try `fp foo hello --apple=fuji --meal=snack`
+    When I try `fin foo hello --apple=fuji --meal=snack`
     Then STDERR should contain:
       """
       Invalid value specified for 'meal' (A type of meal.)
       """
 
-    When I run `fp foo hello --apple=fuji`
+    When I run `fin foo hello --apple=fuji`
     Then STDOUT should be:
       """
       Message is: hello
       Success: breakfast
       """
 
-    When I run `fp foo hello --apple=fuji --meal=dinner`
+    When I run `fin foo hello --apple=fuji --meal=dinner`
     Then STDOUT should be:
       """
       Message is: hello
@@ -656,10 +656,10 @@ Feature: FP-CLI Commands
     And a test-cmd.php file:
       """
       <?php
-      FP_CLI::add_command( 'foo', function( $args ){
-        FP_CLI::log( count( $args ) );
+      FIN_CLI::add_command( 'foo', function( $args ){
+        FIN_CLI::log( count( $args ) );
       }, array(
-        'when' => 'before_fp_load',
+        'when' => 'before_fin_load',
         'synopsis' => array(
           array(
             'type'      => 'positional',
@@ -669,19 +669,19 @@ Feature: FP-CLI Commands
         ),
       ));
       """
-    And a fp-cli.yml file:
+    And a fin-cli.yml file:
       """
       require:
         - test-cmd.php
       """
 
-    When I run `fp foo bar`
+    When I run `fin foo bar`
     Then STDOUT should be:
       """
       1
       """
 
-    When I run `fp foo bar burrito`
+    When I run `fin foo bar burrito`
     Then STDOUT should be:
       """
       2
@@ -692,10 +692,10 @@ Feature: FP-CLI Commands
     And a test-cmd.php file:
       """
       <?php
-      FP_CLI::add_command( 'foo', function( $_, $assoc_args ){
-        FP_CLI::log( \FP_CLI\Utils\get_flag_value( $assoc_args, 'honk' ) ? 'honked' : 'nohonk' );
+      FIN_CLI::add_command( 'foo', function( $_, $assoc_args ){
+        FIN_CLI::log( \FIN_CLI\Utils\get_flag_value( $assoc_args, 'honk' ) ? 'honked' : 'nohonk' );
       }, array(
-        'when' => 'before_fp_load',
+        'when' => 'before_fin_load',
         'synopsis' => array(
           array(
             'type'     => 'flag',
@@ -705,44 +705,44 @@ Feature: FP-CLI Commands
         ),
       ));
       """
-    And a fp-cli.yml file:
+    And a fin-cli.yml file:
       """
       require:
         - test-cmd.php
       """
 
-    When I run `fp foo`
+    When I run `fin foo`
     Then STDOUT should be:
       """
       nohonk
       """
 
-    When I run `fp foo --honk`
+    When I run `fin foo --honk`
     Then STDOUT should be:
       """
       honked
       """
 
-    When I run `fp foo --honk=1`
+    When I run `fin foo --honk=1`
     Then STDOUT should be:
       """
       honked
       """
 
-    When I run `fp foo --no-honk`
+    When I run `fin foo --no-honk`
     Then STDOUT should be:
       """
       nohonk
       """
 
-    When I run `fp foo --honk=0`
+    When I run `fin foo --honk=0`
     Then STDOUT should be:
       """
       nohonk
       """
 
     # Note treats "false" as true.
-    When I run `fp foo --honk=false`
+    When I run `fin foo --honk=false`
     Then STDOUT should be:
       """
       honked
@@ -754,15 +754,15 @@ Feature: FP-CLI Commands
       """
       <?php
       function foo() {
-        FP_CLI::success( 'Command run.' );
+        FIN_CLI::success( 'Command run.' );
       }
-      FP_CLI::add_command( 'foo', 'foo', array(
+      FIN_CLI::add_command( 'foo', 'foo', array(
         'shortdesc'   => 'My awesome function command',
-        'when'        => 'before_fp_load',
+        'when'        => 'before_fin_load',
         'longdesc'    => '## EXAMPLES ' . PHP_EOL . PHP_EOL . '  # Run the custom foo command',
       ) );
       """
-    And a fp-cli.yml file:
+    And a fin-cli.yml file:
       """
       require:
         - custom-cmd.php
@@ -770,12 +770,12 @@ Feature: FP-CLI Commands
     And I run `echo ' '`
     And save STDOUT as {SPACE}
 
-    When I run `fp help foo`
+    When I run `fin help foo`
     Then STDOUT should contain:
       """
       NAME
 
-        fp foo
+        fin foo
 
       DESCRIPTION
 
@@ -783,7 +783,7 @@ Feature: FP-CLI Commands
 
       SYNOPSIS
 
-        fp foo{SPACE}
+        fin foo{SPACE}
 
       EXAMPLES{SPACE}
 
@@ -800,12 +800,12 @@ Feature: FP-CLI Commands
         $hello_command = function( $args, $assoc_args ) {
             list( $name ) = $args;
             $type = $assoc_args['type'];
-            FP_CLI::$type( "Hello, $name!" );
+            FIN_CLI::$type( "Hello, $name!" );
             if ( isset( $assoc_args['honk'] ) ) {
-                FP_CLI::log( 'Honk!' );
+                FIN_CLI::log( 'Honk!' );
             }
         };
-        FP_CLI::add_command( 'example hello', $hello_command, array(
+        FIN_CLI::add_command( 'example hello', $hello_command, array(
             'shortdesc' => 'Prints a greeting.',
             'synopsis' => array(
                 array(
@@ -828,17 +828,17 @@ Feature: FP-CLI Commands
                     'optional' => true,
                 ),
             ),
-            'when' => 'after_fp_load',
-            'longdesc'    => "\r\n## EXAMPLES\n\n# Say hello to Newman\nfp example hello Newman\nSuccess: Hello, Newman!",
+            'when' => 'after_fin_load',
+            'longdesc'    => "\r\n## EXAMPLES\n\n# Say hello to Newman\nfin example hello Newman\nSuccess: Hello, Newman!",
       ) );
       """
 
-    When I run `fp --require=hello-command.php help example hello`
+    When I run `fin --require=hello-command.php help example hello`
     Then STDOUT should contain:
       """
       NAME
 
-        fp example hello
+        fin example hello
 
       DESCRIPTION
 
@@ -846,7 +846,7 @@ Feature: FP-CLI Commands
 
       SYNOPSIS
 
-        fp example hello <name> [--type=<type>] [--honk]
+        fin example hello <name> [--type=<type>] [--honk]
 
       OPTIONS
 
@@ -866,7 +866,7 @@ Feature: FP-CLI Commands
       EXAMPLES
 
         # Say hello to Newman
-        fp example hello Newman
+        fin example hello Newman
         Success: Hello, Newman!
 
       GLOBAL PARAMETERS
@@ -903,7 +903,7 @@ Feature: FP-CLI Commands
        *   - veggies
        * ---
        *
-       * @when before_fp_load
+       * @when before_fin_load
        */
       $foo = function( $args, $assoc_args ) {
         $out = array(
@@ -911,12 +911,12 @@ Feature: FP-CLI Commands
           'shop'    => isset( $args[1] ) ? $args[1] : '',
           'burrito' => isset( $assoc_args['burrito'] ) ? $assoc_args['burrito'] : '',
         );
-        FP_CLI::print_value( $out, array( 'format' => 'yaml' ) );
+        FIN_CLI::print_value( $out, array( 'format' => 'yaml' ) );
       };
-      FP_CLI::add_command( 'foo', $foo );
+      FIN_CLI::add_command( 'foo', $foo );
       """
 
-    When I run `fp --require=test-cmd.php foo --help`
+    When I run `fin --require=test-cmd.php foo --help`
     Then STDOUT should contain:
       """
       [<bar>]
@@ -936,7 +936,7 @@ Feature: FP-CLI Commands
           ---
       """
 
-    When I run `fp --require=test-cmd.php foo`
+    When I run `fin --require=test-cmd.php foo`
     Then STDOUT should be YAML containing:
       """
       bar: burrito
@@ -945,7 +945,7 @@ Feature: FP-CLI Commands
       """
     And STDERR should be empty
 
-    When I run `fp --require=test-cmd.php foo ''`
+    When I run `fin --require=test-cmd.php foo ''`
     Then STDOUT should be YAML containing:
       """
       bar:
@@ -954,7 +954,7 @@ Feature: FP-CLI Commands
       """
     And STDERR should be empty
 
-    When I run `fp --require=test-cmd.php foo apple --burrito=veggies`
+    When I run `fin --require=test-cmd.php foo apple --burrito=veggies`
     Then STDOUT should be YAML containing:
       """
       bar: apple
@@ -963,33 +963,33 @@ Feature: FP-CLI Commands
       """
     And STDERR should be empty
 
-    When I try `fp --require=test-cmd.php foo apple --burrito=meat`
+    When I try `fin --require=test-cmd.php foo apple --burrito=meat`
     Then STDERR should contain:
       """
       Error: Parameter errors:
        Invalid value specified for 'burrito' (This is the burrito argument.)
       """
 
-    When I try `fp --require=test-cmd.php foo apple --burrito=''`
+    When I try `fin --require=test-cmd.php foo apple --burrito=''`
     Then STDERR should contain:
       """
       Error: Parameter errors:
        Invalid value specified for 'burrito' (This is the burrito argument.)
       """
 
-    When I try `fp --require=test-cmd.php foo apple taco_del_mar`
+    When I try `fin --require=test-cmd.php foo apple taco_del_mar`
     Then STDERR should contain:
       """
       Error: Invalid value specified for positional arg.
       """
 
-    When I try `fp --require=test-cmd.php foo apple 'cha cha cha' taco_del_mar`
+    When I try `fin --require=test-cmd.php foo apple 'cha cha cha' taco_del_mar`
     Then STDERR should contain:
       """
       Error: Invalid value specified for positional arg.
       """
 
-    When I run `fp --require=test-cmd.php foo apple 'cha cha cha'`
+    When I run `fin --require=test-cmd.php foo apple 'cha cha cha'`
     Then STDOUT should be YAML containing:
       """
       bar: apple
@@ -1014,32 +1014,32 @@ Feature: FP-CLI Commands
        *   - veggies
        * ---
        *
-       * @when before_fp_load
+       * @when before_fin_load
        */
       $foo = function( $args, $assoc_args ) {
         $out = array(
           'burrito' => isset( $args[0] ) ? $args[0] : '',
         );
-        FP_CLI::print_value( $out, array( 'format' => 'yaml' ) );
+        FIN_CLI::print_value( $out, array( 'format' => 'yaml' ) );
       };
-      FP_CLI::add_command( 'foo', $foo );
+      FIN_CLI::add_command( 'foo', $foo );
       """
 
-    When I run `fp --require=test-cmd.php foo`
+    When I run `fin --require=test-cmd.php foo`
     Then STDOUT should be YAML containing:
       """
       burrito:
       """
     And STDERR should be empty
 
-    When I run `fp --require=test-cmd.php foo beans`
+    When I run `fin --require=test-cmd.php foo beans`
     Then STDOUT should be YAML containing:
       """
       burrito: beans
       """
     And STDERR should be empty
 
-    When I try `fp --require=test-cmd.php foo apple`
+    When I try `fin --require=test-cmd.php foo apple`
     Then STDERR should be:
       """
       Error: Invalid value specified for positional arg.
@@ -1050,19 +1050,19 @@ Feature: FP-CLI Commands
     And a remove-comment.php file:
       """
       <?php
-      FP_CLI::add_hook( 'after_add_command:comment', function () {
-        $command = FP_CLI::get_root_command();
+      FIN_CLI::add_hook( 'after_add_command:comment', function () {
+        $command = FIN_CLI::get_root_command();
         $command->remove_subcommand( 'comment' );
       } );
       """
 
-    When I run `fp`
+    When I run `fin`
     Then STDOUT should contain:
       """
       Creates, updates, deletes, and moderates comments.
       """
 
-    When I run `fp --require=remove-comment.php`
+    When I run `fin --require=remove-comment.php`
     Then STDOUT should not contain:
       """
       Creates, updates, deletes, and moderates comments.
@@ -1074,21 +1074,21 @@ Feature: FP-CLI Commands
       """
       <?php
       /**
-       * @when before_fp_load
+       * @when before_fin_load
        */
       $before_invoke = function() {
-        FP_CLI::success( 'Invoked' );
+        FIN_CLI::success( 'Invoked' );
       };
       $before_invoke_args = array( 'before_invoke' => function() {
-        FP_CLI::success( 'before invoke' );
+        FIN_CLI::success( 'before invoke' );
       }, 'after_invoke' => function() {
-        FP_CLI::success( 'after invoke' );
+        FIN_CLI::success( 'after invoke' );
       });
-      FP_CLI::add_command( 'before invoke', $before_invoke, $before_invoke_args );
-      FP_CLI::add_command( 'before-invoke', $before_invoke, $before_invoke_args );
+      FIN_CLI::add_command( 'before invoke', $before_invoke, $before_invoke_args );
+      FIN_CLI::add_command( 'before-invoke', $before_invoke, $before_invoke_args );
       """
 
-    When I run `fp --require=call-invoke.php before invoke`
+    When I run `fin --require=call-invoke.php before invoke`
     Then STDOUT should contain:
       """
       Success: before invoke
@@ -1096,7 +1096,7 @@ Feature: FP-CLI Commands
       Success: after invoke
       """
 
-    When I run `fp --require=call-invoke.php before-invoke`
+    When I run `fin --require=call-invoke.php before-invoke`
     Then STDOUT should contain:
       """
       Success: before invoke
@@ -1104,15 +1104,15 @@ Feature: FP-CLI Commands
       Success: after invoke
       """
 
-  Scenario: Default arguments should respect fp-cli.yml
-    Given a FP installation
-    And a fp-cli.yml file:
+  Scenario: Default arguments should respect fin-cli.yml
+    Given a FIN installation
+    And a fin-cli.yml file:
       """
       post list:
         format: count
       """
 
-    When I run `fp post list`
+    When I run `fin post list`
     Then STDOUT should be a number
 
   Scenario: Use class passed as object
@@ -1130,54 +1130,54 @@ Feature: FP-CLI Commands
         /**
          * My awesome class method command
          *
-         * @when before_fp_load
+         * @when before_fin_load
          */
         function message( $args ) {
-          FP_CLI::success( $this->message );
+          FIN_CLI::success( $this->message );
         }
       }
       $foo = new Foo_Class( 'bar' );
-      FP_CLI::add_command( 'instantiated-command', $foo );
+      FIN_CLI::add_command( 'instantiated-command', $foo );
       """
 
-    When I run `fp --require=custom-cmd.php instantiated-command message`
+    When I run `fin --require=custom-cmd.php instantiated-command message`
     Then STDOUT should contain:
       """
       bar
       """
     And STDERR should be empty
 
-  Scenario: FP-CLI suggests matching commands when user entry contains typos
-    Given a FP installation
+  Scenario: FIN-CLI suggests matching commands when user entry contains typos
+    Given a FIN installation
 
-    When I try `fp clu`
+    When I try `fin clu`
     Then STDERR should contain:
       """
       Did you mean 'cli'?
       """
 
-    When I try `fp cli nfo`
+    When I try `fin cli nfo`
     Then STDERR should contain:
       """
       Did you mean 'info'?
       """
 
-    When I try `fp cli beyondlevenshteinthreshold`
+    When I try `fin cli beyondlevenshteinthreshold`
     Then STDERR should not contain:
       """
       Did you mean
       """
 
-  Scenario: FP-CLI suggests matching parameters when user entry contains typos
+  Scenario: FIN-CLI suggests matching parameters when user entry contains typos
     Given an empty directory
 
-    When I try `fp cli info --quie`
+    When I try `fin cli info --quie`
     Then STDERR should contain:
       """
       Did you mean '--quiet'?
       """
 
-    When I try `fp cli info --forma=json`
+    When I try `fin cli info --forma=json`
     Then STDERR should contain:
       """
       Did you mean '--format'?
@@ -1188,15 +1188,15 @@ Feature: FP-CLI Commands
     And a abort-add-command.php file:
       """
       <?php
-      FP_CLI::add_hook( 'before_add_command:test-command-2', function ( $addition ) {
+      FIN_CLI::add_hook( 'before_add_command:test-command-2', function ( $addition ) {
         $addition->abort( 'Testing hooks.' );
       } );
 
-      FP_CLI::add_command( 'test-command-1', function () {} );
-      FP_CLI::add_command( 'test-command-2', function () {} );
+      FIN_CLI::add_command( 'test-command-1', function () {} );
+      FIN_CLI::add_command( 'test-command-2', function () {} );
       """
 
-    When I try `fp --require=abort-add-command.php`
+    When I try `fin --require=abort-add-command.php`
     Then STDOUT should contain:
       """
       test-command-1
@@ -1219,20 +1219,20 @@ Feature: FP-CLI Commands
       class TestCommand {
       }
 
-      FP_CLI::add_hook( 'after_add_command:test-command', function () {
-        FP_CLI::add_command( 'test-command sub-command', function () {} );
+      FIN_CLI::add_hook( 'after_add_command:test-command', function () {
+        FIN_CLI::add_command( 'test-command sub-command', function () {} );
       } );
 
-      FP_CLI::add_command( 'test-command', 'TestCommand' );
+      FIN_CLI::add_command( 'test-command', 'TestCommand' );
       """
 
-    When I run `fp --require=add-dependent-command.php`
+    When I run `fin --require=add-dependent-command.php`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    When I run `fp --require=add-dependent-command.php help test-command`
+    When I run `fin --require=add-dependent-command.php help test-command`
     Then STDOUT should contain:
       """
       sub-command
@@ -1246,26 +1246,26 @@ Feature: FP-CLI Commands
       class TestCommand {
       }
 
-      FP_CLI::add_command( 'test-command sub-command', function () {} );
+      FIN_CLI::add_command( 'test-command sub-command', function () {} );
 
-      FP_CLI::add_command( 'test-command', 'TestCommand' );
+      FIN_CLI::add_command( 'test-command', 'TestCommand' );
       """
 
-    When I run `fp --require=add-deferred-command.php`
+    When I run `fin --require=add-deferred-command.php`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    When I run `fp --require=add-deferred-command.php help test-command`
+    When I run `fin --require=add-deferred-command.php help test-command`
     Then STDOUT should contain:
       """
       sub-command
       """
 
   Scenario: Command additions should work as plugins
-    Given a FP installation
-    And a fp-content/plugins/test-cli/command.php file:
+    Given a FIN installation
+    And a fin-content/plugins/test-cli/command.php file:
       """
       <?php
       // Plugin Name: Test CLI Help
@@ -1274,39 +1274,39 @@ Feature: FP-CLI Commands
       }
 
       function test_function() {
-        \FP_CLI::success( 'unknown-parent child-command' );
+        \FIN_CLI::success( 'unknown-parent child-command' );
       }
 
-      FP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
+      FIN_CLI::add_command( 'unknown-parent child-command', 'test_function' );
 
-      FP_CLI::add_command( 'test-command sub-command', function () { \FP_CLI::success( 'test-command sub-command' ); } );
+      FIN_CLI::add_command( 'test-command sub-command', function () { \FIN_CLI::success( 'test-command sub-command' ); } );
 
-      FP_CLI::add_command( 'test-command', 'TestCommand' );
+      FIN_CLI::add_command( 'test-command', 'TestCommand' );
       """
-    And I run `fp plugin activate test-cli`
+    And I run `fin plugin activate test-cli`
 
-    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
-    When I try `fp`
+    # TODO: Throwing deprecations with PHP 8.1+ and FIN < 5.9
+    When I try `fin`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
-    When I try `fp help test-command`
+    # TODO: Throwing deprecations with PHP 8.1+ and FIN < 5.9
+    When I try `fin help test-command`
     Then STDOUT should contain:
       """
       sub-command
       """
 
-    When I run `fp test-command sub-command`
+    When I run `fin test-command sub-command`
     Then STDOUT should contain:
       """
       Success: test-command sub-command
       """
     And STDERR should be empty
 
-    When I run `fp unknown-parent child-command`
+    When I run `fin unknown-parent child-command`
     Then STDOUT should contain:
       """
       Success: unknown-parent child-command
@@ -1314,8 +1314,8 @@ Feature: FP-CLI Commands
     And STDERR should be empty
 
   Scenario: Command additions should work as must-use plugins
-    Given a FP installation
-    And a fp-content/mu-plugins/test-cli.php file:
+    Given a FIN installation
+    And a fin-content/mu-plugins/test-cli.php file:
       """
       <?php
       // Plugin Name: Test CLI Help
@@ -1324,47 +1324,47 @@ Feature: FP-CLI Commands
       }
 
       function test_function() {
-        \FP_CLI::success( 'unknown-parent child-command' );
+        \FIN_CLI::success( 'unknown-parent child-command' );
       }
 
-      FP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
+      FIN_CLI::add_command( 'unknown-parent child-command', 'test_function' );
 
-      FP_CLI::add_command( 'test-command sub-command', function () { \FP_CLI::success( 'test-command sub-command' ); } );
+      FIN_CLI::add_command( 'test-command sub-command', function () { \FIN_CLI::success( 'test-command sub-command' ); } );
 
-      FP_CLI::add_command( 'test-command', 'TestCommand' );
+      FIN_CLI::add_command( 'test-command', 'TestCommand' );
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
-    When I try `fp`
+    # TODO: Throwing deprecations with PHP 8.1+ and FIN < 5.9
+    When I try `fin`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
-    When I try `fp help test-command`
+    # TODO: Throwing deprecations with PHP 8.1+ and FIN < 5.9
+    When I try `fin help test-command`
     Then STDOUT should contain:
       """
       sub-command
       """
 
-    When I run `fp test-command sub-command`
+    When I run `fin test-command sub-command`
     Then STDOUT should contain:
       """
       Success: test-command sub-command
       """
     And STDERR should be empty
 
-    When I run `fp unknown-parent child-command`
+    When I run `fin unknown-parent child-command`
     Then STDOUT should contain:
       """
       Success: unknown-parent child-command
       """
     And STDERR should be empty
 
-  Scenario: Command additions should work when registered on after_fp_load
-    Given a FP installation
-    And a fp-content/mu-plugins/test-cli.php file:
+  Scenario: Command additions should work when registered on after_fin_load
+    Given a FIN installation
+    And a fin-content/mu-plugins/test-cli.php file:
       """
       <?php
       // Plugin Name: Test CLI Help
@@ -1373,123 +1373,123 @@ Feature: FP-CLI Commands
       }
 
       function test_function() {
-        \FP_CLI::success( 'unknown-parent child-command' );
+        \FIN_CLI::success( 'unknown-parent child-command' );
       }
 
-      FP_CLI::add_hook( 'after_fp_load', function(){
-        FP_CLI::add_command( 'unknown-parent child-command', 'test_function' );
+      FIN_CLI::add_hook( 'after_fin_load', function(){
+        FIN_CLI::add_command( 'unknown-parent child-command', 'test_function' );
 
-        FP_CLI::add_command( 'test-command sub-command', function () { \FP_CLI::success( 'test-command sub-command' ); } );
+        FIN_CLI::add_command( 'test-command sub-command', function () { \FIN_CLI::success( 'test-command sub-command' ); } );
 
-        FP_CLI::add_command( 'test-command', 'TestCommand' );
+        FIN_CLI::add_command( 'test-command', 'TestCommand' );
       });
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
-    When I try `fp`
+    # TODO: Throwing deprecations with PHP 8.1+ and FIN < 5.9
+    When I try `fin`
     Then STDOUT should contain:
       """
       test-command
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
-    When I try `fp help test-command`
+    # TODO: Throwing deprecations with PHP 8.1+ and FIN < 5.9
+    When I try `fin help test-command`
     Then STDOUT should contain:
       """
       sub-command
       """
 
-    When I run `fp test-command sub-command`
+    When I run `fin test-command sub-command`
     Then STDOUT should contain:
       """
       Success: test-command sub-command
       """
     And STDERR should be empty
 
-    When I run `fp unknown-parent child-command`
+    When I run `fin unknown-parent child-command`
     Then STDOUT should contain:
       """
       Success: unknown-parent child-command
       """
     And STDERR should be empty
 
-  Scenario: The command should fire on `after_fp_load`
-    Given a FP installation
+  Scenario: The command should fire on `after_fin_load`
+    Given a FIN installation
     And a custom-cmd.php file:
       """
       <?php
       /**
-       * @when before_fp_load
+       * @when before_fin_load
        */
-      class Custom_Command_Class extends FP_CLI_Command {
+      class Custom_Command_Class extends FIN_CLI_Command {
           /**
-           * @when after_fp_load
+           * @when after_fin_load
            */
-          public function after_fp_load() {
+          public function after_fin_load() {
              var_dump( function_exists( 'home_url' ) );
           }
-          public function before_fp_load() {
+          public function before_fin_load() {
              var_dump( function_exists( 'home_url' ) );
           }
       }
-      FP_CLI::add_command( 'command', 'Custom_Command_Class' );
+      FIN_CLI::add_command( 'command', 'Custom_Command_Class' );
       """
-    And a fp-cli.yml file:
+    And a fin-cli.yml file:
       """
       require:
         - custom-cmd.php
       """
 
-    When I run `fp command after_fp_load`
+    When I run `fin command after_fin_load`
     Then STDOUT should contain:
       """
       bool(true)
       """
     And the return code should be 0
 
-    When I run `fp command before_fp_load`
+    When I run `fin command before_fin_load`
     Then STDOUT should contain:
       """
       bool(false)
       """
     And the return code should be 0
 
-    When I try `fp command after_fp_load --path=/tmp`
+    When I try `fin command after_fin_load --path=/tmp`
     Then STDERR should contain:
       """
       Error: This does not seem to be a FinPress installation.
       """
     And the return code should be 1
 
-  Scenario: The command should fire on `before_fp_load`
-    Given a FP installation
+  Scenario: The command should fire on `before_fin_load`
+    Given a FIN installation
     And a custom-cmd.php file:
       """
       <?php
       /**
-       * @when after_fp_load
+       * @when after_fin_load
        */
-      class Custom_Command_Class extends FP_CLI_Command {
+      class Custom_Command_Class extends FIN_CLI_Command {
           /**
-           * @when before_fp_load
+           * @when before_fin_load
            */
-          public function before_fp_load() {
+          public function before_fin_load() {
              var_dump( function_exists( 'home_url' ) );
           }
 
-          public function after_fp_load() {
+          public function after_fin_load() {
              var_dump( function_exists( 'home_url' ) );
           }
       }
-      FP_CLI::add_command( 'command', 'Custom_Command_Class' );
+      FIN_CLI::add_command( 'command', 'Custom_Command_Class' );
       """
-    And a fp-cli.yml file:
+    And a fin-cli.yml file:
       """
       require:
         - custom-cmd.php
       """
 
-    When I run `fp command before_fp_load`
+    When I run `fin command before_fin_load`
     Then STDERR should be empty
     And STDOUT should contain:
       """
@@ -1497,7 +1497,7 @@ Feature: FP-CLI Commands
       """
     And the return code should be 0
 
-    When I run `fp command after_fp_load`
+    When I run `fin command after_fin_load`
     Then STDERR should be empty
     And STDOUT should contain:
       """
@@ -1506,37 +1506,37 @@ Feature: FP-CLI Commands
     And the return code should be 0
 
   Scenario: Command hook should fires as expected on __invoke()
-    Given a FP installation
+    Given a FIN installation
     And a custom-cmd.php file:
       """
       <?php
       /**
-       * @when before_fp_load
+       * @when before_fin_load
        */
-      class Custom_Command_Class extends FP_CLI_Command {
+      class Custom_Command_Class extends FIN_CLI_Command {
           /**
-           * @when after_fp_load
+           * @when after_fin_load
            */
           public function __invoke() {
              var_dump( function_exists( 'home_url' ) );
           }
       }
-      FP_CLI::add_command( 'command', 'Custom_Command_Class' );
+      FIN_CLI::add_command( 'command', 'Custom_Command_Class' );
       """
-    And a fp-cli.yml file:
+    And a fin-cli.yml file:
       """
       require:
         - custom-cmd.php
       """
 
-    When I run `fp command`
+    When I run `fin command`
     Then STDOUT should contain:
       """
       bool(true)
       """
     And the return code should be 0
 
-    When I try `fp command --path=/tmp`
+    When I try `fin command --path=/tmp`
     Then STDERR should contain:
       """
       Error: This does not seem to be a FinPress installation.
@@ -1551,11 +1551,11 @@ Feature: FP-CLI Commands
       /**
        * My Command Namespace Description.
        */
-      class My_Command_Namespace extends \FP_CLI\Dispatcher\CommandNamespace {}
-      FP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
+      class My_Command_Namespace extends \FIN_CLI\Dispatcher\CommandNamespace {}
+      FIN_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
       """
 
-    When I run `fp help --require=command-namespace.php`
+    When I run `fin help --require=command-namespace.php`
     Then STDOUT should contain:
       """
       my-namespaced-command
@@ -1574,17 +1574,17 @@ Feature: FP-CLI Commands
       /**
        * My Actual Namespaced Command.
        */
-      class My_Namespaced_Command extends FP_CLI_Command {}
-      FP_CLI::add_command( 'my-namespaced-command', 'My_Namespaced_Command' );
+      class My_Namespaced_Command extends FIN_CLI_Command {}
+      FIN_CLI::add_command( 'my-namespaced-command', 'My_Namespaced_Command' );
 
       /**
        * My Command Namespace Description.
        */
-      class My_Command_Namespace extends \FP_CLI\Dispatcher\CommandNamespace {}
-      FP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
+      class My_Command_Namespace extends \FIN_CLI\Dispatcher\CommandNamespace {}
+      FIN_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
       """
 
-    When I run `fp help --require=command-namespace.php`
+    When I run `fin help --require=command-namespace.php`
     Then STDOUT should contain:
       """
       my-namespaced-command
@@ -1603,17 +1603,17 @@ Feature: FP-CLI Commands
       /**
        * My Command Namespace Description.
        */
-      class My_Command_Namespace extends \FP_CLI\Dispatcher\CommandNamespace {}
-      FP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
+      class My_Command_Namespace extends \FIN_CLI\Dispatcher\CommandNamespace {}
+      FIN_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
 
       /**
        * My Actual Namespaced Command.
        */
-      class My_Namespaced_Command extends FP_CLI_Command {}
-      FP_CLI::add_command( 'my-namespaced-command', 'My_Namespaced_Command' );
+      class My_Namespaced_Command extends FIN_CLI_Command {}
+      FIN_CLI::add_command( 'my-namespaced-command', 'My_Namespaced_Command' );
       """
 
-    When I run `fp help --require=command-namespace.php`
+    When I run `fin help --require=command-namespace.php`
     Then STDOUT should contain:
       """
       my-namespaced-command
@@ -1632,11 +1632,11 @@ Feature: FP-CLI Commands
       /**
        * My Command Namespace Description.
        */
-      class My_Command_Namespace extends \FP_CLI\Dispatcher\CommandNamespace {}
-      FP_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
+      class My_Command_Namespace extends \FIN_CLI\Dispatcher\CommandNamespace {}
+      FIN_CLI::add_command( 'my-namespaced-command', 'My_Command_Namespace' );
       """
 
-    When I run `fp --require=command-namespace.php my-namespaced-command`
+    When I run `fin --require=command-namespace.php my-namespaced-command`
     Then STDOUT should contain:
       """
       The namespace my-namespaced-command does not contain any usable commands in the current context.
@@ -1644,29 +1644,29 @@ Feature: FP-CLI Commands
     And STDERR should be empty
 
   Scenario: Late-registered command should appear in command usage
-    Given a FP installation
+    Given a FIN installation
     And a test-cmd.php file:
       """
       <?php
-      FP_CLI::add_fp_hook( 'plugins_loaded', function(){
-        FP_CLI::add_command( 'core custom-subcommand', function() {});
+      FIN_CLI::add_fin_hook( 'plugins_loaded', function(){
+        FIN_CLI::add_command( 'core custom-subcommand', function() {});
       });
       """
-    And a fp-cli.yml file:
+    And a fin-cli.yml file:
       """
       require:
         - test-cmd.php
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
-    When I try `fp help core`
+    # TODO: Throwing deprecations with PHP 8.1+ and FIN < 5.9
+    When I try `fin help core`
     Then STDOUT should contain:
       """
       custom-subcommand
       """
 
-    # TODO: Throwing deprecations with PHP 8.1+ and FP < 5.9
-    When I try `fp core`
+    # TODO: Throwing deprecations with PHP 8.1+ and FIN < 5.9
+    When I try `fin core`
     Then STDOUT should contain:
       """
       usage:
